@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solutions</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="./css/style.css" rel="stylesheet" />
+  </head>
+  <!-- <style>
+    @font-face {
+      font-family: "Unbounded";
+      /*  url("./static/Unbounded-Black.ttf") format("truetype"),
+          url("./static/Unbounded-Bold.ttf") format("truetype"),
+          url("./static/Unbounded-ExtraBold.ttf") format("truetype"),
+          url("./static/Unbounded-ExtraLight.ttf") format("truetype"),
+          url("./static/Unbounded-Light.ttf") format("truetype"),
+          url("./static/Unbounded-Medium.ttf") format("truetype"),
+          url("./static/Unbounded-SemiBold.ttf") format("truetype"), */
+      src: url("./static/Unbounded-Regular.ttf") format("truetype");
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Unbounded";
+    }
+    /* navbar  */
+    .navbar {
+      padding: 15px 0;
+      transition: all 0.3s ease;
+      border: 2px solid rgba(255, 231, 231, 0.208);
+    }
+    .navbar-brand {
+      .navbar-brand {
+        font-size: 29px;
+        font-weight: bold;
+        color: white !important;
+        transition: color 0.3s ease;
+        margin-left: 0;
+        padding-right: 15px;
+        display: flex;
+        align-items: center;
+      }
+    }
+    /* Navbar links space */
+    .navbar-nav {
+      display: flex;
+      gap: 2px; /* Space between nav links */
+      justify-content: flex-end;
+    }
+
+    .nav-link {
+      color: white !important;
+      font-size: 15px;
+      transition: color 0.3s ease;
+    }
+    .navbar.scrolled .navbar-brand img {
+      mix-blend-mode: difference;
+    }
+    .nav-link:hover {
+      color: #ff8045 !important;
+    }
+    .navbar-toggler {
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    .navbar.scrolled {
+      background-color: white !important;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar.scrolled .navbar-brand {
+      color: #000 !important;
+    }
+
+    .navbar.scrolled .nav-link {
+      color: #000 !important;
+    }
+
+    .navbar.scrolled .nav-link:hover {
+      color: #ff8045 !important;
+    }
+
+    .navbar.scrolled .navbar-toggler {
+      border-color: rgba(0, 0, 0, 0.5);
+    }
+
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 15px;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+    }
+
+    /* hero styles  */
+
+    .parallax-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      width: 100%;
+      min-height: 100vh;
+    }
+    .parallax-item:first-child {
+      background: url("./img/Solutions-bg.jpg");
+      background-size: cover;
+    }
+    .content {
+      text-align: center;
+      color: white;
+      padding: 20px;
+      max-width: 800px;
+    }
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+    @media screen and (max-width: 768px) {
+      .parallax-item h2 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    /* services styling  */
+    .services-container {
+      max-width: 1200px;
+      margin: 2rem auto 0;
+      padding: 20px;
+      display: flex;
+      gap: 40px;
+    }
+    .services-nav {
+      flex: 1;
+    }
+    .services-content {
+      flex: 2;
+    }
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .service-btn {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 10px;
+      background-color: #333;
+      color: white;
+      text-decoration: none;
+      text-align: left;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .service-btn:focus,
+    .service-btn.active {
+      background-color: #ff5722;
+    }
+    .service-content {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+    .service-content.active {
+      display: block;
+      opacity: 1;
+    }
+    .service-content h3 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    .service-content p {
+      margin-bottom: 15px;
+    }
+
+    /* Responsive styles for mobile phones */
+    @media (max-width: 768px) {
+      .services-container {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .services-nav {
+        order: -1; /* Move navigation above content */
+      }
+      .service-btn {
+        padding: 10px;
+        margin-bottom: 5px;
+        font-size: 14px;
+      }
+      h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+      .service-content h3 {
+        font-size: 18px;
+      }
+      .service-content p {
+        font-size: 14px;
+      }
+    }
+
+    /* agent styles  */
+    .wealth-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .wealth-content {
+      display: flex;
+      max-width: 1200px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .wealth-text-section {
+      flex: 1;
+      padding: 40px;
+    }
+    .wealth-image-section {
+      flex: 1;
+    }
+    .wealth-heading {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+    .wealth-description {
+      font-size: 1em;
+      line-height: 1.6;
+      color: #666;
+      margin-bottom: 30px;
+    }
+    .wealth-cta-button {
+      display: inline-block;
+      background-color: #ff5722;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .wealth-founder-info {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #333;
+    }
+    .wealth-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Responsive styles for mobile phones */
+    @media (max-width: 768px) {
+      .wealth-container {
+        height: auto;
+      }
+      .wealth-content {
+        flex-direction: column;
+      }
+      .wealth-text-section {
+        order: -1; /* Move text above image */
+        padding: 20px;
+      }
+      .wealth-image-section {
+        height: 300px; /* Set a fixed height for the image container */
+      }
+      .wealth-heading {
+        font-size: 2em;
+      }
+      .wealth-description {
+        font-size: 0.9em;
+      }
+    }
+
+    /* text component styles  */
+    .financial-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .financial-component {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .financial-left {
+      flex: 1;
+      padding-right: 40px;
+      min-width: 300px;
+    }
+    .financial-right {
+      flex: 1;
+      min-width: 300px;
+    }
+    .financial-intro {
+      color: #ff6347;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    .financial-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .financial-paragraph {
+      margin-bottom: 20px;
+    }
+    .financial-paragraph:last-child {
+      color: #666;
+    }
+
+    /* FOOTER CSS */
+    .footer {
+      background-color: #000;
+      color: #fff;
+      padding: 4rem 0 2rem;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .col {
+      flex: 1;
+      margin-bottom: 2rem;
+      min-width: 200px;
+    }
+    .footer h5 {
+      color: #fff;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      font-weight: normal;
+    }
+    .footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer ul li {
+      margin-bottom: 0.5rem;
+    }
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.7rem;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .subscribe-btn {
+      color: #000;
+      /* background-color: #fff; */
+      border: none;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+    .get-in-touch {
+      font-size: 4rem;
+      font-weight: bold;
+      margin-top: 3rem;
+      border-top: 1px solid #333;
+      padding-top: 2rem;
+    }
+    .social-icons a {
+      margin-right: 1rem;
+      font-size: 1.2rem;
+    }
+    .footer-bottom {
+      border-top: 1px solid #333;
+      padding-top: 1rem;
+      margin-top: 2rem;
+      font-size: 0.8rem;
+    }
+    .footer-bottom a {
+      color: #999;
+    }
+    .quick-contact p {
+      margin: 0.5rem 0;
+    }
+  </style> -->
+  <body>
+    <!-- navbar  -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="./img/cci-logo.png"
+            alt="CCI Global Logo"
+            style="height: 40px"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="industries.html">Industries</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="solutions.html">Solutions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CareerBox</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Call Insight</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Knowledge Base</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Diversity</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Connect</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- hero section  -->
+    <section>
+      <div id="parallax" class="parallax-item">
+        <div class="content">
+          <h2>AN EXPERT OUTSOURCER WITH THAT IN-HOUSE FEEL</h2>
+          <p>
+            We have over 15 years of experience across a multitude of service
+            lines, industries, and specialist services. With new opportunities
+            we adapt and grow every day.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- services section  -->
+    <div class="services-container">
+      <div class="services-nav">
+        <h2>Our Services</h2>
+        <a
+          href="#financial-planning"
+          class="service-btn active"
+          data-target="financial-planning"
+          >Business Growth</a
+        >
+        <a
+          href="#wealth-management"
+          class="service-btn"
+          data-target="wealth-management"
+          >Management</a
+        >
+        <a
+          href="#portfolio-consulting"
+          class="service-btn"
+          data-target="portfolio-consulting"
+          >Processing</a
+        >
+        <a
+          href="#mergers-acquisitions"
+          class="service-btn"
+          data-target="mergers-acquisitions"
+          >Technical Expertise</a
+        >
+      </div>
+      <div class="services-content">
+        <!-- <h2>Overview</h2> -->
+        <div id="financial-planning" class="service-content active">
+          <p>
+            CCI assist clients in growing their business by applying a customer
+            focused approach to engagement. With a focus on the human
+            experience, we create the interactions that directly impact how your
+            customers feel and perceive your brand. CCI’s first language
+            communication skills, empathetic interactions and informed agents
+            directly impact your bottom line and create new revenue
+            opportunities across your products and services.
+          </p>
+          <h3>Customer Acquisition & Engagement</h3>
+          <p>
+            CCI support your businesses to grow and expand across your services.
+            We help in developing sales strategies that directly impact your
+            bottom line with agents working to grow your customer base and
+            interact in a positive manner to maximize your brand value.
+          </p>
+          <h3>Digital Demand Generation</h3>
+          <p>
+            CCI provide our clients the ability to create new opportunities for
+            sales and loyalty amongst their client base through digitally
+            generated sector specific insights and tailored agent training.
+          </p>
+          <h3>Digital Marketing & Inbound Sales</h3>
+          <p>
+            Managing your ad revenue, new sales opportunities and marketing new
+            products or services is a standard service offering to all our
+            clients across communication channels and your digital landscape.
+          </p>
+          <h3>Loyalty Program Management</h3>
+          <p>
+            We manage your loyalty programs and engage with your customers by
+            understanding your customer base. We then integrate our service
+            interactions with your program to deliver a CX, service specific
+            interaction model. We fortify the engagements through data generated
+            strategies and tactics.
+          </p>
+          <h3>Renewals and cancellations</h3>
+          <p>
+            Subscription based services or multi-tiered revenue programs; we
+            manage your financial processes as it relates to your service lines.
+            We seamlessly take on your standard tasks allowing you to focus on
+            enhancing your core competencies
+          </p>
+        </div>
+        <div id="wealth-management" class="service-content">
+          <!-- <h3>Wealth Management</h3> -->
+          <p>
+            CCI manage your standard business processes in the most
+            extraordinary manner applying cross industry best practices to
+            enhance service and output. We help our clients manage noncritical
+            functions in the value chain by offering efficiency and cost
+            benefits.
+          </p>
+          <h3>Chat & Email Support</h3>
+          <p>
+            CCI provide the technology platforms, training, and delivery
+            methodology to manage your channels and interact with customers with
+            an experiential mindset.
+          </p>
+          <h3>Content Moderation, Labelling & Curation</h3>
+          <p>
+            CCI audit, review, and govern your platforms to assess content
+            against your policies to moderate, label and curate media. Our
+            trained team develop governance structures which then also tag and
+            label new media to then become part of your content ecosystems
+            adding the additional benefit of curating content to your
+            requirements.
+          </p>
+          <h3>Compliance As a Service</h3>
+          <p>
+            Offering trained professionals who understand your regulatory
+            framework to seamlessly integrate into your operating model. This
+            ensures your work is monitored, measured, assessed, and reported on
+            to meet the demands of your local regulatory market.
+          </p>
+          <h3>Customer Services</h3>
+          <p>
+            Helping businesses develop centralized contact center operations
+            that deliver solution-oriented services. Solutions that tackle the
+            whole breadth of services from customer issues, complaints,
+            requests, and queries
+          </p>
+          <h3>Social Media Community Management</h3>
+          <p>
+            Across regions, countries, cities and areas, your divisions, product
+            lines and brands require multiple social channel management. We
+            provide you teams who will engage with your communities and generate
+            and manage content to ensure that your customers feel engaged,
+            heard, and connected to your brand.
+          </p>
+          <h3>Product support</h3>
+          <p>
+            Information services or coordination between your operations, we
+            offer support functionality for product-based organizations who need
+            support in managing multi region operations with the multitude of
+            product specific challenges.
+          </p>
+          <h3>Technical Support</h3>
+          <p>
+            Challenges, snags and complaints all need to be tackled with a
+            solution-oriented approach developed to your operations, products,
+            and services. We provide the capability to manage these facets
+            through rigorous training and skill development across all your
+            functional elements that then creates customer delight and loyalty.
+          </p>
+          <h3>Warranty claims management</h3>
+          <p>
+            Rigorously trained agents that manage entry of online claims,
+            uploading claims from service systems, verification of claims,
+            review and process of comprehensive warranty business rules with
+            context-based decision to ensure your claims management process is
+            as efficient as possible.
+          </p>
+        </div>
+        <div id="portfolio-consulting" class="service-content">
+          <!-- <h3>Portfolio Consulting</h3> -->
+          <p>
+            CCI has the people, scalability, and flexibility to manage high
+            volume tasks that directly feed into your organizational activity
+            systems. We become part of your value chain to then help you focus
+            on efficiency.
+          </p>
+          <h3>Back Office Support</h3>
+          <p>
+            Streamlining the customer experience by improving the processes that
+            support your core operations, ranging from accounting, content
+            creation, administrative tasks and other support functions that may
+            not have direct customer interaction but are vital to your business.
+          </p>
+          <h3>Data Entry, Processing & Management</h3>
+          <p>
+            CCI support A.I organizations in their development process through
+            support functionality in data pre-processing, cleaning, structuring,
+            and managing large data sets which are then sent to technology
+            organizations to feed into their machine learning models.
+          </p>
+          <h3>Data Validation</h3>
+          <p>
+            We support companies in validating data and bringing quality
+            assurance services to their mass data generation operations to make
+            sure transactions and entries are detailed and accurate.
+          </p>
+          <h3>Finance and Accounting</h3>
+          <p>
+            Helping businesses develop centralized contact center operations
+            that deliver solution-oriented services which tackle customer
+            challenges, complaints, requests, and queries
+          </p>
+          <h3>Insurance Processing</h3>
+          <p>
+            From claims management, information gathering, validation of policy
+            and coordination with your financial teams, we offer the full suite
+            of insurance sector outsourced services.
+          </p>
+          <h3>Translation and localization</h3>
+          <p>
+            With a diverse set of talent across Africa, with multi-lingual
+            capabilities and cultural diversity, we offer our clients a full
+            suite of local knowledge services that we tailor to your market
+            requirements.
+          </p>
+        </div>
+        <div id="mergers-acquisitions" class="service-content">
+          <!-- <h3>Mergers & Acquisitions</h3> -->
+          <p>
+            CCI use in-house operational expertise to analyze your service
+            interactions across channels and value chain to then recommend and
+            implement transformative changes through best-in-class approaches.
+          </p>
+          <h3>Feedback Analysis, Calls & Issues</h3>
+          <p>
+            Survey data, high call volume operations and improvements across the
+            current BPO model provide our clients with the value of our
+            multi-industry experience for operations that seek to improve,
+            transition and scale.
+          </p>
+          <h3>Omnichannel consulting</h3>
+          <p>
+            We provide customers the opportunity to maximize on their operations
+            by bringing our expert tenured team members to review, assess and
+            recommend optimizations on current business practices. We program
+            manage the changes across your digital channels and operations
+            future proofing your procedures.
+          </p>
+          <h3>Self-service portals</h3>
+          <p>
+            Our operational and technology teams bring custom build experience
+            that can allow your e-commerce or retail business to provide new
+            avenues for workforce management by automating your service
+            processes.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Agent  -->
+    <div class="wealth-container">
+      <div class="wealth-content">
+        <div class="wealth-text-section">
+          <h1 class="wealth-heading">THERE’S AN AGENT FOR THAT!</h1>
+          <p class="wealth-description">
+            Our award-winning agents support New Economy and Blue-Chip brands,
+            seamlessly convert service to sales, and dynamically accelerate
+            lifetime customer value. We train & motivate highly engaged brand
+            support champions. CCI invest in its agent workforce by investing in
+            their development as well as investing in new talent to better
+            acclimate and understand the BPO industry for success in any field.
+          </p>
+          <!-- <a href="#" class="wealth-cta-button">More About Us</a>
+          <div class="wealth-founder-info">
+            <strong>Michael Brian</strong><br />
+            The Founder
+          </div> -->
+        </div>
+        <div class="wealth-image-section">
+          <img
+            class="wealth-image"
+            src="./img/agent.png"
+            alt="Business professionals outside an office building"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- text component -->
+    <div class="financial-container">
+      <div class="financial-component">
+        <div class="financial-left">
+          <h1 class="financial-title">
+            We build partnerships that look to expand your campaign services
+          </h1>
+          <h1 class="financial-title">
+            We invest in our agents to provide them with the right training and
+            coaching
+          </h1>
+        </div>
+        <div class="financial-right">
+          <p class="financial-paragraph">
+            CCI build relationships that add to our expertise, enhance your
+            service delivery and work alongside your evolution to
+            collaboratively grow together
+          </p>
+
+          <p class="financial-paragraph">
+            By building capabilities and enhancing our agent skill sets, we
+            offer services that are focused on result driven outcomes
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer component  -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h5>
+              Sign up for alerts, monthly insights, strategic business
+              perspectives and exclusive content in your inbox.
+            </h5>
+            <a href="#" class="subscribe-btn">Subscribe</a>
+          </div>
+          <div class="col">
+            <h5>Company</h5>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Sustainability</a></li>
+              <li><a href="#">Leadership Team</a></li>
+              <li><a href="#">News & Media</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h5>Services</h5>
+            <ul>
+              <li><a href="#">Financial Planning</a></li>
+              <li><a href="#">Wealth Management</a></li>
+              <li><a href="#">Portfolio Consulting</a></li>
+              <li><a href="#">Mergers & Acquisitions</a></li>
+              <li><a href="#">Sustainability Assurance</a></li>
+              <li><a href="#">Crisis Management</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h5>Industries</h5>
+            <ul>
+              <li><a href="#">Banking & Finance</a></li>
+              <li><a href="#">Sciences & Healthcare</a></li>
+              <li><a href="#">Technology & Software</a></li>
+              <li><a href="#">Education & Training</a></li>
+              <li><a href="#">Hospitality & Leisure</a></li>
+              <li><a href="#">Power & Utilities</a></li>
+            </ul>
+          </div>
+          <div class="col quick-contact">
+            <h5>Quick Contact</h5>
+            <p>Allianz@7oroof.com</p>
+            <p>+2 011 6114 5741</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="get-in-touch">Get In Touch</div>
+        <div class="footer-bottom">
+          <div class="row">
+            <div class="col">
+              <p>
+                &copy;2024 Allianz. All Rights Reserved. With Love by 7oroof.com
+              </p>
+            </div>
+            <div class="col" style="text-align: right">
+              <a href="#">Terms & Conditions</a> &bull;
+              <a href="#">Privacy Policy</a> &bull;
+              <a href="#">Site Map</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    window.addEventListener("scroll", function () {
+      const navbar = document.querySelector(".navbar");
+
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+
+    // parallax
+    const parallax = document.getElementById("parallax");
+
+    window.addEventListener("scroll", function () {
+      let offset = window.pageYOffset;
+      parallax.style.backgroundPositionY = offset * 0.7 + "px";
+    });
+
+    // tabs section
+    document.addEventListener("DOMContentLoaded", function () {
+      const serviceBtns = document.querySelectorAll(".service-btn");
+      const serviceContents = document.querySelectorAll(".service-content");
+
+      serviceBtns.forEach((btn) => {
+        btn.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = this.getAttribute("data-target");
+
+          serviceBtns.forEach((btn) => btn.classList.remove("active"));
+          serviceContents.forEach((content) =>
+            content.classList.remove("active")
+          );
+
+          this.classList.add("active");
+          document.getElementById(target).classList.add("active");
+        });
+      });
+    });
+  </script>
+</html>
