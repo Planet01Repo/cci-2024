@@ -1,0 +1,1725 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CCI Global</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="./css/style.css" rel="stylesheet" />
+    <!-- <style>
+      @font-face {
+        font-family: "Unbounded";
+        /*  url("./static/Unbounded-Black.ttf") format("truetype"),
+          url("./static/Unbounded-Bold.ttf") format("truetype"),
+          url("./static/Unbounded-ExtraBold.ttf") format("truetype"),
+          url("./static/Unbounded-ExtraLight.ttf") format("truetype"),
+          url("./static/Unbounded-Light.ttf") format("truetype"),
+          url("./static/Unbounded-Medium.ttf") format("truetype"),
+          url("./static/Unbounded-SemiBold.ttf") format("truetype"), */
+        src: url("./static/Unbounded-Regular.ttf") format("truetype");
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Unbounded";
+      }
+      /* navbar  */
+      .navbar {
+        padding: 15px 0;
+        transition: all 0.3s ease;
+        border: 2px solid rgba(255, 231, 231, 0.208);
+      }
+      .navbar-brand {
+        .navbar-brand {
+          font-size: 29px;
+          font-weight: bold;
+          color: white !important;
+          transition: color 0.3s ease;
+          margin-left: 0;
+          padding-right: 15px;
+          display: flex;
+          align-items: center;
+        }
+      }
+      /* Navbar links space */
+      .navbar-nav {
+        display: flex;
+        gap: 2px; /* Space between nav links */
+        justify-content: flex-end;
+      }
+
+      .nav-link {
+        color: white !important;
+        font-size: 15px;
+        transition: color 0.3s ease;
+      }
+      .navbar.scrolled .navbar-brand img {
+        mix-blend-mode: difference;
+      }
+      .nav-link:hover {
+        color: #ff8045 !important;
+      }
+      .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.5);
+      }
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+
+      .navbar.scrolled {
+        background-color: white !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar.scrolled .navbar-brand {
+        color: #000 !important;
+      }
+
+      .navbar.scrolled .nav-link {
+        color: #000 !important;
+      }
+
+      .navbar.scrolled .nav-link:hover {
+        color: #ff8045 !important;
+      }
+
+      .navbar.scrolled .navbar-toggler {
+        border-color: rgba(0, 0, 0, 0.5);
+      }
+
+      @media (max-width: 991px) {
+        .navbar-collapse {
+          background-color: rgba(0, 0, 0, 0.9);
+          padding: 15px;
+          border-radius: 5px;
+          margin-top: 10px;
+        }
+      }
+      /* hero styling */
+      .slider-container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+      .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 50px;
+        box-sizing: border-box;
+        color: white;
+      }
+      .slide.active {
+        opacity: 1;
+      }
+      .slide-content {
+        max-width: 400px;
+      }
+      .slide-subtitle {
+        font-size: 10px;
+        margin-bottom: 16px;
+        margin-left: 3rem;
+      }
+      .slide-title {
+        font-size: 35px;
+        margin-bottom: 9rem;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-left: 3rem;
+      }
+      .slide-description {
+        font-size: 12px;
+        margin-bottom: 40px;
+        /* max-width: 500px; */
+      }
+      .slide-nav {
+        display: flex;
+        align-items: center;
+      }
+      .nav-button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 5px;
+      }
+      .progress-bar {
+        flex-grow: 1;
+        height: 2px;
+        background-color: rgba(255, 255, 255, 0.3);
+        margin: 0 20px;
+        position: relative;
+      }
+      .progress {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-color: white;
+        transition: width 0.3s ease-in-out;
+      }
+      .slide-counter {
+        font-size: 18px;
+        margin-left: 20px;
+      }
+
+      /* about styling */
+      .section-spacing {
+        margin-bottom: 4rem;
+        font-size: medium;
+      }
+
+      .left-content,
+      .right-content {
+        padding: 2rem;
+      }
+
+      .right-content {
+        margin-top: 5rem;
+      }
+
+      @media (min-width: 992px) {
+        .left-content {
+          position: sticky;
+          top: 0;
+          height: 40vh;
+          overflow-y: auto;
+        }
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+      }
+
+      .description {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-top: 2rem;
+      }
+
+      /* location styling */
+      .carouselContainer {
+        position: relative;
+        padding: 40px 0;
+        margin-bottom: 0.5rem;
+      }
+      .carouselOfImages {
+        overflow: hidden;
+      }
+      .carouselImage {
+        width: 350px;
+        height: 420px;
+        margin-right: 20px;
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .icon {
+        font-size: 36px;
+        color: #ff6347;
+        margin-bottom: 20px;
+      }
+      .carouselImage h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        transition: color 0.3s ease;
+      }
+      .carouselImage:hover h3 {
+        color: #ff6347;
+      }
+      .carouselImage p {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+      .read-more {
+        color: #ff6347;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+      }
+      .gradient-left,
+      .gradient-right {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100px;
+        z-index: 2;
+        pointer-events: none;
+      }
+      .gradient-left {
+        left: 0;
+        background: linear-gradient(to right, #f5f5f5, transparent);
+      }
+      .gradient-right {
+        right: 0;
+        background: linear-gradient(to left, #f5f5f5, transparent);
+      }
+      /* why africa  */
+      .consulting-section {
+        background: url("./img/Why-Africa.jpg") no-repeat center center fixed;
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+      }
+      .gradient-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.7),
+          rgba(0, 0, 0, 0.3)
+        );
+      }
+      .content-wrapper {
+        position: relative;
+        z-index: 1;
+      }
+      .left-panel,
+      .right-panel {
+        padding: 2rem;
+      }
+      @media (min-width: 992px) {
+        .left-content {
+          position: sticky;
+          top: 0;
+          height: 40vh !important;
+          overflow-y: auto;
+        }
+      }
+      .subtitle {
+        color: #ff4500;
+        font-size: 12px;
+        margin-bottom: 1rem;
+      }
+      .main-title {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+        margin-top: 2rem;
+        color: #f5f5f5;
+      }
+      .desc {
+        color: white;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+      }
+      .right-panel {
+        margin-top: 8rem;
+      }
+      .right-content {
+        transition: transform 0.3s ease-out;
+      }
+      /* cards styling  */
+      .card {
+        border: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-top: 2rem;
+      }
+
+      .card-img-wrapper {
+        position: relative;
+        height: 200px;
+        overflow: hidden;
+      }
+
+      .card-img-top {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .tag {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 10;
+      }
+
+      .tag span {
+        display: inline-block;
+        padding: 2px 8px;
+        margin-right: 5px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 4px;
+        font-size: 0.8rem;
+      }
+
+      .arrow-icon {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background-color: white;
+        border-radius: 50%;
+        padding: 8px;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .arrow-icon::before {
+        content: "↗";
+        font-size: 1.2rem;
+      }
+
+      .card-title {
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin-top: 15px;
+      }
+
+      .card-text {
+        font-size: 0.9rem;
+        color: #6c757d;
+      }
+
+      .orange-bar {
+        width: 30px;
+        height: 4px;
+        background-color: #ff6b35;
+        margin-bottom: 10px;
+      }
+
+      /* english section styles */
+      .insulting-section {
+        background: url("./img/english-neutral-bg.jpg") no-repeat center center
+          fixed;
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+        margin-top: 2rem;
+      }
+      .gradient-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.7),
+          rgba(0, 0, 0, 0.3)
+        );
+      }
+      .con-wrapper {
+        position: relative;
+        z-index: 1;
+      }
+      .panel-left,
+      .panel-right {
+        padding: 2rem;
+      }
+      @media (min-width: 992px) {
+        .left-content {
+          position: sticky;
+          top: 0;
+          /* height: 100vh; */
+          overflow-y: auto;
+        }
+      }
+      .subhead {
+        color: #ff4500;
+        font-size: 12px;
+        margin-bottom: 1rem;
+      }
+      .main-head {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+        color: #f5f5f5;
+      }
+      .descrip {
+        color: white;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+      }
+      .panel-right {
+        margin-top: 7rem;
+      }
+
+      /* meet our team  */
+      .page-layout {
+        min-height: 100vh;
+        background-color: #ffffff;
+        padding: 20px;
+      }
+      .container-fluid {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+      }
+      .hero-content {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: white;
+        color: #333;
+      }
+      .hero-title {
+        font-size: 2.3rem;
+        color: #ff6b35;
+        margin-bottom: 2rem;
+        font-weight: bold;
+      }
+      .team-members {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      .team-member {
+        margin-bottom: 1rem;
+      }
+      .team-member-name {
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+      .team-member-position {
+        color: #ff6b35;
+        font-size: 0.9rem;
+      }
+      .card-stack {
+        padding: 2rem;
+        background-color: white;
+      }
+      .card-column {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .info-card {
+        background-color: white;
+        border-radius: 15px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 50%;
+        margin-left: 10rem;
+      }
+
+      .card-number {
+        font-size: 1.2rem; /* Smaller font size for number */
+        font-weight: bold;
+        color: #ff6b35;
+        align-self: flex-start;
+        margin-right: 0.5rem;
+      }
+
+      .card-header {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 1rem;
+      }
+
+      .card-heading {
+        font-size: 0.7rem;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .card-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+      }
+
+      .card-paragraph {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        text-align: left;
+        width: 100%;
+        color: #555;
+      }
+
+      @media (max-width: 992px) {
+        .hero-content,
+        .card-stack {
+          padding: 1rem;
+        }
+        .col-lg-5,
+        .col-lg-7 {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+        .info-card {
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+      @media (max-width: 576px) {
+        .hero-title {
+          font-size: 2rem;
+        }
+        .card-image {
+          width: 120px;
+          height: 120px;
+        }
+        .card-heading {
+          font-size: 1.2rem;
+        }
+        .card-paragraph {
+          font-size: 0.8rem;
+        }
+      }
+
+      /* news and articles  */
+      .v0-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        margin-bottom: 1rem;
+      }
+      .v0-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .v0-header h1 {
+        font-size: 36px;
+        font-weight: bold;
+      }
+      .v0-nav-buttons {
+        display: flex;
+        gap: 10px;
+      }
+      .v0-nav-button {
+        background-color: #f0f0f0;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+      .v0-carousel {
+        overflow: hidden;
+      }
+      .v0-carousel-item {
+        width: 300px;
+        margin-right: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+      }
+      .v0-carousel-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+      .v0-card-content {
+        padding: 15px;
+      }
+      .v0-card-category {
+        font-size: 12px;
+        color: #666;
+        margin-bottom: 8px;
+      }
+      .v0-card-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        line-height: 1.2;
+      }
+      .v0-card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .v0-card-date {
+        font-size: 12px;
+        color: #666;
+      }
+      .v0-card-arrow {
+        width: 20px;
+        height: 20px;
+      }
+
+      /* footer styles  */
+      .footer {
+        background-color: #000;
+        color: #fff;
+        padding: 4rem 0 2rem;
+      }
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .col {
+        flex: 1;
+        margin-bottom: 2rem;
+        min-width: 200px;
+      }
+      .footer h5 {
+        color: #fff;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        font-weight: normal;
+      }
+      .footer ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .footer ul li {
+        margin-bottom: 0.5rem;
+      }
+      .footer a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.7rem;
+      }
+      .footer a:hover {
+        text-decoration: underline;
+      }
+      .subscribe-btn {
+        color: #000;
+        /* background-color: #fff; */
+        border: none;
+        padding: 0.75rem 1.5rem;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        font-weight: bold;
+      }
+      .get-in-touch {
+        font-size: 4rem;
+        font-weight: bold;
+        margin-top: 3rem;
+        border-top: 1px solid #333;
+        padding-top: 2rem;
+      }
+      .social-icons a {
+        margin-right: 1rem;
+        font-size: 1.2rem;
+      }
+      .footer-bottom {
+        border-top: 1px solid #333;
+        padding-top: 1rem;
+        margin-top: 2rem;
+        font-size: 0.8rem;
+      }
+      .footer-bottom a {
+        color: #999;
+      }
+      .quick-contact p {
+        margin: 0.5rem 0;
+      }
+    </style> -->
+  </head>
+  <body>
+    <!-- navbar  -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="./img/cci-logo.png"
+            alt="CCI Global Logo"
+            style="height: 40px"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="industries.html">Industries</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="solutions.html">Solutions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CareerBox</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Call Insight</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Knowledge Base</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Diversity</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Connect</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- hero -->
+    <div class="slider-container">
+      <div
+        class="slide active"
+        style="background-image: url('./img/sliderbg.webp')"
+      >
+        <div class="slide-content">
+          <p class="slide-subtitle">
+            DETERMINED, ENGAGED AND ENERGIZED SPEARHEADING INVESTMENT ACROSS THE
+            CONTINENT
+          </p>
+          <h2 class="slide-title">Africa's Leading BPO</h2>
+          <!-- <p class="slide-description">
+            We help our clients achieve their goals by providing expert
+            consulting services.
+          </p> -->
+          <div class="slide-nav">
+            <button class="nav-button prev">&lt;</button>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <button class="nav-button next">&gt;</button>
+            <span class="slide-counter">1/2</span>
+          </div>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('./img/sliderbg.webp')">
+        <div class="slide-content">
+          <p class="slide-subtitle">
+            DETERMINED, ENGAGED AND ENERGIZED SPEARHEADING INVESTMENT ACROSS THE
+            CONTINENT
+          </p>
+          <h2 class="slide-title">Africa's Leading BPO</h2>
+          <!-- <p class="slide-description">
+            Our global strategy is designed to help you overcome time-related
+            obstacles in your business.
+          </p> -->
+          <div class="slide-nav">
+            <button class="nav-button prev">&lt;</button>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <button class="nav-button next">&gt;</button>
+            <span class="slide-counter">2/2</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- about -->
+    <div class="container-fluid">
+      <div class="row section-spacing">
+        <div class="col-lg-6 left-content">
+          <p class="header" style="color: #ff4500">Interactions per month.</p>
+          <h1>20,000,000</h1>
+        </div>
+        <div class="col-lg-6 right-content">
+          <h1 style="color: #ff4500">About us</h1>
+          <p class="description">
+            The CCI group of companies is one of the top providers of customer
+            management services in Africa, supporting domestic and international
+            clients. Headquartered in the UAE, the group comprises of companies
+            across the African continent servicing brands from the United
+            Kingdom, United States, Australia, New Zealand, South Africa, Kenya
+            and others.
+          </p>
+          <h1 style="color: #ff4500">Impact Sourcing</h1>
+          <p class="description">
+            Our vision is to be the largest and most respected outsourcer in
+            Africa by offering world class solutions that derive value for our
+            clients and their customers. Our mission is to continue being
+            pioneers in new markets across Africa by investing in people and
+            uplifting communities we operate in. We empower through training,
+            with a focus on developing young professionals for careers in the
+            BPO industry.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- location component  -->
+    <div class="solutions-layout">
+      <div class="solutions-container">
+        <div class="solutions-row">
+          <div class="solutions-sidebar">
+            <h1 class="solutions-title">OUR LOCATIONS</h1>
+            <div class="solutions-list">
+              <div class="solution-item active" onclick="showLocation('kenya')">
+                <div class="solution-name">1. Kenya</div>
+              </div>
+              <div class="solution-item" onclick="showLocation('southAfrica')">
+                <div class="solution-name">2. South Africa</div>
+              </div>
+              <div class="solution-item" onclick="showLocation('ethiopia')">
+                <div class="solution-name">3. Ethiopia</div>
+              </div>
+              <div class="solution-item" onclick="showLocation('rwanda')">
+                <div class="solution-name">4. Rwanda</div>
+              </div>
+              <div class="solution-item" onclick="showLocation('ghana')">
+                <div class="solution-name">5. Ghana</div>
+              </div>
+              <div class="solution-item" onclick="showLocation('egypt')">
+                <div class="solution-name">6. Egypt</div>
+              </div>
+            </div>
+          </div>
+          <div class="solutions-content">
+            <div class="solutions-cards">
+              <div id="kenya" class="solution-card">
+                <div class="solution-card-header">
+                  <div class="solution-card-icon">
+                    <img src="./img/location-icon.png" alt="Location icon" />
+                  </div>
+                  <div class="solution-card-title">Kenya</div>
+                </div>
+                <img
+                  src="./img/CCI-Kenya-Location.jpg"
+                  alt="Kenya"
+                  class="solution-card-image"
+                />
+                <p class="solution-card-description">
+                  One of our fastest growing markets and at the spearhead of our
+                  continuous evolution strategy. CCI are aligned to the Kenya
+                  Vision 2030 that aims to transform Kenya into a rapidly
+                  industrializing, middle-income country that will elevate the
+                  quality of life for its citizens within a secure and clean
+                  ecosystem
+                </p>
+              </div>
+              <div id="southAfrica" class="solution-card hidden">
+                <div class="solution-card-header">
+                  <div class="solution-card-icon">
+                    <img src="./img/location-icon.png" alt="Location icon" />
+                  </div>
+                  <div class="solution-card-title">South Africa</div>
+                </div>
+                <img
+                  src="./img/CCI-SouthAfrica-Location.jpg"
+                  alt="South Africa"
+                  class="solution-card-image"
+                />
+                <p class="solution-card-description">
+                  Our South African hub serves as a gateway to Southern Africa,
+                  offering innovative solutions tailored to the region's unique
+                  needs and opportunities.
+                </p>
+              </div>
+              <div id="ethiopia" class="solution-card hidden">
+                <div class="solution-card-header">
+                  <div class="solution-card-icon">
+                    <img src="./img/location-icon.png" alt="Location icon" />
+                  </div>
+                  <div class="solution-card-title">Ethiopia</div>
+                </div>
+                <img
+                  src="./img/CCI-Ethiopia-Location.jpg"
+                  alt="Ethiopia"
+                  class="solution-card-image"
+                />
+                <p class="solution-card-description">
+                  In Ethiopia, we're contributing to the country's rapid growth
+                  and development, focusing on sustainable practices and local
+                  empowerment.
+                </p>
+              </div>
+              <div id="rwanda" class="solution-card hidden">
+                <div class="solution-card-header">
+                  <div class="solution-card-icon">
+                    <img src="./img/location-icon.png" alt="Location icon" />
+                  </div>
+                  <div class="solution-card-title">Rwanda</div>
+                </div>
+                <img
+                  src="./img/CCI-Rwanda-Location.jpg"
+                  alt="Rwanda"
+                  class="solution-card-image"
+                />
+                <p class="solution-card-description">
+                  Our presence in Rwanda supports the country's vision of
+                  becoming a regional technology hub, driving innovation and
+                  digital transformation.
+                </p>
+              </div>
+              <div id="ghana" class="solution-card hidden">
+                <div class="solution-card-header">
+                  <div class="solution-card-icon">
+                    <img src="./img/location-icon.png" alt="Location icon" />
+                  </div>
+                  <div class="solution-card-title">Ghana</div>
+                </div>
+                <img
+                  src="./img/CCI-Ghana-Location.jpg"
+                  alt="Ghana"
+                  class="solution-card-image"
+                />
+                <p class="solution-card-description">
+                  Ghana serves as our West African base, where we're fostering
+                  entrepreneurship and supporting the region's emerging tech
+                  ecosystem.
+                </p>
+              </div>
+              <div id="egypt" class="solution-card hidden">
+                <div class="solution-card-header">
+                  <div class="solution-card-icon">
+                    <img src="./img/location-icon.png" alt="Location icon" />
+                  </div>
+                  <div class="solution-card-title">Egypt</div>
+                </div>
+                <img
+                  src="./img/CCI-Egypt-Location.jpg"
+                  alt="Egypt"
+                  class="solution-card-image"
+                />
+                <p class="solution-card-description">
+                  In Egypt, we're leveraging the country's strategic location to
+                  bridge North Africa with the Middle East, focusing on digital
+                  solutions and fintech.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="carouselContainer">
+      <div class="carouselOfImages">
+        <div class="carouselImage">
+          <div class="icon">💻</div>
+          <h3>Technology & Software</h3>
+          <p>
+            As artificial intelligence and the internet of things move from
+            concept to reality, all business executives worry about change, but
+            tech companies must be especially cognizant of the forces driving
+            change and increased complexity.
+          </p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+        <div class="carouselImage">
+          <div class="icon">🎓</div>
+          <h3>Education & Training</h3>
+          <p>
+            Education is an important key to economic competitiveness and social
+            cohesion. It helps individuals & communities to reach their full
+            potential. Governments therefore committed to raising educational
+            skills and access to lifelong learning.
+          </p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+        <div class="carouselImage">
+          <div class="icon">🍽️</div>
+          <h3>Hospitality & Leisure</h3>
+          <p>
+            Hospitality, leisure and tourism are vast subject areas that will
+            give you the grounding to work in a variety of sectors. From
+            managing a sports centre or luxury hotel, to planning a major
+            exhibition or cruise ship, the skills and knowledge you develop will
+            be transferable across this diverse industry.
+          </p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+        <div class="carouselImage">
+          <div class="icon">⚡</div>
+          <h3>Power & Utilities</h3>
+          <p>
+            We can help you make the right decisions in an era of new energy
+            sources, sustainability, and digital transformation. Addressing
+            climate change and a new energy landscape require power sector to
+            think differently about every aspect of their business.
+          </p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+        <div class="carouselImage">
+          <div class="icon">🏭</div>
+          <h3>Manufacturing & Industry</h3>
+          <p>
+            The manufacturing industry is evolving rapidly with the integration
+            of advanced technologies. From smart factories to sustainable
+            practices, companies are adapting to meet global challenges and
+            consumer demands.
+          </p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+        <div class="carouselImage">
+          <div class="icon">🧬</div>
+          <h3>Sciences & Healthcare</h3>
+          <p>
+            Sciences and Healthcare practice helps pharmaceutical, biotech and
+            medical clients develop future focused business strategies and
+            implement the time critical programmes and procedures essential to
+            success within worldwide regulatory frameworks.
+          </p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </div>
+      <div class="gradient-left"></div>
+      <div class="gradient-right"></div>
+    </div> -->
+
+    <!-- why africa  -->
+    <section class="consulting-section bg-overlay">
+      <div class="gradient-overlay"></div>
+      <div class="container-fluid content-wrapper">
+        <div class="row">
+          <div class="col-lg-6 left-panel">
+            <!-- <p class="subtitle">Expect and deliver the highest quality outcomes.</p> -->
+            <h1 class="main-title">Why Africa?</h1>
+          </div>
+          <div class="col-lg-6 right-panel">
+            <div class="desc">
+              <p>
+                Africa is the fastest growing continent globally, a rapidly
+                urbanizing population and an abundance of highly educated youth
+                searching for opportunity to use hard earned qualifications.
+                Natural English language skills provide unparalleled levels of
+                comprehension. High levels of retention and opportunities to
+                progress result in global leading capability.
+              </p>
+            </div>
+            <button class="learn-more-btn">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- card component  -->
+    <div class="container section-spacing">
+      <div class="text-center mt-5">
+        <h2 class="section-heading">OUR SOLUTIONS</h2>
+        <p class="section-text">
+          CCI work across a multitude of service lines and provide capability
+          across industries to global clients searching for quality outputs
+          while creating social impact.
+        </p>
+      </div>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-img-wrapper">
+              <img
+                src="/img/Business-Growth.jpg"
+                class="card-img-top"
+                alt="Man working on laptop"
+              />
+              <div class="tag">
+                <span>Customer</span>
+                <span>Management</span>
+              </div>
+              <div class="arrow-icon"></div>
+            </div>
+            <div class="card-body">
+              <div class="orange-bar"></div>
+              <h5 class="card-title">Customer Management</h5>
+              <p class="card-text">
+                Business growth rests on your ability to choose partners who
+                understand your services, products, and market...
+              </p>
+              <button class="expertise-btn">More on our expertise</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-img-wrapper">
+              <img
+                src="./img/management.png"
+                class="card-img-top"
+                alt="Woman in business attire"
+              />
+              <div class="tag">
+                <span>Omnichannel</span>
+                <span>Management</span>
+              </div>
+              <div class="arrow-icon"></div>
+            </div>
+            <div class="card-body">
+              <div class="orange-bar"></div>
+              <h5 class="card-title">Omnichannel Management</h5>
+              <p class="card-text">
+                Across voice & digital channels, CCI provides support to
+                organizations across the world. We implement...
+              </p>
+              <button class="expertise-btn">More on our expertise</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-img-wrapper">
+              <img
+                src="./img/administration.jpg"
+                class="card-img-top"
+                alt="Woman in business attire"
+              />
+              <div class="tag">
+                <span>Administration</span>
+                <span>Processing</span>
+              </div>
+              <div class="arrow-icon"></div>
+            </div>
+            <div class="card-body">
+              <div class="orange-bar"></div>
+              <h5 class="card-title">Administration & Processing</h5>
+              <p class="card-text">
+                Operations and effectiveness across translation, digitization,
+                claims and complex case management require...
+              </p>
+              <button class="expertise-btn">More on our expertise</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <div class="card-img-wrapper">
+              <img
+                src="./img/technical-expertise.png"
+                class="card-img-top"
+                alt="Two women in coats"
+              />
+              <div class="tag">
+                <span>Technical</span>
+                <span>Expertise</span>
+              </div>
+              <div class="arrow-icon"></div>
+            </div>
+            <div class="card-body">
+              <div class="orange-bar"></div>
+              <h5 class="card-title">Technical Expertise</h5>
+              <p class="card-text">
+                Detail-oriented and focused services require a highly educated
+                workforce. CCI bring a diverse talent base with the requisite
+                specialization...
+              </p>
+              <button class="expertise-btn">More on our expertise</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- english-section -->
+    <section class="insulting-section bg-overlay">
+      <div class="gradient-overlay"></div>
+      <div class="contain-fluid con-wrapper">
+        <div class="row">
+          <div class="col-lg-6 panel-left">
+            <!-- <p class="subhead">
+              Expect and deliver the highest quality outcomes.
+            </p> -->
+            <h1 class="main-head">ENGLISH NEUTRAL,<br />GLOBALLY CAPABLE</h1>
+          </div>
+          <div class="col-lg-6 panel-right">
+            <div class="descrip">
+              <p>
+                Africa has one of the most globalized youth populations, with
+                young job seeking individuals exposed to an array of popular
+                culture that influences their style, conversations, behaviors
+                and understanding of the world.
+              </p>
+            </div>
+            <div class="descrip">
+              <p>
+                Our workforce provides an English neutral accent that
+                distinguishes itself across our services as well as adds a
+                greater sense of familiarity to your customers. First language
+                capability coupled with an incredibly knowledgeable workforce
+                provides the capability to dynamically resolve customer queries.
+              </p>
+            </div>
+            <button class="learn-more-btn">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- meet our team  -->
+    <div class="page-layout m-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-5 hero-content">
+            <h1 class="hero-title">MEET OUR TEAM</h1>
+            <div class="team-members">
+              <div class="team-member">
+                <div class="team-member-name">1. Martin Roe</div>
+                <div class="team-member-position">Chief Executive Officer</div>
+              </div>
+              <div class="team-member">
+                <div class="team-member-name">2. Mark Channa</div>
+                <div class="team-member-position">Chief Operating Officer</div>
+              </div>
+              <div class="team-member">
+                <div class="team-member-name">3. Lizelle Strydom</div>
+                <div class="team-member-position">
+                  Managing Director: CareerBox
+                </div>
+              </div>
+              <div class="team-member">
+                <div class="team-member-name">4. Mahira Khan</div>
+                <div class="team-member-position">
+                  Director of Bids and Contracts
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7 card-stack">
+            <div class="card-column">
+              <div class="info-card" data-index="0">
+                <div class="card-header">
+                  <div class="card-number">01</div>
+                  <div class="card-heading">
+                    Acknowledge needs and objectives
+                  </div>
+                </div>
+                <img
+                  src="./img/image-22.png"
+                  alt="Person with documents"
+                  class="card-image"
+                />
+                <p class="card-paragraph">
+                  We prepare for your meeting by identifying key milestones or
+                  events that have happened since we last met. Then we review
+                  your portfolios to see if they're well positioned to meet your
+                  goals.
+                </p>
+              </div>
+
+              <div class="info-card" data-index="1">
+                <div class="card-header">
+                  <div class="card-number">02</div>
+                  <div class="card-heading">
+                    Acknowledge needs and objectives
+                  </div>
+                </div>
+                <img
+                  src="./img/image-20.png"
+                  alt="Person with documents"
+                  class="card-image"
+                />
+                <p class="card-paragraph">
+                  We prepare for your meeting by identifying key milestones or
+                  events that have happened since we last met. Then we review
+                  your portfolios to see if they're well positioned to meet your
+                  goals.
+                </p>
+              </div>
+              <div class="info-card" data-index="2">
+                <div class="card-header">
+                  <div class="card-number">03</div>
+                  <div class="card-heading">
+                    Acknowledge needs and objectives
+                  </div>
+                </div>
+                <img
+                  src="./img/image-26.png"
+                  alt="Person with documents"
+                  class="card-image"
+                />
+                <p class="card-paragraph">
+                  We prepare for your meeting by identifying key milestones or
+                  events that have happened since we last met. Then we review
+                  your portfolios to see if they're well positioned to meet your
+                  goals.
+                </p>
+              </div>
+              <div class="info-card" data-index="3">
+                <div class="card-header">
+                  <div class="card-number">04</div>
+                  <div class="card-heading">
+                    Acknowledge needs and objectives
+                  </div>
+                </div>
+                <img
+                  src="./img/image-27.png"
+                  alt="Person with documents"
+                  class="card-image"
+                />
+                <p class="card-paragraph">
+                  We prepare for your meeting by identifying key milestones or
+                  events that have happened since we last met. Then we review
+                  your portfolios to see if they're well positioned to meet your
+                  goals.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- news and articles  -->
+    <div class="v0-container">
+      <div class="v0-header">
+        <h1>News & Articles</h1>
+        <!-- <div class="v0-nav-buttons">
+          <button class="v0-nav-button">&#8592;</button>
+          <button class="v0-nav-button">&#8594;</button>
+        </div> -->
+      </div>
+      <div class="v0-carousel row flex-nowrap">
+        <div class="v0-carousel-item col-12 col-md-6 col-lg-4">
+          <img src="./img/article1.webp" alt="Article 1" />
+          <div class="v0-card-content">
+            <div class="v0-card-category">Digital | Funds</div>
+            <h2 class="v0-card-title">
+              Family business leaders focus from next generation on growth
+            </h2>
+            <div class="v0-card-footer">
+              <span class="v0-card-date">Dec 26, 2023</span>
+            </div>
+          </div>
+        </div>
+        <div class="v0-carousel-item col-12 col-md-6 col-lg-4">
+          <img src="./img/article2.webp" alt="Article 2" />
+          <div class="v0-card-content">
+            <div class="v0-card-category">Business | Tech</div>
+            <h2 class="v0-card-title">
+              Family business leaders focus from next generation on growth
+            </h2>
+            <div class="v0-card-footer">
+              <span class="v0-card-date">Dec 26, 2023</span>
+            </div>
+          </div>
+        </div>
+        <div class="v0-carousel-item col-12 col-md-6 col-lg-4">
+          <img src="./img/article3.webp" alt="Article 3" />
+          <div class="v0-card-content">
+            <div class="v0-card-category">Business | Consumers</div>
+            <h2 class="v0-card-title">
+              Family business leaders focus from next generation on growth
+            </h2>
+            <div class="v0-card-footer">
+              <span class="v0-card-date">Dec 26, 2023</span>
+            </div>
+          </div>
+        </div>
+        <div class="v0-carousel-item col-12 col-md-6 col-lg-4">
+          <img src="./img/article4.webp" alt="Article 4" />
+          <div class="v0-card-content">
+            <div class="v0-card-category">Growth | Leadership</div>
+            <h2 class="v0-card-title">
+              Family business leaders focus from next generation on growth
+            </h2>
+            <div class="v0-card-footer">
+              <span class="v0-card-date">Dec 26, 2023</span>
+            </div>
+          </div>
+        </div>
+        <div class="v0-carousel-item col-12 col-md-6 col-lg-4">
+          <img src="./img/article5.webp" alt="Article 5" />
+          <div class="v0-card-content">
+            <div class="v0-card-category">Technology | Innovation</div>
+            <h2 class="v0-card-title">
+              Emerging technologies shaping the future of industries
+            </h2>
+            <div class="v0-card-footer">
+              <span class="v0-card-date">Dec 26, 2023</span>
+            </div>
+          </div>
+        </div>
+        <div class="v0-carousel-item col-12 col-md-6 col-lg-4">
+          <img src="./img/article5.webp" alt="Article 6" />
+          <div class="v0-card-content">
+            <div class="v0-card-category">Finance | Markets</div>
+            <h2 class="v0-card-title">
+              Global market trends and their impact on investment strategies
+            </h2>
+            <div class="v0-card-footer">
+              <span class="v0-card-date">Dec 26, 2023</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer component  -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h5>
+              Sign up for alerts, monthly insights, strategic business
+              perspectives and exclusive content in your inbox.
+            </h5>
+            <a href="#" class="subscribe-btn">Subscribe</a>
+          </div>
+          <div class="col">
+            <h5>Company</h5>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Sustainability</a></li>
+              <li><a href="#">Leadership Team</a></li>
+              <li><a href="#">News & Media</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h5>Services</h5>
+            <ul>
+              <li><a href="#">Financial Planning</a></li>
+              <li><a href="#">Wealth Management</a></li>
+              <li><a href="#">Portfolio Consulting</a></li>
+              <li><a href="#">Mergers & Acquisitions</a></li>
+              <li><a href="#">Sustainability Assurance</a></li>
+              <li><a href="#">Crisis Management</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h5>Industries</h5>
+            <ul>
+              <li><a href="#">Banking & Finance</a></li>
+              <li><a href="#">Sciences & Healthcare</a></li>
+              <li><a href="#">Technology & Software</a></li>
+              <li><a href="#">Education & Training</a></li>
+              <li><a href="#">Hospitality & Leisure</a></li>
+              <li><a href="#">Power & Utilities</a></li>
+            </ul>
+          </div>
+          <div class="col quick-contact">
+            <h5>Quick Contact</h5>
+            <p>Allianz@7oroof.com</p>
+            <p>+2 011 6114 5741</p>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="get-in-touch">Get In Touch</div>
+        <div class="footer-bottom">
+          <div class="row">
+            <div class="col">
+              <p>
+                &copy;2024 Allianz. All Rights Reserved. With Love by 7oroof.com
+              </p>
+            </div>
+            <div class="col" style="text-align: right">
+              <a href="#">Terms & Conditions</a> &bull;
+              <a href="#">Privacy Policy</a> &bull;
+              <a href="#">Site Map</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script>
+      // navbar
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        console.log(navbar);
+
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+      // hero
+      const slides = document.querySelectorAll(".slide");
+      const prevButton = document.querySelector(".prev");
+      const nextButton = document.querySelector(".next");
+      const progressBars = document.querySelectorAll(".progress");
+      const counters = document.querySelectorAll(".slide-counter");
+      let currentSlide = 0;
+
+      function showSlide(index) {
+        slides[currentSlide].classList.remove("active");
+        slides[index].classList.add("active");
+        currentSlide = index;
+        updateProgress();
+      }
+
+      function nextSlide() {
+        showSlide((currentSlide + 1) % slides.length);
+      }
+
+      function prevSlide() {
+        showSlide((currentSlide - 1 + slides.length) % slides.length);
+      }
+
+      function updateProgress() {
+        progressBars.forEach((bar, index) => {
+          bar.style.width = index <= currentSlide ? "100%" : "0%";
+        });
+        counters.forEach((counter) => {
+          counter.textContent = `${currentSlide + 1}/${slides.length}`;
+        });
+      }
+
+      prevButton.addEventListener("click", prevSlide);
+      nextButton.addEventListener("click", nextSlide);
+
+      // Initialize progress
+      updateProgress();
+
+      // Auto-advance slides every 5 seconds
+      setInterval(nextSlide, 5000);
+
+      // location
+      function showLocation(locationId) {
+        // Hide all location cards
+        document.querySelectorAll(".solution-card").forEach((card) => {
+          card.classList.add("hidden");
+        });
+
+        // Show the selected location card
+        document.getElementById(locationId).classList.remove("hidden");
+
+        // Update active state for sidebar items
+        document.querySelectorAll(".solution-item").forEach((item) => {
+          item.classList.remove("active");
+        });
+        event.currentTarget.classList.add("active");
+      }
+
+      // news and articles
+      var $imagesCarousel = jQuery(".v0-carousel").flickity({
+        accessibility: false,
+        autoPlay: false,
+        pauseAutoPlayOnHover: false,
+        cellAlign: "center",
+        contain: false,
+        draggable: true,
+        friction: 0.2,
+        initialIndex: 0,
+        lazyLoad: false,
+        percentPosition: true,
+        prevNextButtons: false,
+        pageDots: false,
+        resize: true,
+        rightToLeft: false,
+        setGallerySize: true,
+        watchCSS: false,
+        wrapAround: true,
+      });
+
+      function resizeCells() {
+        var flkty = $imagesCarousel.data("flickity");
+        var $current = flkty.selectedIndex;
+        var $length = flkty.cells.length;
+        var $imageNumLimit = 5;
+        if ($length < $imageNumLimit) {
+          $imagesCarousel.flickity("destroy");
+        }
+        jQuery(".v0-carousel .v0-carousel-item").removeClass(
+          "nextToSelectedLeft"
+        );
+        jQuery(".v0-carousel .v0-carousel-item").removeClass(
+          "nextToSelectedRight"
+        );
+        jQuery(".v0-carousel .v0-carousel-item").removeClass(
+          "nextToSelectedLeft2"
+        );
+        jQuery(".v0-carousel .v0-carousel-item").removeClass(
+          "nextToSelectedRight2"
+        );
+        jQuery(".v0-carousel .v0-carousel-item")
+          .eq($current - 1)
+          .addClass("nextToSelectedLeft");
+        jQuery(".v0-carousel .v0-carousel-item")
+          .eq($current - 2)
+          .addClass("nextToSelectedLeft2");
+        var $endCell;
+        if ($current + 1 == $length) {
+          $endCell = "0";
+        } else {
+          $endCell = $current + 1;
+        }
+        jQuery(".v0-carousel .v0-carousel-item")
+          .eq($endCell)
+          .addClass("nextToSelectedRight");
+        if ($endCell + 1 < $imageNumLimit) {
+          jQuery(".v0-carousel .v0-carousel-item")
+            .eq($endCell + 1)
+            .addClass("nextToSelectedRight2");
+        } else {
+          jQuery(".v0-carousel .v0-carousel-item")
+            .eq(0)
+            .addClass("nextToSelectedRight2");
+        }
+      }
+      resizeCells();
+
+      $imagesCarousel.on("scroll.flickity", function () {
+        resizeCells();
+      });
+
+      //HOVER FUNCTIONS
+      $(".v0-carousel-item").bind("mouseover", function () {
+        if (this.className === "v0-carousel-item nextToSelectedLeft") {
+          $imagesCarousel.flickity("playLeftSlowPlayer");
+        } else if (this.className === "v0-carousel-item nextToSelectedLeft2") {
+          $imagesCarousel.flickity("playLeftFastPlayer");
+        } else if (this.className === "v0-carousel-item nextToSelectedRight") {
+          $imagesCarousel.flickity("playRightSlowPlayer");
+        } else if (this.className === "v0-carousel-item nextToSelectedRight2") {
+          $imagesCarousel.flickity("playRightFastPlayer");
+        }
+      });
+
+      $(".v0-carousel-item").bind("mouseout", function () {
+        $imagesCarousel.flickity("pausePlayer");
+      });
+    </script>
+  </body>
+</html>
