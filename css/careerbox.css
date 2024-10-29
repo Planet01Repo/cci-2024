@@ -1,0 +1,591 @@
+@import url("main.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: var(--regular-font);
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 1920px) {
+  .bg-image {
+    background-image: linear-gradient(
+        45deg,
+        rgb(234, 120, 27, 0.1) 60%,
+        var(--secondary-color) 100%
+      ),
+      url("../assests/careerBox_title.webp");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .overlay h1 {
+    font-family: var(--bold-font);
+    font-size: var(--h1-font-size);
+  }
+
+  /* Impact Souring Section */
+  .cont_impact_sourcing {
+    padding: 0px 50px;
+    margin-top: 5rem;
+  }
+
+  .career_box_img {
+    margin-bottom: 2rem;
+  }
+  .impact_souring_first_column {
+    padding-right: 70px;
+  }
+
+  .cont_impact_sourcing h2 {
+    font-size: var(--h2-font-size);
+    font-family: var(--regular-font);
+  }
+  .cont_impact_sourcing p {
+    font-size: var(--h5-font-size);
+    line-height: 30px;
+    letter-spacing: 1px;
+  }
+
+  .cont_impact_sourcing h6 {
+    font-size: 16px;
+    padding-bottom: 20px;
+    color: var(--secondary-color);
+  }
+
+
+
+  /* Cards Section */
+  .about_career_box {
+    padding: 0px 50px;
+    margin-top: 3rem;
+  }
+  .about_career_box h1 {
+    font-size: var(--h2-font-size);
+    color: var(--regular-font) !important;
+    padding-bottom: 20px;
+  }
+  .about_career_box p {
+    font-size: var(--h5-font-size);
+    line-height: 30px;
+    letter-spacing: 1px;
+  }
+  .about_career_box_col1 {
+    padding-right: 70px;
+  }
+  .counter {
+    color: var(--secondary-color);
+    font-size: var(--h3-font-size);
+    font-weight: bold;
+  }
+
+  .plus {
+    color: var(--secondary-color);
+    font-size: var(--h3-font-size);
+    font-weight: bold;
+  }
+
+  .col_counter{
+    margin: 2rem 0rem;
+  }
+
+  .counter_para {
+    font-size: 14px;
+  }
+  .counter-section{
+    margin: 3rem 0rem;
+  }
+
+  /* Slidder Section */
+  .slidder-section {
+    display: none;
+  }
+  /* Learn More Section */
+  .learn_hero-section {
+    position: relative;
+    background: url("../assests/careerBox_learn_more.png") no-repeat center
+      center;
+    background-size: cover;
+    height: 100vh;
+  }
+
+  /* Overlay using a div */
+  .learn_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  /* Floating card styles */
+  .learn_floating-card {
+    position: absolute;
+    top: 38%;
+    left: 17%;
+    z-index: 2;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 600px;
+    height: auto;
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+    opacity: 0;
+    transform: translateX(-400px);
+  }
+
+  .learn_floating-card.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .learn_floating-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .learn_floating-card p {
+    font-size: 24px !important;
+    font-weight: 200 !important;
+    margin-bottom: 20px;
+  }
+
+  .learn_arrow-btn {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .learn_circular-btn {
+    width: 100px;
+    height: 100px;
+    background-color: var(--secondary-color);
+    color: #ff5722;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .learn_circular-btn i {
+    font-size: var(--h3-font-size);
+    color: #fff;
+  }
+
+  .learn_circular-btn:hover {
+    transform: scale(1.2);
+  }
+}
+@media screen and (max-width: 1550px) {
+  .overlay h1 {
+    font-family: var(--bold-font);
+    font-size: var(--h2-font-size);
+  }
+
+  /* Impact Souring Section */
+
+  .cont_impact_sourcing h2 {
+    font-size: var(--h3-font-size);
+    font-family: var(--regular-font);
+  }
+  .cont_impact_sourcing p {
+    font-size: var(--h6-font-size);
+  }
+
+  /* Cards Section */
+
+  .about_career_box h1 {
+    font-size: var(--h3-font-size);
+    color: var(--regular-font) !important;
+  }
+  .about_career_box p {
+    font-size: var(--h6-font-size);
+  }
+  .counter {
+    color: var(--secondary-color);
+    font-size: var(--h4-font-size);
+    font-weight: bold;
+  }
+  .plus {
+    font-size: var(--h4-font-size);
+  }
+
+  .counter_para {
+    font-size: 16px !important;
+  }
+
+  /* Learn More Section */
+  .learn_hero-section {
+    height: 85vh;
+  }
+
+  /* Floating card styles */
+  .learn_floating-card {
+    position: absolute;
+    top: 35%;
+    left: 13%;
+    z-index: 2;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    height: auto;
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+    opacity: 0;
+    transform: translateX(-400px);
+  }
+
+  .learn_floating-card.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .learn_floating-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .learn_floating-card p {
+    font-size: 16px !important;
+    font-weight: 300 !important;
+    margin-bottom: 20px;
+  }
+
+  .learn_arrow-btn {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .learn_circular-btn {
+    width: 80px;
+    height: 80px;
+    background-color: var(--secondary-color);
+    color: #ff5722;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .learn_circular-btn i {
+    color: #fff;
+  }
+
+  .learn_circular-btn:hover {
+    transform: scale(1.2);
+  }
+}
+
+@media screen and (max-width: 1155px) {
+  .learn_floating-card {
+    position: absolute;
+    top: 45%;
+    left: 15%;
+    width: 400px;
+    transform: translateX(-50%);
+  }
+
+  .learn_floating-card p {
+    font-size: 14px !important;
+  }
+}
+@media screen and (max-width: 1023px) {
+  /* Main Section */
+  .bg-image {
+    height: 70vh;
+  }
+
+  /* Impact Souring Section */
+  .cont_impact_sourcing {
+    padding: 0px 30px;
+    margin-top: 3.5rem;
+  }
+
+  .career_box_img {
+    margin-bottom: 2rem;
+  }
+
+  .cont_impact_sourcing h2 {
+    font-size: var(--h4-font-size);
+  }
+  .cont_impact_sourcing p {
+    font-size: var(--body-font-size);
+    letter-spacing: 0.5px;
+  }
+
+  .cont_impact_sourcing h6 {
+    font-size: 18px;
+  }
+
+  .impact_souring_first_column {
+    padding-right: 10px;
+  }
+
+  /* About Career Box */
+  .about_career_box {
+    padding: 0px 30px;
+    margin-top: 2rem;
+  }
+
+  .about_career_box h1 {
+    font-size: var(--h4-font-size);
+  }
+  .about_career_box p {
+    font-size: var(--body-font-size);
+  }
+
+  .about_career_box_col1 {
+    padding-right: 20px;
+  }
+
+  /* Floating Cards */
+  .learn_floating-card {
+    position: absolute;
+    top: 45%;
+    left: 13%;
+    width: 440px;
+    transform: translateY(-50%);
+  }
+}
+
+.learn_floating-card.visible {
+  opacity: 1;
+  transform: translateX(0); /* Slide in */
+}
+@media screen and (max-width: 580px) {
+  /* Counter Section */
+  .counter-section {
+    display: none;
+  }
+
+  /* Slidder Section */
+  .slidder-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30rem;
+  }
+  .slider-text {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+  }
+
+  .slider-container {
+    position: relative;
+    height: 170px;
+    overflow: hidden;
+    margin-top: 40px;
+  }
+
+  .slider-content {
+    display: flex;
+    flex-direction: column;
+    animation: slide 12s linear infinite;
+  }
+
+  .slider-item {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 170px;
+    font-weight: 700;
+    color: #111;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateY(0);
+    }
+    15% {
+      transform: translateY(0);
+    }
+    20% {
+      transform: translateY(-170px);
+    }
+    35% {
+      transform: translateY(-170px);
+    }
+    40% {
+      transform: translateY(-340px);
+    }
+    55% {
+      transform: translateY(-340px);
+    }
+    60% {
+      transform: translateY(-510px);
+    }
+    75% {
+      transform: translateY(-510px);
+    }
+    80% {
+      transform: translateY(-680px);
+    }
+    96% {
+      transform: translateY(-680px);
+    }
+    100% {
+      transform: translateY(-850px);
+    }
+    110% {
+      transform: translateY(-850px);
+    }
+  }
+
+  .learn_floating-card {
+    position: absolute;
+    top: 40%;
+    left: 11%;
+    width: 400px;
+    transform: translateY(-50%);
+  }
+}
+
+@media screen and (max-width: 475px) {
+  /* Impact Sourcing */
+  .impact_souring_first_column {
+    padding-right: 0px;
+  }
+
+  /* Abour Career Box */
+  .about_career_box_col1 {
+    padding-right: 0px;
+  }
+  /* Learn About Section */
+  .learn_hero-section {
+    position: relative;
+    background: url("../assests/careerBox_learn_more.png") no-repeat center
+      center;
+    background-size: cover;
+    height: 100vh;
+  }
+  .learn_floating-card {
+    background-color: var(--secondary-color);
+    width: 350px;
+    height: auto;
+    left: 20px;
+  }
+
+  /* Slidder Section */
+  .slidder-section {
+    height: 25rem;
+  }
+  .slider-text {
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+  }
+
+  .slider-container {
+    position: relative;
+    height: 170px;
+    overflow: hidden;
+    margin-top: 40px;
+  }
+
+  .slider-content {
+    display: flex;
+    flex-direction: column;
+    animation: slide 12s linear infinite;
+  }
+
+  .slider-item {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 170px;
+    font-weight: 700;
+    color: #111;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateY(0);
+    }
+    15% {
+      transform: translateY(0);
+    }
+    20% {
+      transform: translateY(-170px);
+    }
+    35% {
+      transform: translateY(-170px);
+    }
+    40% {
+      transform: translateY(-340px);
+    }
+    55% {
+      transform: translateY(-340px);
+    }
+    60% {
+      transform: translateY(-510px);
+    }
+    75% {
+      transform: translateY(-510px);
+    }
+    80% {
+      transform: translateY(-680px);
+    }
+    96% {
+      transform: translateY(-680px);
+    }
+    100% {
+      transform: translateY(-850px);
+    }
+    110% {
+      transform: translateY(-850px);
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .learn_floating-card {
+    position: absolute;
+    top: 42%;
+    left: 11%;
+    width: 300px;
+    transform: translateY(-50%);
+    padding: 13px;
+  }
+  .learn_floating-card p {
+    font-size: 13px !important;
+  }
+  .learn_circular-btn {
+    width: 60px;
+    height: 60px;
+  
+  }
+}
+

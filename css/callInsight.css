@@ -1,0 +1,900 @@
+@import url("main.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: var(--regular-font);
+  width: 100%;
+  height: 100%;
+  /* overflow-x: hidden; */
+}
+
+@media screen and (max-width: 1920px) {
+  .call_insight-video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    overflow: hidden;
+  }
+
+  .call_insight-video-container h1 {
+    padding-top: 24rem !important;
+    font-family: var(--bold-font);
+    font-size: var(--h1-font-size);
+    z-index: 2;
+  }
+
+  .call_insight-video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire area */
+  }
+
+  .call_insight-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  }
+
+  .call_insight-content-background {
+    z-index: 2; /* Ensure text is above video and overlay */
+  }
+
+  /* Call Insight Who we are  */
+  .call_insight_who_we_are {
+    padding: 0px 100px;
+    margin-top: 5rem;
+  }
+
+  .call_insight_who_we_are_first_column {
+    padding-right: 70px !important;
+  }
+
+  .call_insight_who_we_are h2 {
+    font-size: var(--h2-font-size);
+    font-family: var(--regular-font);
+  }
+
+  .call_insight_who_we_are h6 {
+    font-size: 20px;
+    padding-bottom: 20px;
+    color: var(--secondary-color);
+  }
+  .call_insight_who_we_are p {
+    font-size: var(--h5-font-size);
+    line-height: 30px;
+    letter-spacing: 1px;
+  }
+
+  /* Why Choose us Container */
+  .why_choose_us_1920 {
+    padding: 4rem 5rem;
+  }
+  .why_choose_us_1520 {
+    display: none;
+  }
+  .why_choose_us_580 {
+    display: none;
+  }
+  .experience-container_1920 {
+    display: flex;
+    align-items: center;
+  }
+
+  .experience-circle_1920 {
+    position: relative;
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin-right: -30px;
+  }
+
+  .experience-circle_1920 svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .experience-circle_1920 .years_1920 {
+    font-weight: bold;
+    position: absolute;
+    z-index: 2;
+    background-color: #ff5722;
+    padding: 13px 20px;
+    border-radius: 50%;
+  }
+
+  .arrow-circle_1920 {
+    width: 120px;
+    height: 120px;
+    background-color: #ff5722;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  .arrow-circle_1920:hover {
+    color: #fff;
+  }
+
+  .years_1920 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--h1-font-size);
+    width: 160px;
+    height: 160px;
+    text-align: center;
+  }
+
+  .title_1920 {
+    color: var(--primary-color);
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .industry-list_1920 p {
+    font-size: 25px;
+    margin-bottom: 10px;
+    width: 350px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+  }
+
+  .col_industry-list_1920 {
+    padding-left: 1rem !important;
+  }
+
+  .raw-industry_1920 {
+    width: 350px;
+    font-weight: 500;
+    transition: color 0.3s ease, color 0.3s ease;
+  }
+
+  .raw-industry_1920::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 1px;
+    display: block;
+    margin-top: 16px;
+    background: #111;
+    transition: width 0.5s;
+  }
+
+  .raw-industry_1920:hover::after {
+    width: 350px;
+  }
+
+  /* Slidder Section */
+  .call-insight-slider-section {
+    display: none;
+  }
+
+  /* Call Insight Counter */
+  .call_insight_counter-section {
+    padding: 0 !important;
+    margin-bottom: 4rem;
+  }
+  .call_insight_col_counter {
+    margin: 2rem 0;
+  }
+  .call_insight_counter {
+    color: var(--secondary-color);
+    font-size: var(--h3-font-size);
+    font-weight: bold;
+  }
+  .call_insight_plus {
+    font-size: var(--h3-font-size);
+  }
+
+  .call_insight_counter_para {
+    font-size: 20px !important;
+  }
+
+  .call_insight_plus {
+    font-weight: bold;
+    color: var(--secondary-color);
+  }
+
+  /* Cards Section */
+  .card {
+    text-align: start;
+    border-top: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    margin-top: 50px;
+    height: 290px;
+  }
+
+  .card1{
+    border-left: none !important;
+  }
+  
+
+  .card-body {
+    padding: 10px;
+  }
+  .card-icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+
+  .card-title {
+    color: var(--primary-color);
+    margin-top: 30px !important;
+  }
+
+  .card_heading{
+    margin: 0rem 40px;
+    color: var(--primary-color) !important;
+  }
+
+  .card_grid {
+    transition: color 0.5s ease, color 0.3s ease;
+  }
+
+  .card_grid::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 8px;
+    display: block;
+    margin-top: 5px;
+    background: #ffc107;
+    transition: width 0.5s;
+  }
+
+  .card_grid:hover::after {
+    width: 25%;
+  }
+
+  .card-text {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  .row.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .col-lg-3,
+  .col-md-6 {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .card_img:hover {
+    animation: bounce 0.6s ease-in-out;
+  }
+  .no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .no-gutters > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    20% {
+      transform: translateY(-10px);
+    }
+    50% {
+      transform: translateY(5px);
+    }
+    80% {
+      transform: translateY(-5px);
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .call_insight-video-container h1 {
+    padding-top: 17rem !important;
+    font-size: var(--h2-font-size);
+    z-index: 2;
+  }
+
+  /* Call Insight Who we are  */
+  .call_insight_who_we_are {
+    padding: 0px 70px;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+  }
+
+  .call_insight_who_we_are h2 {
+    font-size: var(--h3-font-size);
+    font-family: var(--regular-font);
+  }
+
+  .call_insight_who_we_are h6 {
+    font-size: 16px;
+    padding-bottom: 10px;
+  }
+
+  /* Why Choose Us */
+
+  /* Why Choose us Container */
+  .why_choose_us_1920 {
+    display: none;
+  }
+  .why_choose_us_1520 {
+    display: block;
+  }
+  .why_choose_us_580 {
+    display: none;
+  }
+  .why_choose_us_1520 {
+    margin-top: 0 !important;
+    padding: 2rem 3rem !important;
+    margin-bottom: 0rem;
+  }
+  .experience-container_1520 {
+    display: flex;
+    align-items: center;
+  }
+
+  .experience-circle_1520 {
+    position: relative;
+    width: 210px !important;
+    height: 210px !important;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin-right: -30px;
+  }
+
+  .experience-circle_1520 svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .experience-circle_1520 .years_1520 {
+    font-weight: bold;
+    position: absolute;
+    z-index: 2;
+    background-color: var(--secondary-color);
+    padding: 13px 20px;
+    border-radius: 50%;
+  }
+
+  .arrow-circle_1520 {
+    width: 80px;
+    height: 80px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  .arrow-circle_1520:hover {
+    color: #fff;
+  }
+
+  .years_1520 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--h2-font-size);
+    width: 110px;
+    height: 110px;
+    text-align: center;
+  }
+
+  .title_1520 {
+    color: var(--primary-color);
+    font-size: var(--h4-font-size) !important;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .industry-list_1520 p {
+    font-size: var(--h6-font-size);
+    margin-bottom: 10px;
+    width: 295px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+  }
+
+  .raw-industry_1520 {
+    width: 295px;
+    font-weight: 500;
+    transition: color 0.3s ease, color 0.3s ease;
+  }
+
+  .raw-industry_1520::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 1px;
+    display: block;
+    margin-top: 16px;
+    background: #111;
+    transition: width 0.5s;
+  }
+
+  .raw-industry_1520:hover::after {
+    width: 295px;
+  }
+
+  /* Call Insight Counter */
+
+  .call_insight_counter {
+    color: var(--secondary-color);
+    font-size: var(--h4-font-size);
+    font-weight: bold;
+  }
+  .call_insight_plus {
+    font-size: var(--h4-font-size);
+  }
+
+  .call_insight_counter_para {
+    font-size: 16px !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .industry-list p {
+    font-size: 13px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+  }
+
+  /* Card Section */
+  .card1{
+    border-left: 1px solid #ddd !important;
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+  /* call Insigt Wo we are section */
+  .call_insight_who_we_are h2 {
+    font-size: var(--h4-font-size);
+    font-family: var(--regular-font);
+    margin-bottom: 1.5rem;
+  }
+
+  .call_insight_who_we_are h6 {
+    font-size: 16px;
+    padding-bottom: 20px;
+    color: var(--secondary-color);
+  }
+  .call_insight_who_we_are p {
+    font-size: var(--h6-font-size);
+    line-height: 30px;
+    letter-spacing: 1px;
+  }
+
+  /* Why Choose Us */
+  .industry-list_1520 p {
+    font-size: var(--h6-font-size);
+    margin-bottom: 10px;
+    width: 250px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+  }
+
+  .raw-industry_1520 {
+    width: 250px;
+    font-weight: 500;
+    transition: color 0.3s ease, color 0.3s ease;
+  }
+
+  .raw-industry_1520::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 1px;
+    display: block;
+    margin-top: 16px;
+    background: #111;
+    transition: width 0.5s;
+  }
+
+  .raw-industry_1520:hover::after {
+    width: 250px;
+  }
+
+  .content-background h3 {
+    font-size: 16px;
+  }
+
+  .content-background p {
+    line-height: 20px;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 200;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .industry-list_1520 p {
+    font-size: var(--h6-font-size);
+    margin-bottom: 10px;
+    width: 375px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+  }
+
+  .raw-industry_1520 {
+    width: 375px;
+    font-weight: 500;
+    transition: color 0.3s ease, color 0.3s ease;
+  }
+
+  .raw-industry_1520::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 1px;
+    display: block;
+    margin-top: 16px;
+    background: #111;
+    transition: width 0.5s;
+  }
+
+  .raw-industry_1520:hover::after {
+    width: 375px;
+  }
+
+  .content-background {
+    width: 75%;
+  }
+  .content-background h3 {
+    font-size: 16px;
+  }
+  #raw {
+    margin-top: 0 !important;
+  }
+  .industry-list p {
+    font-size: 16px;
+  }
+
+  .cards_container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .container,
+    .cards_container,
+    .experience-container {
+      width: 100% !important;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .card {
+      width: 100% !important;
+      margin: 10px 0;
+    }
+
+    .no-gutters {
+      margin: 0 !important; /* Removes margin */
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  /*  Who we are Section*/
+
+  .call_insight_who_we_are {
+    padding: 0px 40px;
+    margin-top: 5rem;
+  }
+
+  /* Why Choose Us Section */
+
+  .why_choose_us_1520 {
+    display: none;
+  }
+
+  .why_choose_us_580 {
+    display: block;
+    padding: 2rem 30px !important;
+  }
+  .experience-container_580 {
+    display: flex;
+    align-items: center;
+  }
+
+  .experience-circle_580 {
+    position: relative;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin-right: -30px;
+  }
+
+  .experience-circle_580 svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .experience-circle_580 .years_580 {
+    font-weight: bold;
+    position: absolute;
+    z-index: 2;
+    background-color: #ff5722;
+    padding: 13px 20px;
+    border-radius: 50%;
+  }
+
+  .arrow-circle_580 {
+    width: 70px;
+    height: 70px;
+    background-color: #ff5722;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  .arrow-circle_580:hover {
+    color: #fff;
+  }
+
+  .years_580 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--h2-font-size);
+    width: 100px;
+    height: 100px;
+    text-align: center;
+  }
+
+  .title_580 {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 30px 0;
+    color: var(--primary-color);
+  }
+
+  .industry-list_580 p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 350px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+  }
+
+  .col_industry-list_580 {
+    padding-left: 1rem !important;
+  }
+
+  /* Why Choose Us Section */
+
+  .raw-industry_580 {
+    width: 350px;
+    font-weight: 500;
+    transition: color 0.3s ease, color 0.3s ease;
+  }
+
+  .raw-industry_580::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 1px;
+    display: block;
+    margin-top: 16px;
+    background: #111;
+    transition: width 0.5s;
+  }
+
+  .raw-industry_580:hover::after {
+    width: 350px;
+  }
+
+  .call_insight_counter-section {
+    display: none;
+  }
+
+  /* call-insight-slider-section */
+  .call-insight-slider-section {
+    display: block;
+  }
+
+  .custom-container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: 20rem;
+  }
+  .call-insight-slider-text {
+    font-size: 3.5rem !important;
+    font-weight: 700;
+    color: var(--secondary-color);
+  }
+
+  .call-insight-slider-container {
+    position: relative;
+    height: 170px;
+    overflow: hidden;
+    margin-top: 40px;
+  }
+
+  .call-insight-slider-content {
+    display: flex;
+    flex-direction: column;
+    animation: slide 12s linear infinite;
+  }
+
+  .call-insight-slider-item {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 170px;
+    font-weight: 700;
+    color: #111 !important;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateY(0);
+    }
+    15% {
+      transform: translateY(0);
+    }
+    20% {
+      transform: translateY(-170px);
+    }
+    35% {
+      transform: translateY(-170px);
+    }
+    40% {
+      transform: translateY(-340px);
+    }
+    55% {
+      transform: translateY(-340px);
+    }
+    60% {
+      transform: translateY(-510px);
+    }
+    75% {
+      transform: translateY(-510px);
+    }
+    80% {
+      transform: translateY(-680px);
+    }
+    96% {
+      transform: translateY(-680px);
+    }
+    100% {
+      transform: translateY(-850px);
+    }
+    110% {
+      transform: translateY(-850px);
+    }
+  }
+}
+
+@media screen and (max-width: 475px) {
+  /* Call Insight Hero */
+  .call_insight-video-container h1 {
+    padding-top: 17rem !important;
+    font-family: var(--bold-font);
+    font-size: var(--h3-font-size);
+    z-index: 2;
+  }
+  /* Why Choose Us */
+
+  .industry-list_580 p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 310px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+  }
+
+  .raw-industry_580 {
+    width: 310px;
+    font-weight: 500;
+    transition: color 0.3s ease, color 0.3s ease;
+  }
+
+  .raw-industry_580::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 1px;
+    display: block;
+    margin-top: 16px;
+    background: #111;
+    transition: width 0.5s;
+  }
+
+  .raw-industry_580:hover::after {
+    width: 310px;
+  }
+  .call-insight-slider-item {
+    font-size: 15px;
+  }
+  .call-insight-slider-text {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  /* Why Choose Us */
+
+  .industry-list_580 p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 270px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+  }
+
+  .raw-industry_580 {
+    width: 270px;
+    font-weight: 500;
+    transition: color 0.3s ease, color 0.3s ease;
+  }
+
+  .raw-industry_580::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 1px;
+    display: block;
+    margin-top: 16px;
+    background: #111;
+    transition: width 0.5s;
+  }
+
+  .raw-industry_580:hover::after {
+    width: 270px;
+  }
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect</title>
+    <link
+    rel="stylesheet"
+    href="Extended/Bootstrap/css/bootstrap.min.css"
+  />
+    <link rel="stylesheet" href="./css/connect.css" />
+
+    <link rel="stylesheet" href="Extended/fonts/remixicon.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    
+     <!-- Knowledge Based Hero Secotion -->
+  <section class="container-fluid px-0 ">
+    <div class="container-fluid connect_bg-image text-center">
+      <div class="connect_overlay">
+        <h1 class="text-white">Connect</h1>
+      </div>
+    </div>
+  </section>
+
+   <!-- Lets Connect Section -->
+   <section class="container-fluid cont_lets_connect">
+    <div class="row ">
+      <!-- First Column -->
+      <div class="col-md-6 lets_connect_first_column">
+        <h2 style="color: var(--primary-color);"> 
+          Let's Connect
+        </h2>
+      </div>
+
+      <!-- Second Column -->
+      <div class="col-md-6">
+        <p>
+          We are passionate about working with you. We want to discuss the potential for the future and bring value to your organizational design. Reach out and let's begin our shared journey together across your network.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+      <div class="container-fluid mt-5 connect_location">
+          <div class="row connect_location_row">
+              <!-- Map Section -->
+              <div class="col-xl-8 col-lg-7 col-md-12 col-sm-12 map position-relative">
+                  <img src="assests/cci-map.png" alt="World Map" class="img-fluid">
+                  <div class="icon icon1">
+                    <img src="assests/pointer.gif" alt="" />
+                  </div>
+                  <div class="icon icon2">
+                    <img src="assests/pointer.gif" alt="" />
+                  </div>
+                  <div class="icon icon3">
+                    <img src="assests/pointer.gif" alt="" />
+                  </div>
+                  <div class="icon icon4">
+                    <img src="assests/pointer.gif" alt="" />
+                  </div>
+                  <div class="icon icon5">
+                    <img src="assests/pointer.gif" alt="" />
+                  </div>
+                  <div class="icon icon6">
+                    <img src="assests/pointer.gif" alt="" />
+                  </div>
+              </div>
+  
+              <!-- Right Column with Country Flags -->
+              <div class="col-xl-4 col-lg-5 col-md-12 col-sm-12 col2_map">
+                <!-- Country List -->
+                <ul class="list-group">
+                    <li class="list-group-item d-flex kenya">
+                        <div>
+                            <img src="assests/Flag-Kenya.webp" alt="Kenya Flag" class="img-fluid me-3" style="width: 30px;"> <span>Kenya</span>
+                        </div>
+                        <button class="animated-button connect-btn" data-country="kenya" data-bs-toggle="modal" data-bs-target="#connectModal">
+                            <span class="button-text">Connect</span> 
+                            <span class="button-icon"><i class="ri-arrow-right-up-line"></i></span> 
+                        </button>
+                    </li>
+                    <li class="list-group-item d-flex">
+                        <div>
+                            <img src="assests/Flag-South-Africa.webp" alt="South Africa Flag" class="img-fluid me-3" style="width: 30px;"> <span>South Africa</span>
+                        </div>
+                        <button class="animated-button connect-btn" data-country="southAfrica" data-bs-toggle="modal" data-bs-target="#connectModal">
+                            <span class="button-text">Connect</span> 
+                            <span class="button-icon"><i class="ri-arrow-right-up-line"></i></span> 
+                        </button>
+                    </li>
+                    <li class="list-group-item d-flex">
+                        <div>
+                            <img src="assests/Flag_of_Ethiopia.svg.png" alt="Ethiopia Flag" class="img-fluid me-3" style="width: 30px;"><span>Ethiopia</span> 
+                        </div>
+                        <button class="animated-button connect-btn" data-country="ethiopia" data-bs-toggle="modal" data-bs-target="#connectModal">
+                            <span class="button-text">Connect</span> 
+                            <span class="button-icon"><i class="ri-arrow-right-up-line"></i></span> 
+                        </button>
+                    </li>
+                    <li class="list-group-item d-flex">
+                        <div>
+                            <img src="assests/Flag-Rwanda.webp" alt="Rwanda Flag" class="img-fluid me-3" style="width: 30px;"><span>Rwanda</span> 
+                        </div>
+                        <button class="animated-button connect-btn" data-country="rwanda" data-bs-toggle="modal" data-bs-target="#connectModal">
+                            <span class="button-text">Connect</span> 
+                            <span class="button-icon"><i class="ri-arrow-right-up-line"></i></span> 
+                        </button>
+                    </li>
+                    <li class="list-group-item d-flex">
+                        <div>
+                            <img src="assests/Flag-Ghana.webp" alt="Ghana Flag" class="img-fluid me-3" style="width: 30px;"><span>Ghana</span> 
+                        </div>
+                        <button class="animated-button connect-btn" data-country="ghana" data-bs-toggle="modal" data-bs-target="#connectModal">
+                            <span class="button-text">Connect</span> 
+                            <span class="button-icon"><i class="ri-arrow-right-up-line"></i></span> 
+                        </button>
+                    </li>
+                    <li class="list-group-item d-flex">
+                        <div>
+                            <img src="assests/Flag-Egypt.webp" alt="Egypt Flag" class="img-fluid me-3" style="width: 30px;"><span>Egypt</span> 
+                        </div>
+                        <button class="animated-button connect-btn" data-country="egypt" data-bs-toggle="modal" data-bs-target="#connectModal">
+                            <span class="button-text">Connect</span> 
+                            <span class="button-icon"><i class="ri-arrow-right-up-line"></i></span> 
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            
+          </div>
+      </div>
+
+
+      
+  
+      <!-- Modal -->
+      <div class="modal fade" id="connectModal" tabindex="-1" aria-labelledby="connectModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <!-- Left Column for Image -->
+                        <div class="col-md-7 pt-3">
+                            <img src="" alt="Country Image" id="countryImage" class="full-image">
+                        </div>
+                        <!-- Right Column for Form -->
+                        <div class="col-md-5 col-sm-6 px-1">
+                            <form class="m-4 form_section_2">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <div class="my-3">
+                                    <label for="first_name" class="form-label map_form_label">First Name:</label>
+                                    <input type="text" class="form-control map_form_control" id="first_name" placeholder="First Name" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="last_name" class="form-label map_form_label">Last Name:</label>
+                                    <input type="text" class="form-control map_form_control" id="last_name" placeholder="Last Name" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label map_form_label">Email Address:</label>
+                                    <input type="email" class="form-control map_form_control" id="email" placeholder="Email" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="company" class="form-label map_form_label">Organization:</label>
+                                    <input type="text" class="form-control map_form_control" id="company" placeholder="Organization" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="subjectOfEnquiry" class="form-label map_form_label">Subject of Enquiry:</label>
+                                    <input type="text" class="form-control map_form_control" id="subjectOfEnquiry" placeholder="Enquiry" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="description" class="form-label map_form_label">Message to our Team:</label>
+                                    <textarea class="form-control map_form_textarea" id="description" rows="3" placeholder="Message"></textarea>
+                                </div>
+                                <button type="submit" class="btn connect_sub_btn w-100">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+
+   <!-- Section Informed and Connected -->
+   <section class="container-fluid mt-5 cont_join_connect">
+    <div class="row align-items-center">
+      <div class="col-md-6 cont_join_connect_col1">
+        <h1 style="color: var(--primary-color) !important;">Join Us</h1>
+        <p>
+          Do you have a proven track record of delivery? Are you the very best at what you do? If you’re looking for an environment that creates opportunities through continued growth & invests in your development - we are the place for you and we can't wait for you to join the family. 
+        </p>
+        <p>Send your CV to <a class="join_us_cv" href="#">Careers@cci.com</a></p>
+      </div>
+      <div class="col-md-6 cont_join_connect_col2">
+        <img
+          src="assests/connect_jumpus.png"
+          alt="Business meeting"
+          class="img-fluid"
+        />
+      </div>
+    </div>
+  </section>
+
+    
+  <script src="Extended/Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/connect.js"></script>
+</body>
+</html>
