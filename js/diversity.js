@@ -1,6 +1,6 @@
 
 
-
+// Slider Animation
 $(document).ready(function () {
     var $sliders = $(".slide");
     var center = Math.floor($sliders.length / 2);
@@ -122,4 +122,67 @@ $(document).ready(function () {
 
     
     startAutoSlide();
+});
+
+
+// Diversity Card Counter
+
+$(document).ready(function () {
+    // Function to check if the element is in viewport
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.bottom >= 0
+        );
+    }
+
+    // Counter animation function
+    function animateCounter() {
+        $('.percentage').each(function () {
+            const $this = $(this);
+            const countTo = parseFloat($this.attr('data-count')); // Parse as float for decimal handling
+            $({ countNum: 0 }).animate(
+                { countNum: countTo },
+                {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function () {
+                        $this.text(this.countNum.toFixed(1) + '%'); // Adjusted to display one decimal place
+                    },
+                    complete: function () {
+                        $this.text(countTo.toFixed(1) + '%'); // Ensure final value displays with one decimal place
+                    }
+                }
+            );
+        });
+    }
+
+    // Scroll event to check when the card is in view
+    $(window).on('scroll', function () {
+        if (isInViewport(document.getElementById('counter-card'))) {
+            animateCounter();
+            $(window).off('scroll'); // Trigger only once
+        }
+    });
+});
+
+$(document).ready(function() {
+    $('.main').on('mouseenter', function() {
+        const $box = $(this).find('.box'); // Find the .box inside the hovered .main
+        $box.css({
+            'animation': 'rotate 5s linear infinite',
+            'opacity': 0.7,
+            'animation-play-state': 'running'
+        });
+    });
+
+    $('.main').on('mouseleave', function() {
+        const $box = $(this).find('.box'); // Find the .box inside the hovered .main
+        $box.css('animation-play-state', 'paused');
+
+        setTimeout(function() {
+            $box.css('opacity', 0);
+        }, 100);
+    });
 });
