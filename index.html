@@ -29,6 +29,7 @@
           aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          style="z-index: 99"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -287,79 +288,6 @@
         </div>
       </div>
     </div>
-    <!-- <div class="carouselContainer">
-      <div class="carouselOfImages">
-        <div class="carouselImage">
-          <div class="icon">💻</div>
-          <h3>Technology & Software</h3>
-          <p>
-            As artificial intelligence and the internet of things move from
-            concept to reality, all business executives worry about change, but
-            tech companies must be especially cognizant of the forces driving
-            change and increased complexity.
-          </p>
-          <a href="#" class="read-more">Read More →</a>
-        </div>
-        <div class="carouselImage">
-          <div class="icon">🎓</div>
-          <h3>Education & Training</h3>
-          <p>
-            Education is an important key to economic competitiveness and social
-            cohesion. It helps individuals & communities to reach their full
-            potential. Governments therefore committed to raising educational
-            skills and access to lifelong learning.
-          </p>
-          <a href="#" class="read-more">Read More →</a>
-        </div>
-        <div class="carouselImage">
-          <div class="icon">🍽️</div>
-          <h3>Hospitality & Leisure</h3>
-          <p>
-            Hospitality, leisure and tourism are vast subject areas that will
-            give you the grounding to work in a variety of sectors. From
-            managing a sports centre or luxury hotel, to planning a major
-            exhibition or cruise ship, the skills and knowledge you develop will
-            be transferable across this diverse industry.
-          </p>
-          <a href="#" class="read-more">Read More →</a>
-        </div>
-        <div class="carouselImage">
-          <div class="icon">⚡</div>
-          <h3>Power & Utilities</h3>
-          <p>
-            We can help you make the right decisions in an era of new energy
-            sources, sustainability, and digital transformation. Addressing
-            climate change and a new energy landscape require power sector to
-            think differently about every aspect of their business.
-          </p>
-          <a href="#" class="read-more">Read More →</a>
-        </div>
-        <div class="carouselImage">
-          <div class="icon">🏭</div>
-          <h3>Manufacturing & Industry</h3>
-          <p>
-            The manufacturing industry is evolving rapidly with the integration
-            of advanced technologies. From smart factories to sustainable
-            practices, companies are adapting to meet global challenges and
-            consumer demands.
-          </p>
-          <a href="#" class="read-more">Read More →</a>
-        </div>
-        <div class="carouselImage">
-          <div class="icon">🧬</div>
-          <h3>Sciences & Healthcare</h3>
-          <p>
-            Sciences and Healthcare practice helps pharmaceutical, biotech and
-            medical clients develop future focused business strategies and
-            implement the time critical programmes and procedures essential to
-            success within worldwide regulatory frameworks.
-          </p>
-          <a href="#" class="read-more">Read More →</a>
-        </div>
-      </div>
-      <div class="gradient-left"></div>
-      <div class="gradient-right"></div>
-    </div> -->
 
     <!-- why africa  -->
     <section class="consulting-section bg-overlay">
@@ -838,6 +766,10 @@
         } else {
           navbar.classList.remove("scrolled");
         }
+        const toggler = document.querySelector(".navbar-toggler");
+        toggler.addEventListener("click", function () {
+          this.classList.toggle("is-open");
+        });
       });
       // hero
       const slides = document.querySelectorAll(".slide");
