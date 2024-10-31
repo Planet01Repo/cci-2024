@@ -57,6 +57,7 @@ body {
 }
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  mix-blend-mode: difference;
 }
 
 .navbar.scrolled {
@@ -80,13 +81,86 @@ body {
   border-color: rgba(0, 0, 0, 0.5);
 }
 
+/* Mobile view styling for toggler and dropdown menu */
 @media (max-width: 991px) {
+  /* Transforming the navbar-toggler to 'X' */
+  .navbar-toggler.is-open .navbar-toggler-icon {
+    background-image: none;
+    position: relative;
+    width: 30px;
+    height: 30px; /* Increased height for better visibility */
+    background-color: transparent; /* Remove background */
+  }
+
+  .navbar-toggler.is-open .navbar-toggler-icon::before,
+  .navbar-toggler.is-open .navbar-toggler-icon::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px; /* Increased thickness */
+    background-color: white; /* Ensure white color */
+    transition: all 0.3s ease;
+    top: 50%; /* Center vertically */
+    left: 0;
+    z-index: 999;
+  }
+
+  .navbar-toggler.is-open .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+  }
+
+  .navbar-toggler.is-open .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+    top: 50%; /* Align with the other line */
+  }
+
+  /* Your existing mobile styles remain the same */
   .navbar-collapse {
     background-color: rgba(0, 0, 0, 0.9);
-    padding: 15px;
+    padding: 20px;
     border-radius: 5px;
     margin-top: 10px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 9;
   }
+
+  /* Centering and styling of the menu items */
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  /* Fullscreen nav links styling */
+  .navbar-nav .nav-link {
+    margin-top: 1.5rem;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: underline;
+    color: white !important;
+    padding: 4px 0;
+    letter-spacing: 1.5px;
+  }
+}
+
+/* Navbar styles on scroll */
+.navbar.scrolled {
+  background-color: white !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled .navbar-brand {
+  color: #000 !important;
+}
+
+.navbar.scrolled .nav-link {
+  color: #000 !important;
 }
 /* hero styling */
 .slider-container {
@@ -262,6 +336,45 @@ body {
 
   .slide {
     justify-content: center;
+  }
+}
+@media (min-width: 1920px) {
+  .slide {
+    padding: 50px 0 50px 12%; /* Add left padding as percentage */
+    justify-content: center;
+  }
+
+  .slide-content {
+    max-width: 1000px;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .slide-title {
+    font-size: 72px;
+    margin-left: 0;
+    margin-bottom: 6rem;
+  }
+
+  .slide-subtitle {
+    font-size: 18px;
+    margin-left: 0;
+    max-width: 800px;
+  }
+}
+
+/* Reset other large screen styles */
+@media (min-width: 1441px) and (max-width: 1919px) {
+  .slide-content {
+    max-width: 1000px;
+  }
+
+  .slide-title {
+    font-size: 72px;
+  }
+
+  .slide-subtitle {
+    font-size: 18px;
   }
 }
 
@@ -690,7 +803,7 @@ h1 {
 
 /* meet our team  */
 .page-layout {
-  min-height: 100vh;
+  min-height: 120vh;
   background-color: #ffffff;
   padding: 20px;
 }
@@ -748,7 +861,6 @@ h1 {
 .card-column {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   position: relative;
 }
 .info-card {
@@ -1037,6 +1149,7 @@ h1 {
 }
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  mix-blend-mode: difference;
 }
 
 .navbar.scrolled {
