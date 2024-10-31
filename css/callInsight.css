@@ -310,7 +310,7 @@ body {
   }
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1520px) {
   .call_insight-video-container h1 {
     padding-top: 17rem !important;
     font-size: var(--h2-font-size);
