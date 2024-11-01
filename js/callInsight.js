@@ -1,28 +1,31 @@
-function animateCounter(counter) {
-    const target = +counter.getAttribute('data-target');
+function animateCounter($counter) {
+    const target = +$counter.data('target');
     let current = 0;
-    const increment = target / 100;  
+    const increment = target / 100;
 
-    const updateCounter = setInterval(() => {
+    const updateCounter = setInterval(function() {
         current += increment;
         if (current >= target) {
-            counter.textContent = target;
+            $counter.text(target);
             clearInterval(updateCounter);
         } else {
-            counter.textContent = Math.ceil(current);
+            $counter.text(Math.ceil(current));
         }
     }, 20);
 }
 
+$(document).ready(function() {
+    const $counters = $('.call_insight_counter');
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                animateCounter($(entry.target));
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
 
-const counters = document.querySelectorAll('.call_insight_counter');
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            animateCounter(entry.target);
-            observer.unobserve(entry.target); 
-        }
+    $counters.each(function() {
+        observer.observe(this);
     });
-}, { threshold: 0.5 }); 
-
-counters.forEach(counter => observer.observe(counter));
+});
