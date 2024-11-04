@@ -1,4 +1,4 @@
-        // navbar
+ // navbar
 
 
 function animateCounter($counter) {
@@ -66,7 +66,7 @@ $(document).ready(function() {
     observer.observe(card);
 });
 
-    // $(window).on('scroll load', checkVisibility);
+
 ;
 
 
