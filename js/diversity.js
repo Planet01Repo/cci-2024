@@ -1,3 +1,16 @@
+  // navbar
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+    const toggler = document.querySelector(".navbar-toggler");
+    toggler.addEventListener("click", function () {
+      this.classList.toggle("is-open");
+    });
+  });
 
 
 // Slider Animation
