@@ -113,7 +113,6 @@ body {
     top: 50%; /* Align with the other line */
   }
 
-  /* Your existing mobile styles remain the same */
   .navbar-collapse {
     background-color: rgba(0, 0, 0, 0.9);
     padding: 20px;
@@ -801,167 +800,159 @@ h1 {
 }
 
 /* meet our team  */
-.page-layout {
-  min-height: 120vh;
-  background-color: #ffffff;
-  padding: 20px;
-}
-.container-fluid {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-.row {
+.cci-team-container {
   display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 2rem;
 }
-.hero-content {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background-color: white;
-  color: #333;
+
+.cci-intro-panel {
+  width: 40%;
   position: sticky;
   top: 0;
-  height: 100vh;
-  overflow-y: auto;
+  height: 65vh;
+  overflow: hidden;
+  background-color: white;
 }
-.hero-title {
+
+.cci-title-accent {
   font-size: 2.3rem;
   color: #ff6b35;
   margin-bottom: 2rem;
   font-weight: bold;
 }
-.team-members {
+
+.cci-member-roster {
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
-.team-member {
+
+.cci-member-info {
   margin-bottom: 1rem;
 }
-.team-member-name {
+
+.cci-member-name {
   font-weight: bold;
   font-size: 1.1rem;
 }
-.team-member-position {
+
+.cci-member-position {
   color: #ff6b35;
   font-size: 0.9rem;
 }
-.card-stack {
-  padding: 2rem;
-  background-color: white;
-}
-.card-column {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-.info-card {
-  background-color: white;
-  border-radius: 15px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 50%;
-  margin-left: 10rem;
+
+.cci-profile-card {
   position: sticky;
   top: 0;
+  width: 100%;
+  margin-bottom: 100px;
 }
-.info-card[data-index="0"] {
-  transform: translateY(0px);
-  z-index: 1;
+
+.cci-card-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  max-width: 390px;
+  margin: 0px auto 0;
 }
-.info-card[data-index="1"] {
-  transform: translateY(50px);
-  z-index: 2;
+
+.cci-card-content {
+  background: #fff;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+  text-align: left;
 }
-.info-card[data-index="2"] {
-  transform: translateY(100px);
-  z-index: 3;
+.cci-card-content:hover {
+  transform: translateY(-10px);
 }
-.info-card[data-index="3"] {
-  transform: translateY(150px);
-  z-index: 4;
-}
-@media (max-width: 992px) {
-  .info-card[data-index="1"],
-  .info-card[data-index="2"],
-  .info-card[data-index="3"] {
-    transform: none;
-    position: static;
-    z-index: 1;
-  }
-}
-.card-number {
-  font-size: 1.2rem; /* Smaller font size for number */
-  font-weight: bold;
-  color: #ff6b35;
-  align-self: flex-start;
-  margin-right: 0.5rem;
-}
-.card-header {
+
+.cci-card-header {
+  width: 100%;
   display: flex;
   align-items: center;
-  width: 100%;
-  text-align: left;
-  margin-bottom: 1rem;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
-.card-heading {
-  font-size: 0.7rem;
+
+.cci-number-badge {
+  font-size: 1.8rem;
   font-weight: bold;
+  color: #ff6b35;
+}
+
+.cci-card-title {
+  font-size: 1.2rem;
+  font-weight: 500;
   color: #333;
+  line-height: 1.4;
 }
-.card-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-.card-paragraph {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  text-align: left;
+
+.cci-image-container {
   width: 100%;
-  color: #555;
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 0 1.5rem;
 }
-@media (max-width: 992px) {
-  .hero-content,
-  .card-stack {
-    padding: 1rem;
+
+.cci-member-photo {
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+}
+
+.cci-member-bio {
+  text-align: center;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.cci-scroll-spacer {
+  height: 90vh;
+}
+
+@media (max-width: 768px) {
+  .cci-team-container {
+    flex-direction: column;
   }
-  .col-lg-5,
-  .col-lg-7 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  .info-card {
+
+  .cci-intro-panel,
+  .cci-card-container {
     width: 100%;
-    margin-left: 0;
   }
-}
-@media (max-width: 576px) {
-  .hero-title {
-    font-size: 2rem;
+
+  .cci-intro-panel {
+    height: auto;
+    position: static;
   }
-  .card-image {
-    width: 120px;
-    height: 120px;
+
+  .cci-card-content {
+    flex-direction: column;
   }
-  .card-heading {
-    font-size: 1.2rem;
+
+  .cci-image-container {
+    width: 100%;
   }
-  .card-paragraph {
+
+  .cci-member-photo {
+    aspect-ratio: 16 / 9;
+  }
+
+  .cci-member-bio {
     font-size: 0.8rem;
+  }
+
+  .cci-card-header {
+    position: relative;
+    top: 0;
+    margin-bottom: 1rem;
   }
 }
 /* news and articles  */
