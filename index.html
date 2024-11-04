@@ -4,761 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CCI Global</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="Extended/Bootstrap/css/bootstrap.min.css" />
     <link href="./css/style.css" rel="stylesheet" />
-    <!-- <style>
-      @font-face {
-        font-family: "Unbounded";
-        /*  url("./static/Unbounded-Black.ttf") format("truetype"),
-          url("./static/Unbounded-Bold.ttf") format("truetype"),
-          url("./static/Unbounded-ExtraBold.ttf") format("truetype"),
-          url("./static/Unbounded-ExtraLight.ttf") format("truetype"),
-          url("./static/Unbounded-Light.ttf") format("truetype"),
-          url("./static/Unbounded-Medium.ttf") format("truetype"),
-          url("./static/Unbounded-SemiBold.ttf") format("truetype"), */
-        src: url("./static/Unbounded-Regular.ttf") format("truetype");
-      }
-
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: "Unbounded";
-      }
-      /* navbar  */
-      .navbar {
-        padding: 15px 0;
-        transition: all 0.3s ease;
-        border: 2px solid rgba(255, 231, 231, 0.208);
-      }
-      .navbar-brand {
-        .navbar-brand {
-          font-size: 29px;
-          font-weight: bold;
-          color: white !important;
-          transition: color 0.3s ease;
-          margin-left: 0;
-          padding-right: 15px;
-          display: flex;
-          align-items: center;
-        }
-      }
-      /* Navbar links space */
-      .navbar-nav {
-        display: flex;
-        gap: 2px; /* Space between nav links */
-        justify-content: flex-end;
-      }
-
-      .nav-link {
-        color: white !important;
-        font-size: 15px;
-        transition: color 0.3s ease;
-      }
-      .navbar.scrolled .navbar-brand img {
-        mix-blend-mode: difference;
-      }
-      .nav-link:hover {
-        color: #ff8045 !important;
-      }
-      .navbar-toggler {
-        border-color: rgba(255, 255, 255, 0.5);
-      }
-      .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-      }
-
-      .navbar.scrolled {
-        background-color: white !important;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      }
-
-      .navbar.scrolled .navbar-brand {
-        color: #000 !important;
-      }
-
-      .navbar.scrolled .nav-link {
-        color: #000 !important;
-      }
-
-      .navbar.scrolled .nav-link:hover {
-        color: #ff8045 !important;
-      }
-
-      .navbar.scrolled .navbar-toggler {
-        border-color: rgba(0, 0, 0, 0.5);
-      }
-
-      @media (max-width: 991px) {
-        .navbar-collapse {
-          background-color: rgba(0, 0, 0, 0.9);
-          padding: 15px;
-          border-radius: 5px;
-          margin-top: 10px;
-        }
-      }
-      /* hero styling */
-      .slider-container {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-      }
-      .slide {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 50px;
-        box-sizing: border-box;
-        color: white;
-      }
-      .slide.active {
-        opacity: 1;
-      }
-      .slide-content {
-        max-width: 400px;
-      }
-      .slide-subtitle {
-        font-size: 10px;
-        margin-bottom: 16px;
-        margin-left: 3rem;
-      }
-      .slide-title {
-        font-size: 35px;
-        margin-bottom: 9rem;
-        font-weight: 700;
-        line-height: 1.1;
-        margin-left: 3rem;
-      }
-      .slide-description {
-        font-size: 12px;
-        margin-bottom: 40px;
-        /* max-width: 500px; */
-      }
-      .slide-nav {
-        display: flex;
-        align-items: center;
-      }
-      .nav-button {
-        background: none;
-        border: none;
-        color: white;
-        font-size: 24px;
-        cursor: pointer;
-        padding: 5px;
-      }
-      .progress-bar {
-        flex-grow: 1;
-        height: 2px;
-        background-color: rgba(255, 255, 255, 0.3);
-        margin: 0 20px;
-        position: relative;
-      }
-      .progress {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        background-color: white;
-        transition: width 0.3s ease-in-out;
-      }
-      .slide-counter {
-        font-size: 18px;
-        margin-left: 20px;
-      }
-
-      /* about styling */
-      .section-spacing {
-        margin-bottom: 4rem;
-        font-size: medium;
-      }
-
-      .left-content,
-      .right-content {
-        padding: 2rem;
-      }
-
-      .right-content {
-        margin-top: 5rem;
-      }
-
-      @media (min-width: 992px) {
-        .left-content {
-          position: sticky;
-          top: 0;
-          height: 40vh;
-          overflow-y: auto;
-        }
-      }
-
-      h1 {
-        font-size: 2.5rem;
-        line-height: 1.2;
-        margin-bottom: 1.5rem;
-      }
-
-      .description {
-        font-size: 1rem;
-        line-height: 1.6;
-        margin-top: 2rem;
-      }
-
-      /* location styling */
-      .carouselContainer {
-        position: relative;
-        padding: 40px 0;
-        margin-bottom: 0.5rem;
-      }
-      .carouselOfImages {
-        overflow: hidden;
-      }
-      .carouselImage {
-        width: 350px;
-        height: 420px;
-        margin-right: 20px;
-        padding: 30px;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-      .icon {
-        font-size: 36px;
-        color: #ff6347;
-        margin-bottom: 20px;
-      }
-      .carouselImage h3 {
-        font-size: 18px;
-        margin-bottom: 15px;
-        transition: color 0.3s ease;
-      }
-      .carouselImage:hover h3 {
-        color: #ff6347;
-      }
-      .carouselImage p {
-        font-size: 14px;
-        color: #666;
-        margin-bottom: 20px;
-        line-height: 1.5;
-      }
-      .read-more {
-        color: #ff6347;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 14px;
-      }
-      .gradient-left,
-      .gradient-right {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 100px;
-        z-index: 2;
-        pointer-events: none;
-      }
-      .gradient-left {
-        left: 0;
-        background: linear-gradient(to right, #f5f5f5, transparent);
-      }
-      .gradient-right {
-        right: 0;
-        background: linear-gradient(to left, #f5f5f5, transparent);
-      }
-      /* why africa  */
-      .consulting-section {
-        background: url("./img/Why-Africa.jpg") no-repeat center center fixed;
-        background-size: cover;
-        position: relative;
-        overflow: hidden;
-      }
-      .gradient-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(
-          to right,
-          rgba(0, 0, 0, 0.7),
-          rgba(0, 0, 0, 0.3)
-        );
-      }
-      .content-wrapper {
-        position: relative;
-        z-index: 1;
-      }
-      .left-panel,
-      .right-panel {
-        padding: 2rem;
-      }
-      @media (min-width: 992px) {
-        .left-content {
-          position: sticky;
-          top: 0;
-          height: 40vh !important;
-          overflow-y: auto;
-        }
-      }
-      .subtitle {
-        color: #ff4500;
-        font-size: 12px;
-        margin-bottom: 1rem;
-      }
-      .main-title {
-        font-size: 2rem;
-        line-height: 1.2;
-        margin-bottom: 1.5rem;
-        margin-top: 2rem;
-        color: #f5f5f5;
-      }
-      .desc {
-        color: white;
-        font-size: 1rem;
-        line-height: 1.6;
-        margin-bottom: 1.5rem;
-      }
-      .right-panel {
-        margin-top: 8rem;
-      }
-      .right-content {
-        transition: transform 0.3s ease-out;
-      }
-      /* cards styling  */
-      .card {
-        border: none;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        margin-top: 2rem;
-      }
-
-      .card-img-wrapper {
-        position: relative;
-        height: 200px;
-        overflow: hidden;
-      }
-
-      .card-img-top {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .tag {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        z-index: 10;
-      }
-
-      .tag span {
-        display: inline-block;
-        padding: 2px 8px;
-        margin-right: 5px;
-        background-color: rgba(255, 255, 255, 0.7);
-        border-radius: 4px;
-        font-size: 0.8rem;
-      }
-
-      .arrow-icon {
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-        background-color: white;
-        border-radius: 50%;
-        padding: 8px;
-        width: 32px;
-        height: 32px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .arrow-icon::before {
-        content: "↗";
-        font-size: 1.2rem;
-      }
-
-      .card-title {
-        font-weight: bold;
-        font-size: 1.1rem;
-        margin-top: 15px;
-      }
-
-      .card-text {
-        font-size: 0.9rem;
-        color: #6c757d;
-      }
-
-      .orange-bar {
-        width: 30px;
-        height: 4px;
-        background-color: #ff6b35;
-        margin-bottom: 10px;
-      }
-
-      /* english section styles */
-      .insulting-section {
-        background: url("./img/english-neutral-bg.jpg") no-repeat center center
-          fixed;
-        background-size: cover;
-        position: relative;
-        overflow: hidden;
-        margin-top: 2rem;
-      }
-      .gradient-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(
-          to right,
-          rgba(0, 0, 0, 0.7),
-          rgba(0, 0, 0, 0.3)
-        );
-      }
-      .con-wrapper {
-        position: relative;
-        z-index: 1;
-      }
-      .panel-left,
-      .panel-right {
-        padding: 2rem;
-      }
-      @media (min-width: 992px) {
-        .left-content {
-          position: sticky;
-          top: 0;
-          /* height: 100vh; */
-          overflow-y: auto;
-        }
-      }
-      .subhead {
-        color: #ff4500;
-        font-size: 12px;
-        margin-bottom: 1rem;
-      }
-      .main-head {
-        font-size: 2rem;
-        line-height: 1.2;
-        margin-bottom: 1.5rem;
-        color: #f5f5f5;
-      }
-      .descrip {
-        color: white;
-        font-size: 1rem;
-        line-height: 1.6;
-        margin-bottom: 1.5rem;
-      }
-      .panel-right {
-        margin-top: 7rem;
-      }
-
-      /* meet our team  */
-      .page-layout {
-        min-height: 100vh;
-        background-color: #ffffff;
-        padding: 20px;
-      }
-      .container-fluid {
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-      }
-      .row {
-        display: flex;
-        flex-wrap: wrap;
-        margin-right: -15px;
-        margin-left: -15px;
-      }
-      .hero-content {
-        padding: 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        background-color: white;
-        color: #333;
-      }
-      .hero-title {
-        font-size: 2.3rem;
-        color: #ff6b35;
-        margin-bottom: 2rem;
-        font-weight: bold;
-      }
-      .team-members {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-      }
-      .team-member {
-        margin-bottom: 1rem;
-      }
-      .team-member-name {
-        font-weight: bold;
-        font-size: 1.1rem;
-      }
-      .team-member-position {
-        color: #ff6b35;
-        font-size: 0.9rem;
-      }
-      .card-stack {
-        padding: 2rem;
-        background-color: white;
-      }
-      .card-column {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-      }
-      .info-card {
-        background-color: white;
-        border-radius: 15px;
-        padding: 1.5rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        width: 50%;
-        margin-left: 10rem;
-      }
-
-      .card-number {
-        font-size: 1.2rem; /* Smaller font size for number */
-        font-weight: bold;
-        color: #ff6b35;
-        align-self: flex-start;
-        margin-right: 0.5rem;
-      }
-
-      .card-header {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        text-align: left;
-        margin-bottom: 1rem;
-      }
-
-      .card-heading {
-        font-size: 0.7rem;
-        font-weight: bold;
-        color: #333;
-      }
-
-      .card-image {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 1rem;
-      }
-
-      .card-paragraph {
-        font-size: 0.9rem;
-        line-height: 1.5;
-        text-align: left;
-        width: 100%;
-        color: #555;
-      }
-
-      @media (max-width: 992px) {
-        .hero-content,
-        .card-stack {
-          padding: 1rem;
-        }
-        .col-lg-5,
-        .col-lg-7 {
-          flex: 0 0 100%;
-          max-width: 100%;
-        }
-        .info-card {
-          width: 100%;
-          margin-left: 0;
-        }
-      }
-      @media (max-width: 576px) {
-        .hero-title {
-          font-size: 2rem;
-        }
-        .card-image {
-          width: 120px;
-          height: 120px;
-        }
-        .card-heading {
-          font-size: 1.2rem;
-        }
-        .card-paragraph {
-          font-size: 0.8rem;
-        }
-      }
-
-      /* news and articles  */
-      .v0-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-        margin-bottom: 1rem;
-      }
-      .v0-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-      }
-      .v0-header h1 {
-        font-size: 36px;
-        font-weight: bold;
-      }
-      .v0-nav-buttons {
-        display: flex;
-        gap: 10px;
-      }
-      .v0-nav-button {
-        background-color: #f0f0f0;
-        border: none;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-      }
-      .v0-carousel {
-        overflow: hidden;
-      }
-      .v0-carousel-item {
-        width: 300px;
-        margin-right: 20px;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        margin-bottom: 2rem;
-      }
-      .v0-carousel-item img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
-      }
-      .v0-card-content {
-        padding: 15px;
-      }
-      .v0-card-category {
-        font-size: 12px;
-        color: #666;
-        margin-bottom: 8px;
-      }
-      .v0-card-title {
-        font-size: 18px;
-        font-weight: bold;
-        margin-bottom: 10px;
-        line-height: 1.2;
-      }
-      .v0-card-footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .v0-card-date {
-        font-size: 12px;
-        color: #666;
-      }
-      .v0-card-arrow {
-        width: 20px;
-        height: 20px;
-      }
-
-      /* footer styles  */
-      .footer {
-        background-color: #000;
-        color: #fff;
-        padding: 4rem 0 2rem;
-      }
-      .container {
-        width: 90%;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-      .row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-      .col {
-        flex: 1;
-        margin-bottom: 2rem;
-        min-width: 200px;
-      }
-      .footer h5 {
-        color: #fff;
-        font-size: 1rem;
-        margin-bottom: 1rem;
-        font-weight: normal;
-      }
-      .footer ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-      .footer ul li {
-        margin-bottom: 0.5rem;
-      }
-      .footer a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 0.7rem;
-      }
-      .footer a:hover {
-        text-decoration: underline;
-      }
-      .subscribe-btn {
-        color: #000;
-        /* background-color: #fff; */
-        border: none;
-        padding: 0.75rem 1.5rem;
-        text-decoration: none;
-        display: inline-block;
-        margin-top: 1rem;
-        font-size: 0.9rem;
-        font-weight: bold;
-      }
-      .get-in-touch {
-        font-size: 4rem;
-        font-weight: bold;
-        margin-top: 3rem;
-        border-top: 1px solid #333;
-        padding-top: 2rem;
-      }
-      .social-icons a {
-        margin-right: 1rem;
-        font-size: 1.2rem;
-      }
-      .footer-bottom {
-        border-top: 1px solid #333;
-        padding-top: 1rem;
-        margin-top: 2rem;
-        font-size: 0.8rem;
-      }
-      .footer-bottom a {
-        color: #999;
-      }
-      .quick-contact p {
-        margin: 0.5rem 0;
-      }
-    </style> -->
   </head>
   <body>
     <!-- navbar  -->
@@ -779,6 +26,7 @@
           aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          style="z-index: 99"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -814,9 +62,10 @@
     </nav>
     <!-- hero -->
     <div class="slider-container">
+      <div class="gradient-overlay"></div>
       <div
         class="slide active"
-        style="background-image: url('./img/sliderbg.webp')"
+        style="background-image: url('./img/sliderimage.jpg')"
       >
         <div class="slide-content">
           <p class="slide-subtitle">
@@ -824,39 +73,15 @@
             CONTINENT
           </p>
           <h2 class="slide-title">Africa's Leading BPO</h2>
-          <!-- <p class="slide-description">
-            We help our clients achieve their goals by providing expert
-            consulting services.
-          </p> -->
-          <div class="slide-nav">
-            <button class="nav-button prev">&lt;</button>
-            <div class="progress-bar">
-              <div class="progress"></div>
-            </div>
-            <button class="nav-button next">&gt;</button>
-            <span class="slide-counter">1/2</span>
-          </div>
         </div>
       </div>
-      <div class="slide" style="background-image: url('./img/sliderbg.webp')">
+      <div class="slide" style="background-image: url('./img/sliderimage.jpg')">
         <div class="slide-content">
           <p class="slide-subtitle">
             DETERMINED, ENGAGED AND ENERGIZED SPEARHEADING INVESTMENT ACROSS THE
             CONTINENT
           </p>
           <h2 class="slide-title">Africa's Leading BPO</h2>
-          <!-- <p class="slide-description">
-            Our global strategy is designed to help you overcome time-related
-            obstacles in your business.
-          </p> -->
-          <div class="slide-nav">
-            <button class="nav-button prev">&lt;</button>
-            <div class="progress-bar">
-              <div class="progress"></div>
-            </div>
-            <button class="nav-button next">&gt;</button>
-            <span class="slide-counter">2/2</span>
-          </div>
         </div>
       </div>
     </div>
@@ -924,203 +149,166 @@
               <div id="kenya" class="solution-card">
                 <div class="solution-card-header">
                   <div class="solution-card-icon">
-                    <img src="./img/linkedinicon.png" alt="Location icon" />
+                    <a
+                      href="https://www.linkedin.com/company/cci-call-centres-pty-ltd/"
+                    >
+                      <img src="./img/linkedinicon.png" alt="Location icon" />
+                    </a>
                   </div>
                   <div class="solution-card-title">Kenya</div>
                 </div>
-                <img
-                  src="./img/CCI-Kenya-Location.jpg"
-                  alt="Kenya"
-                  class="solution-card-image"
-                />
-                <p class="solution-card-description">
-                  One of our fastest growing markets and at the spearhead of our
-                  continuous evolution strategy. CCI are aligned to the Kenya
-                  Vision 2030 that aims to transform Kenya into a rapidly
-                  industrializing, middle-income country that will elevate the
-                  quality of life for its citizens within a secure and clean
-                  ecosystem
-                </p>
+                <div class="solution-card-body">
+                  <img
+                    src="./img/CCI-Kenya-Location.jpg"
+                    alt="Kenya"
+                    class="solution-card-image"
+                  />
+                  <p class="solution-card-description">
+                    One of our fastest growing markets and at the spearhead of
+                    our continuous evolution strategy. CCI are aligned to the
+                    Kenya Vision 2030 that aims to transform Kenya into a
+                    rapidly industrializing, middle-income country that will
+                    elevate the quality of life for its citizens within a secure
+                    and clean ecosystem
+                  </p>
+                </div>
               </div>
               <div id="southAfrica" class="solution-card hidden">
                 <div class="solution-card-header">
                   <div class="solution-card-icon">
-                    <img src="./img/linkedinicon.png" alt="Location icon" />
+                    <a
+                      href="https://www.linkedin.com/company/cci-call-centres-pty-ltd/"
+                    >
+                      <img src="./img/linkedinicon.png" alt="Location icon" />
+                    </a>
                   </div>
                   <div class="solution-card-title">South Africa</div>
                 </div>
-                <img
-                  src="./img/CCI-South-Africa.jpg"
-                  alt="South Africa"
-                  class="solution-card-image"
-                />
-                <p class="solution-card-description">
-                  The birthplace of the CCI brand and one of our core operating
-                  locations, South Africa has one of the largest information and
-                  communications technology (ICT) markets in Africa and is
-                  leading in the field of mobile, security and electronic
-                  banking services.
-                </p>
+                <div class="solution-card-body">
+                  <img
+                    src="./img/CCI-South-Africa.jpg"
+                    alt="South Africa"
+                    class="solution-card-image"
+                  />
+                  <p class="solution-card-description">
+                    The birthplace of the CCI brand and one of our core
+                    operating locations, South Africa has one of the largest
+                    information and communications technology (ICT) markets in
+                    Africa and is leading in the field of mobile, security and
+                    electronic banking services.
+                  </p>
+                </div>
               </div>
               <div id="ethiopia" class="solution-card hidden">
                 <div class="solution-card-header">
                   <div class="solution-card-icon">
-                    <img src="./img/linkedinicon.png" alt="Location icon" />
+                    <a
+                      href="https://www.linkedin.com/company/cci-call-centres-pty-ltd/"
+                    >
+                      <img src="./img/linkedinicon.png" alt="Location icon" />
+                    </a>
                   </div>
                   <div class="solution-card-title">Ethiopia</div>
                 </div>
-                <img
-                  src="./img/CCI-Ethiopia.jpg"
-                  alt="Ethiopia"
-                  class="solution-card-image"
-                />
-                <p class="solution-card-description">
-                  Ethiopia’s economic outlook has shifted significantly since
-                  2018 and they have focused on building a BPO industry
-                  supported by government policy. CCI have built long term
-                  partnerships and capitalized on working with local entities to
-                  establish itself within the country.
-                </p>
+                <div class="solution-card-body">
+                  <img
+                    src="./img/CCI-Ethiopia.jpg"
+                    alt="Ethiopia"
+                    class="solution-card-image"
+                  />
+                  <p class="solution-card-description">
+                    Ethiopia's economic outlook has shifted significantly since
+                    2018 and they have focused on building a BPO industry
+                    supported by government policy. CCI have built long term
+                    partnerships and capitalized on working with local entities
+                    to establish itself within the country.
+                  </p>
+                </div>
               </div>
               <div id="rwanda" class="solution-card hidden">
                 <div class="solution-card-header">
                   <div class="solution-card-icon">
-                    <img src="./img/linkedinicon.png" alt="Location icon" />
+                    <a
+                      href="https://www.linkedin.com/company/cci-call-centres-pty-ltd/"
+                    >
+                      <img src="./img/linkedinicon.png" alt="Location icon" />
+                    </a>
                   </div>
                   <div class="solution-card-title">Rwanda</div>
                 </div>
-                <img
-                  src="./img/Rwanda.jpg"
-                  alt="Rwanda"
-                  class="solution-card-image"
-                />
-                <p class="solution-card-description">
-                  Rwanda has in recent years developed a “Digital Exports
-                  strategy” that would make it become one of Africa’s Technology
-                  Hubs. CCI view Rwanda as a strategic investment opportunity
-                  for future growth aligned to our long-term digitization
-                  aspirations.
-                </p>
+                <div class="solution-card-body">
+                  <img
+                    src="./img/Rwanda.jpg"
+                    alt="Rwanda"
+                    class="solution-card-image"
+                  />
+                  <p class="solution-card-description">
+                    Rwanda has in recent years developed a "Digital Exports
+                    strategy" that would make it become one of Africa's
+                    Technology Hubs. CCI view Rwanda as a strategic investment
+                    opportunity for future growth aligned to our long-term
+                    digitization aspirations.
+                  </p>
+                </div>
               </div>
               <div id="ghana" class="solution-card hidden">
                 <div class="solution-card-header">
                   <div class="solution-card-icon">
-                    <img src="./img/linkedinicon.png" alt="Location icon" />
+                    <a
+                      href="https://www.linkedin.com/company/cci-call-centres-pty-ltd/"
+                    >
+                      <img src="./img/linkedinicon.png" alt="Location icon" />
+                    </a>
                   </div>
                   <div class="solution-card-title">Ghana</div>
                 </div>
-                <img
-                  src="./img/CCI-Ghana.jpg"
-                  alt="Ghana"
-                  class="solution-card-image"
-                />
-                <p class="solution-card-description">
-                  Ghana’s government is focused on driving digitization across
-                  the country and has invested heavily in accelerating its
-                  initiatives to drive a digital agenda across sectors in its
-                  economy. It is a focal point for growth for West Africa and an
-                  ideal location for our geographic portfolio.
-                </p>
+                <div class="solution-card-body">
+                  <img
+                    src="./img/CCI-Ghana.jpg"
+                    alt="Ghana"
+                    class="solution-card-image"
+                  />
+                  <p class="solution-card-description">
+                    Ghana's government is focused on driving digitization across
+                    the country and has invested heavily in accelerating its
+                    initiatives to drive a digital agenda across sectors in its
+                    economy. It is a focal point for growth for West Africa and
+                    an ideal location for our geographic portfolio.
+                  </p>
+                </div>
               </div>
               <div id="egypt" class="solution-card hidden">
                 <div class="solution-card-header">
                   <div class="solution-card-icon">
-                    <img src="./img/linkedinicon.png" alt="Location icon" />
+                    <a
+                      href="https://www.linkedin.com/company/cci-call-centres-pty-ltd/"
+                    >
+                      <img src="./img/linkedinicon.png" alt="Location icon" />
+                    </a>
                   </div>
                   <div class="solution-card-title">Egypt</div>
                 </div>
-                <img
-                  src="./img/CCI-Egypt.jpg"
-                  alt="Egypt"
-                  class="solution-card-image"
-                />
-                <p class="solution-card-description">
-                  Our newest delivery location in Africa. Egypt offers an
-                  additional established BPO destination for our customers
-                  alongside supplementing our vast reach with additional
-                  language access and an established infrastructure, CCI Global
-                  aim to continue to offer extensive capabilities with a push
-                  for growth for the continent.
-                </p>
+                <div class="solution-card-body">
+                  <img
+                    src="./img/CCI-Egypt.jpg"
+                    alt="Egypt"
+                    class="solution-card-image"
+                  />
+                  <p class="solution-card-description">
+                    Our newest delivery location in Africa. Egypt offers an
+                    additional established BPO destination for our customers
+                    alongside supplementing our vast reach with additional
+                    language access and an established infrastructure, CCI
+                    Global aim to continue to offer extensive capabilities with
+                    a push for growth for the continent.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- <div class="carouselContainer">
-      <div class="carouselOfImages">
-        <div class="carouselImage">
-          <div class="icon">💻</div>
-          <h3>Technology & Software</h3>
-          <p>
-            As artificial intelligence and the internet of things move from
-            concept to reality, all business executives worry about change, but
-            tech companies must be especially cognizant of the forces driving
-            change and increased complexity.
-          </p>
-          <a href="#" class="read-more">Read More →</a>
-        </div>
-        <div class="carouselImage">
-          <div class="icon">🎓</div>
-          <h3>Education & Training</h3>
-          <p>
-            Education is an important key to economic competitiveness and social
-            cohesion. It helps individuals & communities to reach their full
-            potential. Governments therefore committed to raising educational
-            skills and access to lifelong learning.
-          </p>
-          <a href="#" class="read-more">Read More →</a>
-        </div>
-        <div class="carouselImage">
-          <div class="icon">🍽️</div>
-          <h3>Hospitality & Leisure</h3>
-          <p>
-            Hospitality, leisure and tourism are vast subject areas that will
-            give you the grounding to work in a variety of sectors. From
-            managing a sports centre or luxury hotel, to planning a major
-            exhibition or cruise ship, the skills and knowledge you develop will
-            be transferable across this diverse industry.
-          </p>
-          <a href="#" class="read-more">Read More →</a>
-        </div>
-        <div class="carouselImage">
-          <div class="icon">⚡</div>
-          <h3>Power & Utilities</h3>
-          <p>
-            We can help you make the right decisions in an era of new energy
-            sources, sustainability, and digital transformation. Addressing
-            climate change and a new energy landscape require power sector to
-            think differently about every aspect of their business.
-          </p>
-          <a href="#" class="read-more">Read More →</a>
-        </div>
-        <div class="carouselImage">
-          <div class="icon">🏭</div>
-          <h3>Manufacturing & Industry</h3>
-          <p>
-            The manufacturing industry is evolving rapidly with the integration
-            of advanced technologies. From smart factories to sustainable
-            practices, companies are adapting to meet global challenges and
-            consumer demands.
-          </p>
-          <a href="#" class="read-more">Read More →</a>
-        </div>
-        <div class="carouselImage">
-          <div class="icon">🧬</div>
-          <h3>Sciences & Healthcare</h3>
-          <p>
-            Sciences and Healthcare practice helps pharmaceutical, biotech and
-            medical clients develop future focused business strategies and
-            implement the time critical programmes and procedures essential to
-            success within worldwide regulatory frameworks.
-          </p>
-          <a href="#" class="read-more">Read More →</a>
-        </div>
-      </div>
-      <div class="gradient-left"></div>
-      <div class="gradient-right"></div>
-    </div> -->
 
     <!-- why africa  -->
     <section class="consulting-section bg-overlay">
@@ -1264,7 +452,7 @@
     </div>
 
     <!-- english-section -->
-    <section class="insulting-section bg-overlay">
+    <section id="english-section" class="insulting-section bg-overlay">
       <div class="gradient-overlay"></div>
       <div class="contain-fluid con-wrapper">
         <div class="row">
@@ -1299,256 +487,311 @@
     </section>
 
     <!-- meet our team  -->
-    <div class="page-layout m-5">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-5 hero-content">
-            <h1 class="hero-title">MEET OUR TEAM</h1>
-            <div class="team-members">
-              <div class="team-member">
-                <div class="team-member-name">1. Martin Roe</div>
-                <div class="team-member-position">Chief Executive Officer</div>
-              </div>
-              <div class="team-member">
-                <div class="team-member-name">2. Mark Channa</div>
-                <div class="team-member-position">Chief Operating Officer</div>
-              </div>
-              <div class="team-member">
-                <div class="team-member-name">3. Lizelle Strydom</div>
-                <div class="team-member-position">
-                  Managing Director: CareerBox
-                </div>
-              </div>
-              <div class="team-member">
-                <div class="team-member-name">4. Mahira Khan</div>
-                <div class="team-member-position">
-                  Director of Bids and Contracts
-                </div>
-              </div>
-            </div>
+    <div id="meet-our-team" class="cci-team-container">
+      <!-- Left: Meet Our Team Section -->
+      <div class="cci-intro-panel">
+        <h1 class="cci-title-accent">MEET OUR TEAM</h1>
+        <div class="cci-member-roster">
+          <div class="cci-member-info">
+            <div class="cci-member-name">1. Martin Roe</div>
+            <div class="cci-member-position">Chief Executive Officer</div>
           </div>
-          <div class="col-lg-7 card-stack">
-            <div class="card-column">
-              <div class="info-card" data-index="0">
-                <div class="card-header">
-                  <div class="card-number">01</div>
-                  <div class="card-heading">
-                    Acknowledge needs and objectives
-                  </div>
-                </div>
-                <img
-                  src="./img/image-22.png"
-                  alt="Person with documents"
-                  class="card-image"
-                />
-                <p class="card-paragraph">
-                  We prepare for your meeting by identifying key milestones or
-                  events that have happened since we last met. Then we review
-                  your portfolios to see if they're well positioned to meet your
-                  goals.
-                </p>
-              </div>
-
-              <div class="info-card" data-index="1">
-                <div class="card-header">
-                  <div class="card-number">02</div>
-                  <div class="card-heading">
-                    Acknowledge needs and objectives
-                  </div>
-                </div>
-                <img
-                  src="./img/image-20.png"
-                  alt="Person with documents"
-                  class="card-image"
-                />
-                <p class="card-paragraph">
-                  We prepare for your meeting by identifying key milestones or
-                  events that have happened since we last met. Then we review
-                  your portfolios to see if they're well positioned to meet your
-                  goals.
-                </p>
-              </div>
-              <div class="info-card" data-index="2">
-                <div class="card-header">
-                  <div class="card-number">03</div>
-                  <div class="card-heading">
-                    Acknowledge needs and objectives
-                  </div>
-                </div>
-                <img
-                  src="./img/image-26.png"
-                  alt="Person with documents"
-                  class="card-image"
-                />
-                <p class="card-paragraph">
-                  We prepare for your meeting by identifying key milestones or
-                  events that have happened since we last met. Then we review
-                  your portfolios to see if they're well positioned to meet your
-                  goals.
-                </p>
-              </div>
-              <div class="info-card" data-index="3">
-                <div class="card-header">
-                  <div class="card-number">04</div>
-                  <div class="card-heading">
-                    Acknowledge needs and objectives
-                  </div>
-                </div>
-                <img
-                  src="./img/image-27.png"
-                  alt="Person with documents"
-                  class="card-image"
-                />
-                <p class="card-paragraph">
-                  We prepare for your meeting by identifying key milestones or
-                  events that have happened since we last met. Then we review
-                  your portfolios to see if they're well positioned to meet your
-                  goals.
-                </p>
-              </div>
+          <div class="cci-member-info">
+            <div class="cci-member-name">2. Mark Channa</div>
+            <div class="cci-member-position">Chief Operating Officer</div>
+          </div>
+          <div class="cci-member-info">
+            <div class="cci-member-name">3. Lizelle Strydom</div>
+            <div class="cci-member-position">Managing Director: CareerBox</div>
+          </div>
+          <div class="cci-member-info">
+            <div class="cci-member-name">4. Mahira Khan</div>
+            <div class="cci-member-position">
+              Director of Bids and Contracts
             </div>
           </div>
         </div>
       </div>
-    </div>
 
+      <!-- Right: Cards Section -->
+      <div class="cci-card-container">
+        <div class="cci-profile-card" data-index="0">
+          <div class="cci-card-content">
+            <div class="cci-card-header">
+              <div class="cci-number-badge">01</div>
+              <div class="cci-card-title">Acknowledge needs and objectives</div>
+            </div>
+            <div class="cci-image-container">
+              <img
+                class="cci-member-photo"
+                src="./img/image-22.png"
+                alt="Team member 1"
+              />
+            </div>
+            <div class="cci-content-area">
+              <p class="cci-member-bio">
+                With extensive experience in the BPO sector in both the client
+                and vendor side of operations, Martin has overseen CCI's
+                strategy development to become Africa's largest outsourcing
+                provider, steering the company toward the future of the BPO
+                industry. Martin has a passion for Impact Sourcing,
+                incorporating it as one of CCI's core values.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repeat for other cards with the same structure -->
+        <div class="cci-profile-card" data-index="1">
+          <div class="cci-card-content">
+            <div class="cci-card-header">
+              <div class="cci-number-badge">02</div>
+              <div class="cci-card-title">Acknowledge needs and objectives</div>
+            </div>
+            <div class="cci-image-container">
+              <img
+                class="cci-member-photo"
+                src="./img/image-20.png"
+                alt="Team member 2"
+              />
+            </div>
+            <div class="cci-content-area">
+              <p class="cci-member-bio">
+                Mark is our operational guru who has ultimate responsibility for
+                operational delivery across CCI's International & Domestic
+                clients, working closely with management teams at our
+                operational sites to ensure a smooth and satisfying customer
+                experience. Mark is a board member of BPESA (BPO Industry body
+                in South Africa) and CareerBox, our recruitment arm.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cci-profile-card" data-index="2">
+          <div class="cci-card-content">
+            <div class="cci-card-header">
+              <div class="cci-number-badge">03</div>
+              <div class="cci-card-title">Acknowledge needs and objectives</div>
+            </div>
+            <div class="cci-image-container">
+              <img
+                class="cci-member-photo"
+                src="./img/image-26.png"
+                alt="Team member 3"
+              />
+            </div>
+            <div class="cci-content-area">
+              <p class="cci-member-bio">
+                Lizelle has vast knowledge and expertise in various niche
+                entities in the labor market enabling her to identify gaps and
+                create strategic solutions in breaking barriers to entry. She
+                was a guest speaker at Oxford University in 2020 and
+                participated in several global panel discussions around the GBS
+                sector, Impact Sourcing, and Why Africa. She is the leader and
+                integration point between CCI Global and CareerBox.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cci-profile-card" data-index="3">
+          <div class="cci-card-content">
+            <div class="cci-card-header">
+              <div class="cci-number-badge">04</div>
+              <div class="cci-card-title">Acknowledge needs and objectives</div>
+            </div>
+            <div class="cci-image-container">
+              <img
+                class="cci-member-photo"
+                src="./img/image-27.png"
+                alt="Team member 4"
+              />
+            </div>
+            <div class="cci-content-area">
+              <p class="cci-member-bio">
+                Mahira oversees the growth, bidding, and contracting across the
+                group, implementing the bid and solution management process from
+                qualification all the way until hand over to the project
+                implementation team. She's accomplished some of our biggest wins
+                and most successful campaigns, helping CCI become a world class
+                provider to some of the world's leading brands.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cci-scroll-spacer"></div>
+      </div>
+    </div>
     <!-- news and articles  -->
     <div class="v0-container">
       <div class="v0-header">
         <h1>News & Articles</h1>
-        <!-- <div class="v0-nav-buttons">
-          <button class="v0-nav-button">&#8592;</button>
-          <button class="v0-nav-button">&#8594;</button>
-        </div> -->
       </div>
-      <div class="v0-carousel row flex-nowrap">
-        <div class="v0-carousel-item col-12 col-md-6 col-lg-4">
+      <div class="v0-carousel">
+        <div class="v0-carousel-item">
           <img src="./img/article1.webp" alt="Article 1" />
           <div class="v0-card-content">
             <div class="v0-card-category">Digital | Funds</div>
             <h2 class="v0-card-title">
-              Family business leaders focus from next generation on growth
+              Excellence in Customer Service Awards '23 Winner
             </h2>
-            <div class="v0-card-footer">
-              <span class="v0-card-date">Dec 26, 2023</span>
-            </div>
+            <p class="v0-card-description">
+              CCI receives ‘Outsource Partner Of The Year’ at this year’s awards
+              acknowledging those who help companies provide an enhanced level
+              of customer service.
+            </p>
           </div>
         </div>
-        <div class="v0-carousel-item col-12 col-md-6 col-lg-4">
+
+        <div class="v0-carousel-item">
           <img src="./img/article2.webp" alt="Article 2" />
           <div class="v0-card-content">
             <div class="v0-card-category">Business | Tech</div>
             <h2 class="v0-card-title">
-              Family business leaders focus from next generation on growth
+              CCI Kenya is now the Largest BPO Operator in Kenya
             </h2>
-            <div class="v0-card-footer">
-              <span class="v0-card-date">Dec 26, 2023</span>
-            </div>
+            <p class="v0-card-description">
+              CCI’s Kenya operations have grown to become the largest BPO
+              provider in the country with 3000+ agents, cementing growing
+              demand for Kenya as a BPO market.
+            </p>
           </div>
         </div>
-        <div class="v0-carousel-item col-12 col-md-6 col-lg-4">
+
+        <div class="v0-carousel-item">
           <img src="./img/article3.webp" alt="Article 3" />
           <div class="v0-card-content">
             <div class="v0-card-category">Business | Consumers</div>
             <h2 class="v0-card-title">
-              Family business leaders focus from next generation on growth
+              CCI Wins at Stevie Awards for Sales & Customer Service '23
             </h2>
-            <div class="v0-card-footer">
-              <span class="v0-card-date">Dec 26, 2023</span>
-            </div>
+            <p class="v0-card-description">
+              CCI is recognized as a Customer Service Outsourcing Provider Of
+              The Year competing against 2,300 nominees for customer service and
+              contact center achievements.
+            </p>
           </div>
         </div>
-        <div class="v0-carousel-item col-12 col-md-6 col-lg-4">
-          <img src="./img/article4.webp" alt="Article 4" />
+
+        <div class="v0-carousel-item">
+          <img src="./img/article4.webp" alt="Article 3" />
+          <div class="v0-card-content">
+            <div class="v0-card-category">Business | Consumers</div>
+            <h2 class="v0-card-title">
+              CCI Global Partners With Customer Experience Foundation UK (CXFO)
+            </h2>
+            <p class="v0-card-description">
+              The CXFO is the UK’s latest customer experience association with
+              CCI bringing African expertise to the partnership’s joint effort
+              to impact the future of CX.
+            </p>
+          </div>
+        </div>
+
+        <div class="v0-carousel-item">
+          <img src="./img/article5.webp" alt="Article 3" />
+          <div class="v0-card-content">
+            <div class="v0-card-category">Business | Consumers</div>
+            <h2 class="v0-card-title">
+              CCI South Africa Wins Prestigious Award At The GSA Professional
+              Awards 2022
+            </h2>
+            <p class="v0-card-description">
+              CCI were recognized and awarded ‘Best Far Shore Team’ by the GSA
+              Professional Awards , the UK’s premier award organization for
+              customer service provider’s supporting the UK Market.
+            </p>
+          </div>
+        </div>
+
+        <div class="v0-carousel-item">
+          <img src="./img/article1.webp" alt="Article 3" />
+          <div class="v0-card-content">
+            <div class="v0-card-category">Business | Consumers</div>
+            <h2 class="v0-card-title">
+              CCI Kenya Celebrates Annual Fun In the Park Day With Over 10,000
+              People
+            </h2>
+            <p class="v0-card-description">
+              In 2022, CCI Kenya hosted our annual event for family, friends &
+              co-workers to celebrate our achievements and our amazing employees
+              with live performances and from major African artists
+            </p>
+          </div>
+        </div>
+
+        <div class="v0-carousel-item">
+          <img src="./img/article2.webp" alt="Article 4" />
           <div class="v0-card-content">
             <div class="v0-card-category">Growth | Leadership</div>
             <h2 class="v0-card-title">
-              Family business leaders focus from next generation on growth
+              Construction Commences On Our New 4000 Seat Service Center in Tatu
+              City
             </h2>
-            <div class="v0-card-footer">
-              <span class="v0-card-date">Dec 26, 2023</span>
-            </div>
-          </div>
-        </div>
-        <div class="v0-carousel-item col-12 col-md-6 col-lg-4">
-          <img src="./img/article5.webp" alt="Article 5" />
-          <div class="v0-card-content">
-            <div class="v0-card-category">Technology | Innovation</div>
-            <h2 class="v0-card-title">
-              Emerging technologies shaping the future of industries
-            </h2>
-            <div class="v0-card-footer">
-              <span class="v0-card-date">Dec 26, 2023</span>
-            </div>
-          </div>
-        </div>
-        <div class="v0-carousel-item col-12 col-md-6 col-lg-4">
-          <img src="./img/article5.webp" alt="Article 6" />
-          <div class="v0-card-content">
-            <div class="v0-card-category">Finance | Markets</div>
-            <h2 class="v0-card-title">
-              Global market trends and their impact on investment strategies
-            </h2>
-            <div class="v0-card-footer">
-              <span class="v0-card-date">Dec 26, 2023</span>
-            </div>
+            <p class="v0-card-description">
+              Kenya’s largest ultra modern contact centre will employ thousands
+              of young Kenyans in Tatu City, CCI’s second operating location in
+              the country.
+            </p>
           </div>
         </div>
       </div>
     </div>
-
     <!-- footer component  -->
     <footer class="footer">
       <div class="container">
         <div class="row">
           <div class="col">
-            <h5>
+            <!-- <h5>
               Sign up for alerts, monthly insights, strategic business
               perspectives and exclusive content in your inbox.
             </h5>
-            <a href="#" class="subscribe-btn">Subscribe</a>
+            <a href="#" class="subscribe-btn">Subscribe</a> -->
+            <img src="./img/cci-logo.png" alt="" />
           </div>
           <div class="col">
-            <h5>Company</h5>
+            <!-- <h5>Company</h5> -->
             <ul>
               <li><a href="#">About Us</a></li>
-              <li><a href="#">Sustainability</a></li>
-              <li><a href="#">Leadership Team</a></li>
-              <li><a href="#">News & Media</a></li>
-              <li><a href="#">Careers</a></li>
+              <li><a href="#">Industries</a></li>
+              <li><a href="#">Solutions</a></li>
+              <!-- <li><a href="#">News & Media</a></li>
+              <li><a href="#">Careers</a></li> -->
             </ul>
           </div>
           <div class="col">
-            <h5>Services</h5>
+            <!-- <h5>Services</h5> -->
             <ul>
-              <li><a href="#">Financial Planning</a></li>
-              <li><a href="#">Wealth Management</a></li>
-              <li><a href="#">Portfolio Consulting</a></li>
-              <li><a href="#">Mergers & Acquisitions</a></li>
+              <li><a href="#">Career Box</a></li>
+              <li><a href="#">Call Insight</a></li>
+              <li><a href="#">Knowledge Base</a></li>
+              <!-- <li><a href="#">Mergers & Acquisitions</a></li>
               <li><a href="#">Sustainability Assurance</a></li>
-              <li><a href="#">Crisis Management</a></li>
+              <li><a href="#">Crisis Management</a></li> -->
             </ul>
           </div>
           <div class="col">
-            <h5>Industries</h5>
+            <!-- <h5>Industries</h5> -->
             <ul>
-              <li><a href="#">Banking & Finance</a></li>
-              <li><a href="#">Sciences & Healthcare</a></li>
-              <li><a href="#">Technology & Software</a></li>
-              <li><a href="#">Education & Training</a></li>
+              <li><a href="#">Diversity</a></li>
+              <li><a href="#">Connect</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <!-- <li><a href="#">Education & Training</a></li>
               <li><a href="#">Hospitality & Leisure</a></li>
-              <li><a href="#">Power & Utilities</a></li>
+              <li><a href="#">Power & Utilities</a></li> -->
             </ul>
           </div>
           <div class="col quick-contact">
             <h5>Quick Contact</h5>
-            <p>Allianz@7oroof.com</p>
-            <p>+2 011 6114 5741</p>
-            <div class="social-icons">
+            <p>UAE. Phone</p>
+            <p>00971- 4 - 835 7012</p>
+            <!-- <div class="social-icons">
               <a href="#"><i class="fab fa-facebook-f"></i></a>
               <a href="#"><i class="fab fa-twitter"></i></a>
               <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="get-in-touch">Get In Touch</div>
@@ -1556,72 +799,49 @@
           <div class="row">
             <div class="col">
               <p>
-                &copy;2024 Allianz. All Rights Reserved. With Love by 7oroof.com
+                &copy;CCI Enterprises DMCC, Unit 3101 to 3108, HDS Tower,
+                Jumeirah Lakes Towers, Dubai
               </p>
             </div>
             <div class="col" style="text-align: right">
-              <a href="#">Terms & Conditions</a> &bull;
-              <a href="#">Privacy Policy</a> &bull;
-              <a href="#">Site Map</a>
+              <a href="#">Follow us</a>
+              <!-- <a href="#">Privacy Policy</a> &bull;
+              <a href="#">Site Map</a>  -->
             </div>
           </div>
         </div>
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="Extended/Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./docs/flickity.pkgd.min.js"></script>
     <script>
       // navbar
       window.addEventListener("scroll", function () {
         const navbar = document.querySelector(".navbar");
-        console.log(navbar);
-
         if (window.scrollY > 50) {
           navbar.classList.add("scrolled");
         } else {
           navbar.classList.remove("scrolled");
         }
+        const toggler = document.querySelector(".navbar-toggler");
+        toggler.addEventListener("click", function () {
+          this.classList.toggle("is-open");
+        });
       });
       // hero
       const slides = document.querySelectorAll(".slide");
-      const prevButton = document.querySelector(".prev");
-      const nextButton = document.querySelector(".next");
-      const progressBars = document.querySelectorAll(".progress");
-      const counters = document.querySelectorAll(".slide-counter");
       let currentSlide = 0;
 
       function showSlide(index) {
         slides[currentSlide].classList.remove("active");
         slides[index].classList.add("active");
         currentSlide = index;
-        updateProgress();
       }
 
       function nextSlide() {
         showSlide((currentSlide + 1) % slides.length);
       }
-
-      function prevSlide() {
-        showSlide((currentSlide - 1 + slides.length) % slides.length);
-      }
-
-      function updateProgress() {
-        progressBars.forEach((bar, index) => {
-          bar.style.width = index <= currentSlide ? "100%" : "0%";
-        });
-        counters.forEach((counter) => {
-          counter.textContent = `${currentSlide + 1}/${slides.length}`;
-        });
-      }
-
-      prevButton.addEventListener("click", prevSlide);
-      nextButton.addEventListener("click", nextSlide);
-
-      // Initialize progress
-      updateProgress();
 
       // Auto-advance slides every 5 seconds
       setInterval(nextSlide, 5000);
@@ -1644,92 +864,36 @@
       }
 
       // news and articles
-      var $imagesCarousel = jQuery(".v0-carousel").flickity({
-        accessibility: false,
-        autoPlay: false,
-        pauseAutoPlayOnHover: false,
-        cellAlign: "center",
-        contain: false,
-        draggable: true,
-        friction: 0.2,
-        initialIndex: 0,
-        lazyLoad: false,
-        percentPosition: true,
-        prevNextButtons: false,
-        pageDots: false,
-        resize: true,
-        rightToLeft: false,
-        setGallerySize: true,
-        watchCSS: false,
-        wrapAround: true,
-      });
+      document.addEventListener("DOMContentLoaded", function () {
+        const carousel = document.querySelector(".v0-carousel");
+        let isDown = false;
+        let startX;
+        let scrollLeft;
 
-      function resizeCells() {
-        var flkty = $imagesCarousel.data("flickity");
-        var $current = flkty.selectedIndex;
-        var $length = flkty.cells.length;
-        var $imageNumLimit = 5;
-        if ($length < $imageNumLimit) {
-          $imagesCarousel.flickity("destroy");
-        }
-        jQuery(".v0-carousel .v0-carousel-item").removeClass(
-          "nextToSelectedLeft"
-        );
-        jQuery(".v0-carousel .v0-carousel-item").removeClass(
-          "nextToSelectedRight"
-        );
-        jQuery(".v0-carousel .v0-carousel-item").removeClass(
-          "nextToSelectedLeft2"
-        );
-        jQuery(".v0-carousel .v0-carousel-item").removeClass(
-          "nextToSelectedRight2"
-        );
-        jQuery(".v0-carousel .v0-carousel-item")
-          .eq($current - 1)
-          .addClass("nextToSelectedLeft");
-        jQuery(".v0-carousel .v0-carousel-item")
-          .eq($current - 2)
-          .addClass("nextToSelectedLeft2");
-        var $endCell;
-        if ($current + 1 == $length) {
-          $endCell = "0";
-        } else {
-          $endCell = $current + 1;
-        }
-        jQuery(".v0-carousel .v0-carousel-item")
-          .eq($endCell)
-          .addClass("nextToSelectedRight");
-        if ($endCell + 1 < $imageNumLimit) {
-          jQuery(".v0-carousel .v0-carousel-item")
-            .eq($endCell + 1)
-            .addClass("nextToSelectedRight2");
-        } else {
-          jQuery(".v0-carousel .v0-carousel-item")
-            .eq(0)
-            .addClass("nextToSelectedRight2");
-        }
-      }
-      resizeCells();
+        carousel.addEventListener("mousedown", (e) => {
+          isDown = true;
+          carousel.style.cursor = "grabbing";
+          startX = e.pageX - carousel.offsetLeft;
+          scrollLeft = carousel.scrollLeft;
+        });
 
-      $imagesCarousel.on("scroll.flickity", function () {
-        resizeCells();
-      });
+        carousel.addEventListener("mouseleave", () => {
+          isDown = false;
+          carousel.style.cursor = "grab";
+        });
 
-      //HOVER FUNCTIONS
-      $(".v0-carousel-item").bind("mouseover", function () {
-        if (this.className === "v0-carousel-item nextToSelectedLeft") {
-          $imagesCarousel.flickity("playLeftSlowPlayer");
-        } else if (this.className === "v0-carousel-item nextToSelectedLeft2") {
-          $imagesCarousel.flickity("playLeftFastPlayer");
-        } else if (this.className === "v0-carousel-item nextToSelectedRight") {
-          $imagesCarousel.flickity("playRightSlowPlayer");
-        } else if (this.className === "v0-carousel-item nextToSelectedRight2") {
-          $imagesCarousel.flickity("playRightFastPlayer");
-        }
-      });
+        carousel.addEventListener("mouseup", () => {
+          isDown = false;
+          carousel.style.cursor = "grab";
+        });
 
-      $(".v0-carousel-item").bind("mouseout", function () {
-        $imagesCarousel.flickity("pausePlayer");
+        carousel.addEventListener("mousemove", (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - carousel.offsetLeft;
+          const walk = (x - startX) * 2;
+          carousel.scrollLeft = scrollLeft - walk;
+        });
       });
     </script>
   </body>
