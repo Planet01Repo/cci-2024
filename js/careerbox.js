@@ -1,35 +1,36 @@
-function animateCounter(counter) {
-    const target = +counter.getAttribute('data-target');
+function animateCounter($counter) {
+    const target = +$counter.data('target');
     let current = 0;
-    const increment = target / 100;  
+    const increment = target / 100;
 
     const updateCounter = setInterval(() => {
         current += increment;
         if (current >= target) {
-            counter.textContent = target;
+            $counter.text(target);
             clearInterval(updateCounter);
         } else {
-            counter.textContent = Math.ceil(current);
+            $counter.text(Math.ceil(current));
         }
     }, 20);
 }
 
-
-const counters = document.querySelectorAll('.counter');
+const $counters = $('.counter');
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            animateCounter(entry.target);
+            animateCounter($(entry.target));
             observer.unobserve(entry.target); 
         }
     });
-}, { threshold: 0.5 }); 
+}, { threshold: 0.5 });
 
-counters.forEach(counter => observer.observe(counter));
+$counters.each(function() {
+    observer.observe(this);
+});
 
-// // For Animated Card
+
+// For Animated Card
 $(document).ready(function() {
-    // Function to check if the element is in the viewport
     function isElementInViewport(el) {
         const rect = el.getBoundingClientRect();
         return (
@@ -38,7 +39,6 @@ $(document).ready(function() {
         );
     }
 
-    // Function to add 'visible' class when the element comes into the viewport
     function checkVisibility() {
         $('.learn_floating-card').each(function() {
             if (isElementInViewport(this)) {
@@ -47,7 +47,6 @@ $(document).ready(function() {
         });
     }
 
-    // Run the check on scroll and on load
     $(window).on('scroll load', checkVisibility);
 
     // Intersection Observer
@@ -56,15 +55,14 @@ $(document).ready(function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 $(entry.target).addClass('visible');
-                observer.unobserve(entry.target); // Stop observing after visibility
+                observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.5 });
 
-    observer.observe(card); // Observe the card
+    observer.observe(card);
 });
 
-    // Run the check on scroll and on load
     $(window).on('scroll load', checkVisibility);
 ;
 

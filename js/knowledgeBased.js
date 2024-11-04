@@ -1,27 +1,17 @@
 
 
 // Services
-document.querySelectorAll('.sidebar a').forEach(link => {
-  link.addEventListener('click', function(event) {
-    event.preventDefault();
-    
-    // Remove the active class from all links
-    document.querySelectorAll('.sidebar a').forEach(link => {
-      link.classList.remove('active');
-    });
-    
-    // Add active class to the clicked link
-    this.classList.add('active');
+$('.sidebar a').on('click', function(event) {
+  event.preventDefault();
 
-    // Hide all content sections
-    document.querySelectorAll('.content').forEach(content => {
-      content.classList.remove('show');
-    });
+  $('.sidebar a').removeClass('active');
 
-    // Show the corresponding content section
-    const contentId = `${this.id}-content`;
-    document.getElementById(contentId).classList.add('show');
-  });
+  $(this).addClass('active');
+
+  $('.content').removeClass('show');
+
+  const contentId = $(this).attr('id') + '-content';
+  $('#' + contentId).addClass('show');
 });
 
 
@@ -31,12 +21,11 @@ $(document).ready(function () {
       $(modalId).on('hidden.bs.modal', function () {
           const $iframe = $(this).find('iframe');
           const src = $iframe.attr('src');
-          $iframe.attr('src', ''); // Clear the src
-          $iframe.attr('src', src); // Set it back to start over
+          $iframe.attr('src', ''); 
+          $iframe.attr('src', src); 
       });
   }
 
-  // Reset function applied for each modal
   for (let i = 1; i <= 10; i++) {
       resetVideo(`#videoModal${i}`);
   }

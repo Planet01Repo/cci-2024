@@ -49,7 +49,7 @@ $(document).ready(function () {
         if (center !== undefined) $($sliders[center]).removeClass("position-3").addClass("position-2");
         if (rightMid !== undefined) $($sliders[rightMid]).removeClass("position-4").addClass("position-3");
         if (rightEnd !== undefined) $($sliders[rightEnd]).removeClass("position-5").addClass("position-4");
-        
+
         if (rightEndBack !== undefined) {
             $($sliders[rightEndBack]).removeClass("position-none").addClass("position-5");
         } else if (leftEndBack !== undefined) {
@@ -73,54 +73,54 @@ $(document).ready(function () {
     function startAutoSlide() {
         clearInterval(autoSlideInterval);
         autoSlideInterval = setInterval(function () {
-            updatePositionRight(); 
+            updatePositionRight();
         }, 3500);
     }
 
-   
+
     var isDragging = false;
     var startX;
 
     function handleDrag(startX) {
         $(document).on('mousemove touchmove', function (e) {
-            var currentX = e.pageX || e.originalEvent.touches[0].pageX; 
+            var currentX = e.pageX || e.originalEvent.touches[0].pageX;
             var distance = currentX - startX;
 
-        
-            if (distance > 50) { 
+
+            if (distance > 50) {
                 updatePositionLeft();
-                isDragging = false; 
-                startAutoSlide(); 
-                $(document).off('mousemove touchmove'); 
+                isDragging = false;
+                startAutoSlide();
+                $(document).off('mousemove touchmove');
             } else if (distance < -50) {
                 updatePositionRight();
                 isDragging = false;
                 startAutoSlide();
-                $(document).off('mousemove touchmove'); 
+                $(document).off('mousemove touchmove');
             }
         });
     }
 
     $('#slider-content').on('mousedown touchstart', function (e) {
         isDragging = true;
-        startX = e.pageX || e.originalEvent.touches[0].pageX; 
-        clearInterval(autoSlideInterval); 
+        startX = e.pageX || e.originalEvent.touches[0].pageX;
+        clearInterval(autoSlideInterval);
         handleDrag(startX);
     });
 
     $(document).on('mouseup touchend', function () {
         if (isDragging) {
-            isDragging = false; 
-            startAutoSlide(); 
+            isDragging = false;
+            startAutoSlide();
         }
     });
 
-    
+
     $('#slider-content').on('dragstart', function (e) {
         e.preventDefault();
     });
 
-    
+
     startAutoSlide();
 });
 
@@ -167,8 +167,8 @@ $(document).ready(function () {
     });
 });
 
-$(document).ready(function() {
-    $('.main').on('mouseenter', function() {
+$(document).ready(function () {
+    $('.main').on('mouseenter', function () {
         const $box = $(this).find('.box'); // Find the .box inside the hovered .main
         $box.css({
             'animation': 'rotate 5s linear infinite',
@@ -177,11 +177,11 @@ $(document).ready(function() {
         });
     });
 
-    $('.main').on('mouseleave', function() {
+    $('.main').on('mouseleave', function () {
         const $box = $(this).find('.box'); // Find the .box inside the hovered .main
         $box.css('animation-play-state', 'paused');
 
-        setTimeout(function() {
+        setTimeout(function () {
             $box.css('opacity', 0);
         }, 100);
     });
