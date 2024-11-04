@@ -810,7 +810,7 @@ h1 {
 .cci-intro-panel {
   width: 40%;
   position: sticky;
-  top: 0;
+  top: 100px;
   height: 65vh;
   overflow: hidden;
   background-color: white;
@@ -844,7 +844,7 @@ h1 {
 
 .cci-profile-card {
   position: sticky;
-  top: 0;
+  top: 56px;
   width: 100%;
   margin-bottom: 100px;
 }
