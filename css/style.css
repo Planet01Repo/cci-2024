@@ -855,6 +855,7 @@ h1 {
   padding-top: 30px;
   max-width: 390px;
   margin: 0px auto 0;
+  /* max-width: ; */
 }
 
 .cci-card-content {
