@@ -74,6 +74,10 @@ body {
   color: #000 !important;
 }
 
+.navbar.scrolled .nav-link {
+  color: #000 !important;
+}
+
 .navbar.scrolled .nav-link:hover {
   color: #ff8045 !important;
 }
