@@ -858,6 +858,19 @@ h1 {
   /* max-width: ; */
 }
 
+.cci-linkedin-icon {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.cci-linkedin-image {
+  width: 3rem; /* Adjust size to match your design */
+  height: 3rem; /* Adjust size to match your design */
+  object-fit: cover;
+  border-radius: 50%; /* If you want to make the icon circular */
+}
+
 .cci-card-content {
   background: #fff;
   border-radius: 24px;
