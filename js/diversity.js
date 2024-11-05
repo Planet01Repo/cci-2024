@@ -87,7 +87,7 @@ $(document).ready(function () {
         clearInterval(autoSlideInterval);
         autoSlideInterval = setInterval(function () {
             updatePositionRight();
-        }, 3500);
+        }, 2000);
     }
 
 
