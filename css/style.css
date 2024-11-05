@@ -687,6 +687,16 @@ h1 {
   background-color: #e03e00;
 }
 
+@media (min-width: 375px) and (max-width: 768px) {
+  .main-title {
+    margin-bottom: -3rem;
+  }
+
+  .desc {
+    margin-top: -2rem;
+  }
+}
+
 /* cards styling  */
 .card {
   border: none;
@@ -840,6 +850,16 @@ h1 {
 }
 .panel-right {
   margin-top: 5rem;
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+  .main-head {
+    margin-bottom: -3rem;
+  }
+
+  .descrip {
+    margin-top: -2rem;
+  }
 }
 
 /* meet our team  */
