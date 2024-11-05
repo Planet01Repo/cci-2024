@@ -251,6 +251,15 @@ body {
   padding: 20px;
 }
 
+.content1 {
+  display: none;
+  padding-top: 35px !important;
+}
+.content2 {
+  display: none;
+  padding-top: 30px !important;
+}
+
 .content.show {
   display: block;
 }
