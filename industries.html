@@ -366,17 +366,28 @@
   <script src="Extended/Bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="./docs/flickity.pkgd.min.js"></script>
   <script>
+    const toggler = document.querySelector(".navbar-toggler");
+    const span = document.querySelector(".navbar-toggler-icon");
+
+    toggler.addEventListener("click", function () {
+      this.classList.toggle("is-open");
+      if (this.classList.contains("is-open")) {
+        span.classList.remove("color-changed");
+      }
+    });
+
     window.addEventListener("scroll", function () {
       const navbar = document.querySelector(".navbar");
-      if (window.scrollY > 50) {
+
+      if (window.scrollY > 50 && !toggler.classList.contains("is-open")) {
         navbar.classList.add("scrolled");
+        span.classList.add("color-changed");
       } else {
         navbar.classList.remove("scrolled");
+        if (!toggler.classList.contains("is-open")) {
+          span.classList.remove("color-changed");
+        }
       }
-      const toggler = document.querySelector(".navbar-toggler");
-      toggler.addEventListener("click", function () {
-        this.classList.toggle("is-open");
-      });
     });
 
     // parallax
