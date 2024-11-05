@@ -13,7 +13,6 @@
 
   <body>
     <!-- navbar  -->
-    <!-- navbar  -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#">
@@ -67,7 +66,59 @@
     </nav>
     <!-- hero section  -->
     <section>
-      <div id="parallax-industry" class="parallax-industries"></div>
+      <div class="parallax-industries">
+        <div class="slider-containz">
+          <div class="map-container">
+            <img src="img/world-map.png" alt="World Map" class="africa-map" />
+          </div>
+          <div class="sliding-wrapper">
+            <div class="sliding-items sliding-items-1">
+              <div class="product-item">
+                <span class="slider-tuxt"
+                  >Across Industries from Africa to the World</span
+                >
+              </div>
+              <div class="product-item">
+                <span class="slider-tuxt"
+                  >Across Industries from Africa to the World</span
+                >
+              </div>
+              <div class="product-item">
+                <span class="slider-tuxt"
+                  >Across Industries from Africa to the World</span
+                >
+              </div>
+              <div class="product-item">
+                <span class="slider-tuxt"
+                  >Across Industries from Africa to the World</span
+                >
+              </div>
+            </div>
+            <!-- <div class="sliding-items sliding-items-2">
+              <div class="product-item">
+                <span class="slider-tuxt"
+                  >Across Industries from Africa to the World</span
+                >
+              </div>
+              <div class="product-item">
+                <span class="slider-tuxt"
+                  >Across Industries from Africa to the World</span
+                >
+              </div>
+              <div class="product-item">
+                <span class="slider-tuxt"
+                  >Across Industries from Africa to the World</span
+                >
+              </div>
+              <div class="product-item">
+                <span class="slider-tuxt"
+                  >Across Industries from Africa to the World</span
+                >
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- services section  -->
@@ -354,13 +405,12 @@
     });
 
     // parallax
-    const parallax = document.getElementById("parallax-industry");
+    const parallax = document.querySelector(".parallax-industries");
 
     window.addEventListener("scroll", function () {
       let offset = window.pageYOffset;
       parallax.style.backgroundPositionY = offset * 0.7 + "px";
     });
-
     // news and articles
     document.addEventListener("DOMContentLoaded", function () {
       const carousel = document.querySelector(".v0-carousel");
