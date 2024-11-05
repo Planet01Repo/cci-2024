@@ -437,6 +437,11 @@ body {
     overflow-y: auto;
   }
 }
+@media (min-width: 375px) and (max-width: 768px) {
+  .right-content {
+    margin-top: 0rem;
+  }
+}
 
 h1 {
   font-size: 2.5rem;
