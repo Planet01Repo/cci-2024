@@ -23,6 +23,10 @@ body {
   transition: all 0.3s ease;
   border: 2px solid rgba(255, 231, 231, 0.208);
 }
+.custom-spacing {
+  margin-left: auto !important;
+}
+
 .navbar-brand {
   .navbar-brand {
     font-size: 29px;
@@ -70,10 +74,6 @@ body {
   color: #000 !important;
 }
 
-/* .navbar.scrolled .nav-link {
-  color: #000 !important;
-} */
-
 .navbar.scrolled .nav-link:hover {
   color: #ff8045 !important;
 }
@@ -83,6 +83,9 @@ body {
 }
 
 @media (max-width: 991px) {
+  .custom-spacing {
+    margin-left: 0 !important;
+  }
   .navbar-toggler.is-open .navbar-toggler-icon {
     background-image: none;
     position: relative;
@@ -112,7 +115,7 @@ body {
     transform: rotate(-45deg);
     top: 50%; /* Align with the other line */
   }
-  .color-changed{
+  .color-changed {
     filter: invert(1);
   }
 
@@ -146,17 +149,16 @@ body {
     transform: translateY(-100%);
     transition: opacity 0.3s ease, transform 0.3s ease;
   }
-  
+
   /* Active state for open animation */
   .navbar-collapse.show {
     opacity: 1;
     transform: translateY(0);
   }
-  
+
   .navbar-toggler.collapsed ~ .navbar-collapse {
     display: none;
   }
-  
 
   /* Centering and styling of the menu items */
   .navbar-nav {
