@@ -1198,7 +1198,7 @@ h1 {
 .parallax-industries {
   position: relative;
   width: 100%;
-  min-height: 75vh;
+  min-height: 90vh;
   background: linear-gradient(
     90deg,
     rgba(2, 0, 36, 1) 0%,
@@ -1217,6 +1217,7 @@ h1 {
   align-items: center;
   gap: 2rem;
   padding-left: 4rem;
+  flex-direction: column;
 }
 
 .map-container {
@@ -1227,8 +1228,9 @@ h1 {
 
 .africa-map {
   width: 100%;
-  height: auto;
+  height: 80%;
   filter: brightness(0) invert(1);
+  padding-top: 2rem;
 }
 
 .sliding-wrapper {
@@ -1263,7 +1265,7 @@ h1 {
 
 .slider-tuxt {
   color: white;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
   white-space: nowrap;
 }
