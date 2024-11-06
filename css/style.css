@@ -789,6 +789,13 @@ h1 {
   margin: 0 auto;
 }
 
+@media (min-width: 576px) and (max-width: 768px) {
+  .row-cols-md-2 .col {
+    flex: 0 0 50%; /* Make columns take half the row's width */
+    max-width: 50%;
+  }
+}
+
 /* english section styles */
 .insulting-section {
   background: url("../img/english-neutral-bg.jpg") no-repeat center center fixed;
