@@ -19,7 +19,7 @@ body {
 .navbar {
   padding: 15px 0;
   transition: all 0.3s ease;
-  border: 2px solid rgba(255, 231, 231, 0.208);
+  /* border: 2px solid rgba(255, 231, 231, 0.208); */
 }
 .navbar-brand {
   .navbar-brand {
@@ -94,7 +94,7 @@ body {
   }
 
   .call_insight-video-container h1 {
-    padding-top: 14rem !important;
+    /* padding-top: 14rem !important; */
     font-family: var(--bold-font);
     font-size: var(--h1-font-size);
     z-index: 2;
@@ -383,7 +383,7 @@ body {
 
 @media screen and (max-width: 1520px) {
   .call_insight-video-container h1 {
-    padding-top: 11rem !important;
+    /* padding-top: 11rem !important; */
     font-size: var(--h2-font-size);
     z-index: 2;
   }
@@ -897,7 +897,7 @@ body {
 @media screen and (max-width: 475px) {
   /* Call Insight Hero */
   .call_insight-video-container h1 {
-    padding-top: 13rem !important;
+    /* padding-top: 13rem !important; */
     font-family: var(--bold-font);
     font-size: var(--h3-font-size);
     z-index: 2;

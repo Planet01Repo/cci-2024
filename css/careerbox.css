@@ -19,7 +19,7 @@ body {
 .navbar {
   padding: 15px 0;
   transition: all 0.3s ease;   
-  border: 2px solid rgba(255, 231, 231, 0.208);
+  /* border: 2px solid rgba(255, 231, 231, 0.208); */
 }
 .navbar-brand {
   .navbar-brand {
@@ -95,19 +95,24 @@ body {
     background-position: center;
     height: 70vh;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   }
 
+  
+    .bg-image h1 {
+      font-family: var(--bold-font);
+      font-size: var(--h1-font-size);
+  
+    }
   .overlay {
     position: absolute;
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-  }
-
-  .overlay h1 {
-    font-family: var(--bold-font);
-    font-size: var(--h1-font-size);
+    /* text-align: center; */
   }
 
   /* Impact Souring Section */
@@ -270,11 +275,12 @@ body {
   }
 }
 @media screen and (max-width: 1550px) {
-  .overlay h1 {
-    font-family: var(--bold-font);
-    font-size: var(--h2-font-size);
-  }
 
+  
+  .bg-image h1{
+    font-size: var(--h2-font-size);
+
+  }
   /* Impact Souring Section */
 
   .cont_impact_sourcing h2 {
@@ -457,7 +463,7 @@ body {
     height: 50vh;
   }
 
-  .overlay h1 {
+  .bg-image h1 {
     font-size: var(--h3-font-size);
   }
   /* Counter Section */
