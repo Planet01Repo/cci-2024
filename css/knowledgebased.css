@@ -262,7 +262,7 @@ body {
 @media screen and (max-width:1920px) {
 
   .main .container{
-    max-width: 85% !important;
+    max-width: 90% !important;
   }
   
 /* Knowledge Based Main Section */
@@ -306,7 +306,7 @@ body {
   padding-bottom: 20px;
 }
 .cont_inform_connect p {
-  font-size: var(--h6-font-size);
+  font-size: var(--h5-font-size);
   line-height: 30px;
   letter-spacing: 1px;
 }
@@ -338,10 +338,10 @@ body {
 
 .sidebar a {
   display: block;
-  padding: 35px;
+  padding: 25px;
   margin-bottom: 10px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1rem;
   color: #fff;
   background-color: #000;
   position: relative;

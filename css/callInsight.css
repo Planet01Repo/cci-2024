@@ -265,7 +265,7 @@ body {
 @media screen and (max-width: 1920px) {
 
   .main .container{
-    max-width: 85% !important;
+    max-width: 90% !important;
   }
   
   .call_insight-video-container {
@@ -321,7 +321,7 @@ body {
     color: var(--secondary-color);
   }
   .call_insight_who_we_are p {
-    font-size: var(--h6-font-size);
+    font-size: var(--h5-font-size);
     line-height: 30px;
     letter-spacing: 1px;
   }
@@ -470,13 +470,13 @@ body {
 
   /* Cards Section */
   .card_call_insight {
+    border-left:1px solid #ddd !important;
     text-align: start;
     border-top: none !important;
     border-right: none !important;
     border-bottom: none !important;
-    margin-top: 50px;
     height: 240px !important;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
 
   .card1{
@@ -592,6 +592,9 @@ body {
   .call_insight_who_we_are h6 {
     font-size: 16px;
     padding-bottom: 10px;
+  }
+  .call_insight_who_we_are p {
+    font-size: var(--h6-font-size);
   }
 
   /* Why Choose Us */
