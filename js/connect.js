@@ -1,18 +1,28 @@
   // navbar
-  window.addEventListener("scroll", function () {
-    const navbar = document.querySelector(".navbar");
-    if (window.scrollY > 50) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
+  const toggler = document.querySelector(".navbar-toggler");
+  const span = document.querySelector(".navbar-toggler-icon");
+
+  toggler.addEventListener("click", function () {
+    this.classList.toggle("is-open");
+    if (this.classList.contains("is-open")) {
+      span.classList.remove("color-changed");
     }
-    const toggler = document.querySelector(".navbar-toggler");
-    toggler.addEventListener("click", function () {
-      this.classList.toggle("is-open");
-    });
   });
 
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
 
+    if (window.scrollY > 50 && !toggler.classList.contains("is-open")) {
+      navbar.classList.add("scrolled");
+      span.classList.add("color-changed");
+    } else {
+      navbar.classList.remove("scrolled");
+      if (!toggler.classList.contains("is-open")) {
+        span.classList.remove("color-changed");
+      }
+    }
+  });
+  
 $(document).ready(function() {
     // When a Connect button is clicked
     $('.connect-btn').on('click', function() {

@@ -79,11 +79,77 @@ body {
   border-color: rgba(0, 0, 0, 0.5);
 }
 
+/* footer styles  */
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 4rem 0 2rem;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.col {
+  flex: 1;
+  margin-bottom: 2rem;
+  min-width: 200px;
+}
+.footer h5 {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: normal;
+}
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer ul li {
+  margin-bottom: 0.5rem;
+}
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.get-in-touch {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-top: 3rem;
+  border-top: 1px solid #333;
+  padding-top: 2rem;
+}
 
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+.footer-bottom a {
+  color: #999;
+}
+.quick-contact p {
+  margin: 0.5rem 0;
+}
 
 
 
 @media screen and (max-width: 1920px) {
+
+  .main .container{
+    max-width: 85% !important;
+  }
   .diversity_bg-image {
     background-image: linear-gradient(
         45deg,
@@ -95,6 +161,9 @@ body {
     background-position: center;
     height: 70vh;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .diversity_overlay {
@@ -105,7 +174,7 @@ body {
     text-align: center;
   }
 
-  .diversity_overlay h1 {
+  .diversity_bg-image h1 {
     font-family: var(--bold-font);
     font-size: var(--h1-font-size);
   }
@@ -113,7 +182,6 @@ body {
   /* Impact Souring Section */
   .cont_lets_diversity {
     
-    padding: 0px 40px;
     margin-top: 5rem;
     margin-bottom: 2rem;
   }
@@ -133,7 +201,6 @@ body {
 
   .cont_lets_diversity p {
     font-size: var(--h5-font-size);
-    padding-top: 13px;
     line-height: 30px;
     letter-spacing: 1px;
   }
@@ -520,9 +587,24 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px;
-    margin: 20px 0;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    /* padding: 50px; */
+    /* margin: 20px 0; */
   }
+
+  .cont_col2-people_first{
+    height: 475px;
+    width: 35vw;
+
+  }
+
+  .cont_col2-people_first img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
   .icon_people_second-row {
     margin-top: 30px;
     width: 90%;
@@ -558,8 +640,11 @@ body {
 }
 
 @media screen and (max-width: 1520px) {
+  .main .container{
+    max-width: 90% !important;
+  }
   /* Diversity Main */
-  .diversity_overlay h1 {
+  .diversity_bg-image h1 {
     font-size: var(--h2-font-size);
   }
 
@@ -622,9 +707,24 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px;
-    margin: 20px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
+
+  .cont_col2-people_first{
+    height:400px;
+    width: 40vw;
+
+  }
+
+  .cont_col2-people_first img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
   .icon_people_second-row {
     margin-top: 30px;
     width: 90%;
@@ -743,8 +843,14 @@ body {
   .cont_col1-people_first p{
     font-size: var(--body-font-size);
   }
-  .container-people_first {
+  /* .container-people_first {
     padding: 35px;
+  } */
+
+  .cont_col2-people_first{
+    height:350px;
+    width: 45vw;
+
   }
 }
 
@@ -805,12 +911,17 @@ body {
     transform: translateY(0px);
   }
 
-  .cont_lets_diversity {
-    padding:40px ;
+  .cont_col1-people_first{
+    padding: 20px 40px !important;
   }
 
-  .container-people_first {
-    padding: 35px;
+
+
+
+  .cont_col2-people_first{
+    height:350px;
+    width: 100vw;
+
   }
 }
 
@@ -820,7 +931,6 @@ body {
   }
   /* Diversity Section */
   .cont_lets_diversity {
-    padding: 0px 20px;
     margin-top: 2.5rem;
     margin-bottom: 1rem;
   }
@@ -828,7 +938,7 @@ body {
   .lets_diversity_first_column {
     padding-right: 10px;
   }
-  .diversity_overlay h1 {
+  .diversity_bg-image h1 {
     font-size: var(--h3-font-size);
   }
 
@@ -869,9 +979,9 @@ body {
 
   /* People First Section */
 
-  .container-people_first {
+  /* .container-people_first {
     padding: 20px;
-  }
+  } */
   .cont_col1-people_first h1{
     font-size: var(--h5-font-size);
   }

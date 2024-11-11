@@ -19,8 +19,11 @@ body {
 .navbar {
   padding: 15px 0;
   transition: all 0.3s ease;
-  border: 2px solid rgba(255, 231, 231, 0.208);
 }
+.custom-spacing {
+  margin-left: auto !important;
+}
+
 .navbar-brand {
   .navbar-brand {
     font-size: 29px;
@@ -54,10 +57,10 @@ body {
 .navbar-toggler {
   border-color: rgba(255, 255, 255, 0.5);
 }
-.navbar-toggler-icon {
+/* .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-  mix-blend-mode: difference;
-}
+  filter: invert(100%);
+} */
 
 .navbar.scrolled {
   background-color: white !important;
@@ -80,12 +83,191 @@ body {
   border-color: rgba(0, 0, 0, 0.5);
 }
 
+@media (max-width: 991px) {
+  .custom-spacing {
+    margin-left: 0 !important;
+  }
+  .navbar-toggler.is-open .navbar-toggler-icon {
+    background-image: none;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    z-index: 99;
+  }
+
+  .navbar-toggler.is-open .navbar-toggler-icon::before,
+  .navbar-toggler.is-open .navbar-toggler-icon::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px; /* Increased thickness */
+    background-color: white; /* Ensure white color */
+    transition: all 0.3s ease;
+    top: 50%; /* Center vertically */
+    left: 0;
+  }
+
+  .navbar-toggler.is-open .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+  }
+
+  .navbar-toggler.is-open .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+    top: 50%; /* Align with the other line */
+  }
+  .color-changed {
+    filter: invert(1);
+  }
+
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 5px;
+    /* margin-top: 10px; */
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 9;
+  }
+
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 98;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  /* Active state for open animation */
+  .navbar-collapse.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .navbar-toggler.collapsed ~ .navbar-collapse {
+    display: none;
+  }
+
+  /* Centering and styling of the menu items */
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 !important;
+  }
+
+  /* Fullscreen nav links styling */
+  .navbar-nav .nav-link {
+    margin-top: 1.5rem;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: underline;
+    color: white !important;
+    padding: 4px 0;
+    letter-spacing: 1.5px;
+  }
+}
+
+/* Navbar styles on scroll */
+.navbar.scrolled {
+  background-color: white !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled .navbar-brand {
+  color: #000 !important;
+}
 
 
+
+/* footer styles  */
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 4rem 0 2rem;
+}
+.footer_cont {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer_row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer_col {
+  flex: 1;
+  margin-bottom: 2rem;
+  min-width: 200px;
+}
+.footer h5 {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: normal;
+}
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer ul li {
+  margin-bottom: 0.5rem;
+}
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.get-in-touch {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-top: 3rem;
+  border-top: 1px solid #333;
+  padding-top: 2rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+.footer-bottom a {
+  color: #999;
+}
+.quick-contact p {
+  margin: 0.5rem 0;
+}
 
 
 
 @media screen and (max-width: 1920px) {
+
+  .main .container{
+    max-width: 85% !important;
+  }
+  
   .call_insight-video-container {
     position: relative;
     width: 100%;
@@ -94,7 +276,7 @@ body {
   }
 
   .call_insight-video-container h1 {
-    padding-top: 14rem !important;
+    /* padding-top: 14rem !important; */
     font-family: var(--bold-font);
     font-size: var(--h1-font-size);
     z-index: 2;
@@ -119,7 +301,8 @@ body {
 
   /* Call Insight Who we are  */
   .call_insight_who_we_are {
-    padding: 0px 100px;
+    padding: 0px;
+    padding-left: 12px;
     margin-top: 5rem;
   }
 
@@ -138,14 +321,14 @@ body {
     color: var(--secondary-color);
   }
   .call_insight_who_we_are p {
-    font-size: var(--h5-font-size);
+    font-size: var(--h6-font-size);
     line-height: 30px;
     letter-spacing: 1px;
   }
 
   /* Why Choose us Container */
   .why_choose_us_1920 {
-    padding: 4rem 5rem;
+    padding: 4rem 0rem;
   }
   .why_choose_us_1520 {
     display: none;
@@ -222,7 +405,7 @@ body {
   }
 
   .industry-list_1920 p {
-    font-size: 25px;
+    font-size: 20px;
     margin-bottom: 10px;
     width: 350px;
     border-bottom: 1px solid #ddd;
@@ -261,7 +444,7 @@ body {
 
   /* Call Insight Counter */
   .call_insight_counter-section {
-    padding: 0 !important;
+    padding: 0 30px !important;
     margin-bottom: 4rem;
   }
   .call_insight_col_counter {
@@ -286,13 +469,14 @@ body {
   }
 
   /* Cards Section */
-  .card {
+  .card_call_insight {
     text-align: start;
     border-top: none !important;
     border-right: none !important;
     border-bottom: none !important;
     margin-top: 50px;
-    height: 290px;
+    height: 240px !important;
+    margin-bottom: 20px;
   }
 
   .card1{
@@ -314,7 +498,8 @@ body {
   }
 
   .card_heading{
-    margin: 0rem 40px;
+    /* margin: 0rem 30px; */
+    font-size: var(--h2-font-size);
     color: var(--primary-color) !important;
   }
 
@@ -334,12 +519,12 @@ body {
   }
 
   .card_grid:hover::after {
-    width: 25%;
+    width: 5%;
   }
 
   .card-text {
     margin-top: 20px;
-    font-size: 14px;
+    font-size: 12px;
   }
   .row.no-gutters {
     margin-right: 0;
@@ -382,15 +567,19 @@ body {
 }
 
 @media screen and (max-width: 1520px) {
+  .main .container{
+    max-width: 90% !important;
+  }
+
   .call_insight-video-container h1 {
-    padding-top: 11rem !important;
+    /* padding-top: 11rem !important; */
     font-size: var(--h2-font-size);
     z-index: 2;
   }
 
   /* Call Insight Who we are  */
   .call_insight_who_we_are {
-    padding: 0px 70px;
+    padding: 0px 11px;
     margin-top: 6rem;
     margin-bottom: 3rem;
   }
@@ -419,7 +608,7 @@ body {
   }
   .why_choose_us_1520 {
     margin-top: 0 !important;
-    padding: 2rem 3rem !important;
+    padding: 2rem 30px !important;
     margin-bottom: 0rem;
   }
   .experience-container_1520 {
@@ -554,9 +743,14 @@ body {
     border-left: 1px solid #ddd !important;
   }
 
+  
+
 }
 
 @media screen and (max-width: 1024px) {
+  .main .container{
+    max-width: 90% !important;
+  }
   /* call Insigt Wo we are section */
   .call_insight_who_we_are h2 {
     font-size: var(--h4-font-size);
@@ -615,9 +809,24 @@ body {
     color: #fff;
     font-weight: 200;
   }
+  .why_choose_us_1520 {
+    padding: 2rem 0px !important;
+}
+
+  .card_call_insight {
+    margin-bottom: 0px;
+  }
+
+
+
+  .card_grid:hover::after {
+    width: 10%;
+  }
 }
 
 @media screen and (max-width: 767px) {
+
+
   .industry-list_1520 p {
     font-size: var(--h6-font-size);
     margin-bottom: 10px;
@@ -666,8 +875,9 @@ body {
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 20px;
+  
+  }
 
-    .container,
     .cards_container,
     .experience-container {
       width: 100% !important;
@@ -675,7 +885,7 @@ body {
       padding: 0;
     }
 
-    .card {
+    .card_call_insight {
       width: 100% !important;
       margin: 10px 0;
     }
@@ -683,10 +893,14 @@ body {
     .no-gutters {
       margin: 0 !important; /* Removes margin */
     }
+
+ 
+
   }
-}
+
 
 @media screen and (max-width: 580px) {
+
   .call_insight-video-container {
     height: 50vh !important;
   }
@@ -897,7 +1111,7 @@ body {
 @media screen and (max-width: 475px) {
   /* Call Insight Hero */
   .call_insight-video-container h1 {
-    padding-top: 13rem !important;
+    /* padding-top: 13rem !important; */
     font-family: var(--bold-font);
     font-size: var(--h3-font-size);
     z-index: 2;
