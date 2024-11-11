@@ -262,11 +262,12 @@ body {
 
 
 
-
-
-
-
 @media screen and (max-width: 1920px) {
+
+  .main .container{
+    max-width: 85% !important;
+  }
+  
   .call_insight-video-container {
     position: relative;
     width: 100%;
@@ -300,7 +301,8 @@ body {
 
   /* Call Insight Who we are  */
   .call_insight_who_we_are {
-    padding: 0px 100px;
+    padding: 0px;
+    padding-left: 12px;
     margin-top: 5rem;
   }
 
@@ -319,14 +321,14 @@ body {
     color: var(--secondary-color);
   }
   .call_insight_who_we_are p {
-    font-size: var(--h5-font-size);
+    font-size: var(--h6-font-size);
     line-height: 30px;
     letter-spacing: 1px;
   }
 
   /* Why Choose us Container */
   .why_choose_us_1920 {
-    padding: 4rem 5rem;
+    padding: 4rem 0rem;
   }
   .why_choose_us_1520 {
     display: none;
@@ -403,7 +405,7 @@ body {
   }
 
   .industry-list_1920 p {
-    font-size: 25px;
+    font-size: 20px;
     margin-bottom: 10px;
     width: 350px;
     border-bottom: 1px solid #ddd;
@@ -442,7 +444,7 @@ body {
 
   /* Call Insight Counter */
   .call_insight_counter-section {
-    padding: 0 !important;
+    padding: 0 30px !important;
     margin-bottom: 4rem;
   }
   .call_insight_col_counter {
@@ -496,8 +498,8 @@ body {
   }
 
   .card_heading{
-    margin: 0rem 40px;
-    font-size: var(--h3-font-size);
+    /* margin: 0rem 30px; */
+    font-size: var(--h2-font-size);
     color: var(--primary-color) !important;
   }
 
@@ -565,6 +567,10 @@ body {
 }
 
 @media screen and (max-width: 1520px) {
+  .main .container{
+    max-width: 90% !important;
+  }
+
   .call_insight-video-container h1 {
     /* padding-top: 11rem !important; */
     font-size: var(--h2-font-size);
@@ -573,7 +579,7 @@ body {
 
   /* Call Insight Who we are  */
   .call_insight_who_we_are {
-    padding: 0px 70px;
+    padding: 0px 11px;
     margin-top: 6rem;
     margin-bottom: 3rem;
   }
@@ -602,7 +608,7 @@ body {
   }
   .why_choose_us_1520 {
     margin-top: 0 !important;
-    padding: 2rem 3rem !important;
+    padding: 2rem 30px !important;
     margin-bottom: 0rem;
   }
   .experience-container_1520 {
@@ -737,9 +743,14 @@ body {
     border-left: 1px solid #ddd !important;
   }
 
+  
+
 }
 
 @media screen and (max-width: 1024px) {
+  .main .container{
+    max-width: 90% !important;
+  }
   /* call Insigt Wo we are section */
   .call_insight_who_we_are h2 {
     font-size: var(--h4-font-size);
@@ -798,6 +809,15 @@ body {
     color: #fff;
     font-weight: 200;
   }
+  .why_choose_us_1520 {
+    padding: 2rem 0px !important;
+}
+
+  .card_call_insight {
+    margin-bottom: 0px;
+  }
+
+
 
   .card_grid:hover::after {
     width: 10%;
@@ -805,6 +825,8 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+
+
   .industry-list_1520 p {
     font-size: var(--h6-font-size);
     margin-bottom: 10px;
@@ -872,10 +894,13 @@ body {
       margin: 0 !important; /* Removes margin */
     }
 
+ 
+
   }
 
 
 @media screen and (max-width: 580px) {
+
   .call_insight-video-container {
     height: 50vh !important;
   }

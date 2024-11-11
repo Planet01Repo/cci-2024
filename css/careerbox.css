@@ -12,7 +12,9 @@ body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+  
 }
+
 
 /* navbar  */
 
@@ -263,6 +265,11 @@ body {
 
 
 @media screen and (max-width: 1920px) {
+
+  
+.main .container{
+  max-width: 85% !important;
+}
   .bg-image {
     background-image: linear-gradient(
         45deg,
@@ -296,7 +303,6 @@ body {
 
   /* Impact Souring Section */
   .cont_impact_sourcing {
-    padding: 0px 50px;
     margin-top: 5rem;
   }
 
@@ -304,7 +310,8 @@ body {
     margin-bottom: 2rem;
   }
   .impact_souring_first_column {
-    padding-right: 70px;
+    padding-right: 40px;
+    padding-left:12px ;
   }
 
   .cont_impact_sourcing h2 {
@@ -327,7 +334,6 @@ body {
 
   /* Cards Section */
   .about_career_box {
-    padding: 0px 50px;
     margin-top: 3rem;
   }
   .about_career_box h1 {
@@ -341,7 +347,7 @@ body {
     letter-spacing: 1px;
   }
   .about_career_box_col1 {
-    padding-right: 70px;
+    padding-right: 40px;
   }
   .counter {
     color: var(--secondary-color);
@@ -455,6 +461,9 @@ body {
 }
 @media screen and (max-width: 1550px) {
 
+  .main .container{
+    max-width: 90% !important;
+  }
   
   .bg-image h1{
     font-size: var(--h2-font-size);
@@ -573,15 +582,20 @@ body {
     font-size: 14px !important;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1025px) {
+  .main .container{
+    max-width: 90% !important;
+  }
   /* Main Section */
   .bg-image {
     height: 70vh;
   }
 
+
+
   /* Impact Souring Section */
   .cont_impact_sourcing {
-    padding: 0px 30px;
+    /* padding: 0px 40px; */
     margin-top: 3.5rem;
   }
 
@@ -590,7 +604,7 @@ body {
   }
 
   .cont_impact_sourcing h2 {
-    font-size: var(--h4-font-size);
+    font-size: var(--h5-font-size);
   }
   .cont_impact_sourcing p {
     font-size: var(--body-font-size);
@@ -607,7 +621,6 @@ body {
 
   /* About Career Box */
   .about_career_box {
-    padding: 0px 30px;
     margin-top: 2rem;
   }
 
@@ -621,6 +634,19 @@ body {
   .about_career_box_col1 {
     padding-right: 20px;
   }
+
+  .about_career_box-img{
+    height: 380px !important;
+
+  }
+
+  .about_career_box-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+
 
     /* Learn More Section */
     .learn_hero-section {
@@ -636,32 +662,29 @@ body {
     width: 440px;
     transform: translateY(-50%);
   }
+
+  .learn_floating-card.visible {
+    opacity: 1;
+    transform: translateX(0); /* Slide in */
+  }
 }
 
-.learn_floating-card.visible {
-  opacity: 1;
-  transform: translateX(0); /* Slide in */
-}
 
 
-@media screen  and (max-width:768px){
-  /* footer styles  */
+
+/* @media screen  and (max-width:768px){
 .footer {
   background-color: #000;
   color: #fff;
   padding: 4rem 0 2rem;
 }
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.row {
+
+.footer_row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.col {
+.footer_row {
   flex: 1;
   margin-bottom: 2rem;
   min-width: 200px;
@@ -709,10 +732,12 @@ body {
   margin: 0.5rem 0;
 }
 
-}
+} */
 
 
 @media screen and (max-width: 580px) {
+
+
 
   .bg-image {
     height: 50vh;
