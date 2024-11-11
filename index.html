@@ -10,7 +10,7 @@
   <body>
     <!-- navbar  -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <div class="container">
+      <div class="container custom-container">
         <a class="navbar-brand" href="#">
           <img
             src="./img/cci-logo.png"
@@ -61,39 +61,43 @@
       </div>
     </nav>
     <!-- hero -->
-    <div class="slider-container">
+    <div class="slider-container ">
       <div class="gradient-overlay"></div>
       <div
         class="slide active"
         style="background-image: url('./img/sliderimage.jpg')"
       >
         <div class="slide-content">
+         <div class="container custom-container">
+          <h2 class="slide-title">Africa's Leading BPO</h2>
           <p class="slide-subtitle">
             DETERMINED, ENGAGED AND ENERGIZED SPEARHEADING INVESTMENT ACROSS THE
             CONTINENT
           </p>
-          <h2 class="slide-title">Africa's Leading BPO</h2>
-        </div>
+         </div>
+            </div>
       </div>
       <div class="slide" style="background-image: url('./img/sliderimage.jpg')">
         <div class="slide-content">
+          <div class="container custom-container">
+            <h2 class="slide-title">Africa's Leading BPO</h2>
           <p class="slide-subtitle">
             DETERMINED, ENGAGED AND ENERGIZED SPEARHEADING INVESTMENT ACROSS THE
             CONTINENT
-          </p>
-          <h2 class="slide-title">Africa's Leading BPO</h2>
+          </p> 
+          </div>    
         </div>
       </div>
     </div>
 
     <!-- about -->
-    <div class="container-fluid">
+    <div class="container custom-container">
       <div class="row section-spacing">
-        <div class="col-lg-6 left-content">
+        <div class="col-lg-4 left-content">
           <p class="header" style="color: #ff4500">Interactions per month.</p>
           <h1>20,000,000</h1>
         </div>
-        <div class="col-lg-6 right-content">
+        <div class="col-lg-8 right-content">
           <h1 style="color: #ff4500">About us</h1>
           <p class="description">
             The CCI group of companies is one of the top providers of customer
@@ -117,11 +121,36 @@
       </div>
     </div>
 
+    <!-- why africa  -->
+    <section class="consulting-section bg-overlay">
+      <div class="gradient-overlay"></div>
+      <div class="container custom-container content-wrapper">
+        <div class="row">
+          <div class="col-lg-5 left-panel">
+            <!-- <p class="subtitle">Expect and deliver the highest quality outcomes.</p> -->
+            <h1 class="main-title">Why Africa?</h1>
+          </div>
+          <div class="col-lg-7 right-panel">
+            <div class="desc">
+              <p>
+                Africa is the fastest growing continent globally, a rapidly
+                urbanizing population and an abundance of highly educated youth
+                searching for opportunity to use hard earned qualifications.
+                Natural English language skills provide unparalleled levels of
+                comprehension. High levels of retention and opportunities to
+                progress result in global leading capability.
+              </p>
+            </div>
+            <button class="learn-more-btn">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- location component  -->
-    <div class="solutions-layout">
-      <div class="solutions-container">
-        <div class="solutions-row">
-          <div class="solutions-sidebar">
+    <div class="solutions-layout mb-5 mt-5">
+      <div class="solutions-container container custom-container mb-5 mt-5">
+        <div class="solutions-row row">
+          <div class="solutions-sidebar col-lg-3">
             <h1 class="solutions-title">LOCATIONS</h1>
             <div class="solutions-list">
               <div class="solution-item active" onclick="showLocation('kenya')">
@@ -144,7 +173,7 @@
               </div>
             </div>
           </div>
-          <div class="solutions-content">
+          <div class="solutions-content col-lg-9">
             <div class="solutions-cards">
               <div id="kenya" class="solution-card">
                 <div class="solution-card-header">
@@ -310,34 +339,43 @@
       </div>
     </div>
 
-    <!-- why africa  -->
-    <section class="consulting-section bg-overlay">
-      <div class="gradient-overlay"></div>
-      <div class="container-fluid content-wrapper">
-        <div class="row">
-          <div class="col-lg-6 left-panel">
-            <!-- <p class="subtitle">Expect and deliver the highest quality outcomes.</p> -->
-            <h1 class="main-title">Why Africa?</h1>
-          </div>
-          <div class="col-lg-6 right-panel">
-            <div class="desc">
-              <p>
-                Africa is the fastest growing continent globally, a rapidly
-                urbanizing population and an abundance of highly educated youth
-                searching for opportunity to use hard earned qualifications.
-                Natural English language skills provide unparalleled levels of
-                comprehension. High levels of retention and opportunities to
-                progress result in global leading capability.
-              </p>
-            </div>
-            <button class="learn-more-btn">Learn More</button>
-          </div>
-        </div>
+ <!-- english-section -->
+ <section id="english-section" class="insulting-section bg-overlay">
+  <div class="gradient-overlay"></div>
+  <div class="container custom-container con-wrapper">
+    <div class="row">
+      <div class="col-lg-7 panel-left">
+        <!-- <p class="subhead">
+          Expect and deliver the highest quality outcomes.
+        </p> -->
+        <h1 class="main-head">ENGLISH NEUTRAL,<br />GLOBALLY CAPABLE</h1>
       </div>
-    </section>
+      <div class="col-lg-5 panel-right">
+        <div class="descrip">
+          <p>
+            Africa has one of the most globalized youth populations, with
+            young job seeking individuals exposed to an array of popular
+            culture that influences their style, conversations, behaviors
+            and understanding of the world.
+          </p>
+        </div>
+        <div class="descrip">
+          <p>
+            Our workforce provides an English neutral accent that
+            distinguishes itself across our services as well as adds a
+            greater sense of familiarity to your customers. First language
+            capability coupled with an incredibly knowledgeable workforce
+            provides the capability to dynamically resolve customer queries.
+          </p>
+        </div>
+        <button class="learn-more-btn">Learn More</button>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- card component  -->
-    <div class="container section-spacing">
+    <div class="container section-spacing custom-container">
       <div class="text-center mt-5">
         <h2 class="section-heading">OUR SOLUTIONS</h2>
         <p class="section-text">
@@ -351,7 +389,7 @@
           <div class="card h-100">
             <div class="card-img-wrapper">
               <img
-                src="/img/Business-Growth.jpg"
+                src="./img/Business-Growth.jpg"
                 class="card-img-top"
                 alt="Man working on laptop"
               />
@@ -362,8 +400,8 @@
               <div class="arrow-icon"></div>
             </div>
             <div class="card-body">
-              <div class="orange-bar"></div>
               <h5 class="card-title">Customer Management</h5>
+              <div class="orange-bar"></div>
               <p class="card-text">
                 Business growth rests on your ability to choose partners who
                 understand your services, products, and market...
@@ -387,8 +425,8 @@
               <div class="arrow-icon"></div>
             </div>
             <div class="card-body">
-              <div class="orange-bar"></div>
               <h5 class="card-title">Omnichannel Management</h5>
+              <div class="orange-bar"></div>
               <p class="card-text">
                 Across voice & digital channels, CCI provides support to
                 organizations across the world. We implement...
@@ -412,8 +450,8 @@
               <div class="arrow-icon"></div>
             </div>
             <div class="card-body">
-              <div class="orange-bar"></div>
               <h5 class="card-title">Administration & Processing</h5>
+              <div class="orange-bar"></div>
               <p class="card-text">
                 Operations and effectiveness across translation, digitization,
                 claims and complex case management require...
@@ -437,8 +475,8 @@
               <div class="arrow-icon"></div>
             </div>
             <div class="card-body">
-              <div class="orange-bar"></div>
               <h5 class="card-title">Technical Expertise</h5>
+              <div class="orange-bar"></div>
               <p class="card-text">
                 Detail-oriented and focused services require a highly educated
                 workforce. CCI bring a diverse talent base with the requisite
@@ -451,221 +489,189 @@
       </div>
     </div>
 
-    <!-- english-section -->
-    <section id="english-section" class="insulting-section bg-overlay">
-      <div class="gradient-overlay"></div>
-      <div class="contain-fluid con-wrapper">
-        <div class="row">
-          <div class="col-lg-6 panel-left">
-            <!-- <p class="subhead">
-              Expect and deliver the highest quality outcomes.
-            </p> -->
-            <h1 class="main-head">ENGLISH NEUTRAL,<br />GLOBALLY CAPABLE</h1>
-          </div>
-          <div class="col-lg-6 panel-right">
-            <div class="descrip">
-              <p>
-                Africa has one of the most globalized youth populations, with
-                young job seeking individuals exposed to an array of popular
-                culture that influences their style, conversations, behaviors
-                and understanding of the world.
-              </p>
-            </div>
-            <div class="descrip">
-              <p>
-                Our workforce provides an English neutral accent that
-                distinguishes itself across our services as well as adds a
-                greater sense of familiarity to your customers. First language
-                capability coupled with an incredibly knowledgeable workforce
-                provides the capability to dynamically resolve customer queries.
-              </p>
-            </div>
-            <button class="learn-more-btn">Learn More</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
+   
     <!-- meet our team  -->
-    <div id="meet-our-team" class="cci-team-container">
-      <!-- Left: Meet Our Team Section -->
-      <div class="cci-intro-panel">
-        <h1 class="cci-title-accent">MEET OUR TEAM</h1>
-        <div class="cci-member-roster">
-          <div class="cci-member-info">
-            <div class="cci-member-name">1. Martin Roe</div>
-            <div class="cci-member-position">Chief Executive Officer</div>
-          </div>
-          <div class="cci-member-info">
-            <div class="cci-member-name">2. Mark Channa</div>
-            <div class="cci-member-position">Chief Operating Officer</div>
-          </div>
-          <div class="cci-member-info">
-            <div class="cci-member-name">3. Lizelle Strydom</div>
-            <div class="cci-member-position">Managing Director: CareerBox</div>
-          </div>
-          <div class="cci-member-info">
-            <div class="cci-member-name">4. Mahira Khan</div>
-            <div class="cci-member-position">
-              Director of Bids and Contracts
-            </div>
+<div class="bg-team">
+  <div id="meet-our-team" class="cci-team-container custom-container">
+    <!-- Left: Meet Our Team Section -->
+    <div class="cci-intro-panel">
+      <h1 class="cci-title-accent">MEET OUR TEAM</h1>
+      <div class="cci-member-roster">
+        <div class="cci-member-info">
+          <div class="cci-member-name">1. Martin Roe</div>
+          <div class="cci-member-position">Chief Executive Officer</div>
+        </div>
+        <div class="cci-member-info">
+          <div class="cci-member-name">2. Mark Channa</div>
+          <div class="cci-member-position">Chief Operating Officer</div>
+        </div>
+        <div class="cci-member-info">
+          <div class="cci-member-name">3. Lizelle Strydom</div>
+          <div class="cci-member-position">Managing Director: CareerBox</div>
+        </div>
+        <div class="cci-member-info">
+          <div class="cci-member-name">4. Mahira Khan</div>
+          <div class="cci-member-position">
+            Director of Bids and Contracts
           </div>
         </div>
-      </div>
-
-      <!-- Right: Cards Section -->
-      <div class="cci-card-container">
-        <div class="cci-profile-card" data-index="0">
-          <div class="cci-card-content">
-            <div class="cci-card-header">
-              <a
-                href="https://www.linkedin.com/in/martin-roe-55a4724/"
-                target="_blank"
-                class="cci-linkedin-icon"
-              >
-                <img
-                  src="./img/linkedinicon.png"
-                  alt="LinkedIn Icon"
-                  class="cci-linkedin-image"
-                />
-              </a>
-              <div class="cci-card-title">Martin Roe</div>
-            </div>
-            <div class="cci-image-container">
-              <img
-                class="cci-member-photo"
-                src="./img/image-22.png"
-                alt="Team member 1"
-              />
-            </div>
-            <div class="cci-content-area">
-              <p class="cci-member-bio">
-                With extensive experience in the BPO sector in both the client
-                and vendor side of operations, Martin has overseen CCI's
-                strategy development to become Africa's largest outsourcing
-                provider, steering the company toward the future of the BPO
-                industry. Martin has a passion for Impact Sourcing,
-                incorporating it as one of CCI's core values.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Repeat for other cards with the same structure -->
-        <div class="cci-profile-card" data-index="1">
-          <div class="cci-card-content">
-            <div class="cci-card-header">
-              <a
-                href="https://www.linkedin.com/in/mark-chana/"
-                target="_blank"
-                class="cci-linkedin-icon"
-              >
-                <img
-                  src="./img/linkedinicon.png"
-                  alt="LinkedIn Icon"
-                  class="cci-linkedin-image"
-                />
-              </a>
-              <div class="cci-card-title">Mark Channa</div>
-            </div>
-            <div class="cci-image-container">
-              <img
-                class="cci-member-photo"
-                src="./img/image-20.png"
-                alt="Team member 2"
-              />
-            </div>
-            <div class="cci-content-area">
-              <p class="cci-member-bio">
-                Mark is our operational guru who has ultimate responsibility for
-                operational delivery across CCI's International & Domestic
-                clients, working closely with management teams at our
-                operational sites to ensure a smooth and satisfying customer
-                experience. Mark is a board member of BPESA (BPO Industry body
-                in South Africa) and CareerBox, our recruitment arm.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="cci-profile-card" data-index="2">
-          <div class="cci-card-content">
-            <div class="cci-card-header">
-              <a
-                href="https://www.linkedin.com/in/lizelle-strydom-pottier-27667a1b/"
-                target="_blank"
-                class="cci-linkedin-icon"
-              >
-                <img
-                  src="./img/linkedinicon.png"
-                  alt="LinkedIn Icon"
-                  class="cci-linkedin-image"
-                />
-              </a>
-              <div class="cci-card-title">Lizelle Strydom</div>
-            </div>
-            <div class="cci-image-container">
-              <img
-                class="cci-member-photo"
-                src="./img/image-26.png"
-                alt="Team member 3"
-              />
-            </div>
-            <div class="cci-content-area">
-              <p class="cci-member-bio">
-                Lizelle has vast knowledge and expertise in various niche
-                entities in the labor market enabling her to identify gaps and
-                create strategic solutions in breaking barriers to entry. She
-                was a guest speaker at Oxford University in 2020 and
-                participated in several global panel discussions around the GBS
-                sector, Impact Sourcing, and Why Africa. She is the leader and
-                integration point between CCI Global and CareerBox.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="cci-profile-card" data-index="3">
-          <div class="cci-card-content">
-            <div class="cci-card-header">
-              <a
-                href="https://www.linkedin.com/in/mahirakhan/"
-                target="_blank"
-                class="cci-linkedin-icon"
-              >
-                <img
-                  src="./img/linkedinicon.png"
-                  alt="LinkedIn Icon"
-                  class="cci-linkedin-image"
-                />
-              </a>
-              <div class="cci-card-title">Mahira Khan</div>
-            </div>
-            <div class="cci-image-container">
-              <img
-                class="cci-member-photo"
-                src="./img/image-27.png"
-                alt="Team member 4"
-              />
-            </div>
-            <div class="cci-content-area">
-              <p class="cci-member-bio">
-                Mahira oversees the growth, bidding, and contracting across the
-                group, implementing the bid and solution management process from
-                qualification all the way until hand over to the project
-                implementation team. She's accomplished some of our biggest wins
-                and most successful campaigns, helping CCI become a world class
-                provider to some of the world's leading brands.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="cci-scroll-spacer"></div>
       </div>
     </div>
+
+    <!-- Right: Cards Section -->
+    <div class="cci-card-container ">
+      <div class="cci-profile-card" data-index="0">
+        <div class="cci-card-content">
+          <div class="cci-card-header">
+            <a
+              href="https://www.linkedin.com/in/martin-roe-55a4724/"
+              target="_blank"
+              class="cci-linkedin-icon"
+            >
+              <img
+                src="./img/linkedinicon.png"
+                alt="LinkedIn Icon"
+                class="cci-linkedin-image"
+              />
+            </a>
+            <div class="cci-card-title">Martin Roe</div>
+          </div>
+          <div class="cci-image-container">
+            <img
+              class="cci-member-photo"
+              src="./img/image-22.png"
+              alt="Team member 1"
+            />
+          </div>
+          <div class="cci-content-area">
+            <p class="cci-member-bio">
+              With extensive experience in the BPO sector in both the client
+              and vendor side of operations, Martin has overseen CCI's
+              strategy development to become Africa's largest outsourcing
+              provider, steering the company toward the future of the BPO
+              industry. Martin has a passion for Impact Sourcing,
+              incorporating it as one of CCI's core values.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat for other cards with the same structure -->
+      <div class="cci-profile-card" data-index="1">
+        <div class="cci-card-content">
+          <div class="cci-card-header">
+            <a
+              href="https://www.linkedin.com/in/mark-chana/"
+              target="_blank"
+              class="cci-linkedin-icon"
+            >
+              <img
+                src="./img/linkedinicon.png"
+                alt="LinkedIn Icon"
+                class="cci-linkedin-image"
+              />
+            </a>
+            <div class="cci-card-title">Mark Channa</div>
+          </div>
+          <div class="cci-image-container">
+            <img
+              class="cci-member-photo"
+              src="./img/image-20.png"
+              alt="Team member 2"
+            />
+          </div>
+          <div class="cci-content-area">
+            <p class="cci-member-bio">
+              Mark is our operational guru who has ultimate responsibility for
+              operational delivery across CCI's International & Domestic
+              clients, working closely with management teams at our
+              operational sites to ensure a smooth and satisfying customer
+              experience. Mark is a board member of BPESA (BPO Industry body
+              in South Africa) and CareerBox, our recruitment arm.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cci-profile-card" data-index="2">
+        <div class="cci-card-content">
+          <div class="cci-card-header">
+            <a
+              href="https://www.linkedin.com/in/lizelle-strydom-pottier-27667a1b/"
+              target="_blank"
+              class="cci-linkedin-icon"
+            >
+              <img
+                src="./img/linkedinicon.png"
+                alt="LinkedIn Icon"
+                class="cci-linkedin-image"
+              />
+            </a>
+            <div class="cci-card-title">Lizelle Strydom</div>
+          </div>
+          <div class="cci-image-container">
+            <img
+              class="cci-member-photo"
+              src="./img/image-26.png"
+              alt="Team member 3"
+            />
+          </div>
+          <div class="cci-content-area">
+            <p class="cci-member-bio">
+              Lizelle has vast knowledge and expertise in various niche
+              entities in the labor market enabling her to identify gaps and
+              create strategic solutions in breaking barriers to entry. She
+              was a guest speaker at Oxford University in 2020 and
+              participated in several global panel discussions around the GBS
+              sector, Impact Sourcing, and Why Africa. She is the leader and
+              integration point between CCI Global and CareerBox.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cci-profile-card" data-index="3">
+        <div class="cci-card-content">
+          <div class="cci-card-header">
+            <a
+              href="https://www.linkedin.com/in/mahirakhan/"
+              target="_blank"
+              class="cci-linkedin-icon"
+            >
+              <img
+                src="./img/linkedinicon.png"
+                alt="LinkedIn Icon"
+                class="cci-linkedin-image"
+              />
+            </a>
+            <div class="cci-card-title">Mahira Khan</div>
+          </div>
+          <div class="cci-image-container">
+            <img
+              class="cci-member-photo"
+              src="./img/image-27.png"
+              alt="Team member 4"
+            />
+          </div>
+          <div class="cci-content-area">
+            <p class="cci-member-bio">
+              Mahira oversees the growth, bidding, and contracting across the
+              group, implementing the bid and solution management process from
+              qualification all the way until hand over to the project
+              implementation team. She's accomplished some of our biggest wins
+              and most successful campaigns, helping CCI become a world class
+              provider to some of the world's leading brands.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cci-scroll-spacer"></div>
+    </div>
+  </div>
+</div>
     <!-- news and articles  -->
-    <div class="v0-container">
+    <div class="v0-container custom-container">
       <div class="v0-header">
         <h1>News & Articles</h1>
       </div>
@@ -781,7 +787,7 @@
     </div>
     <!-- footer component  -->
     <footer class="footer">
-      <div class="container">
+      <div class="container custom-container">
         <div class="row">
           <div class="col">
             <!-- <h5>
