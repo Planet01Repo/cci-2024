@@ -679,6 +679,17 @@ body {
     margin-bottom: 20px;
   }
 
+  .diversity_image{
+    height: 75px;
+    width: 75px;
+  }
+  .diversity_image img{
+    height: 77%;
+    width: 39%;
+    object-fit: cover;
+  }
+
+
   /* Card styling */
   .card-container {
     padding: 30px;
