@@ -262,6 +262,10 @@ body {
 
 @media screen and (max-width: 1920px) {
   
+
+  .main .container{
+    max-width: 90%;
+  }
   .connect_bg-image {
     background-image: linear-gradient(
         45deg,
@@ -293,14 +297,14 @@ body {
 
   /* Impact Souring Section */
   .cont_lets_connect {
-    padding: 0px 40px;
-    margin-top: 5rem;
+    margin-top: 4rem;
   }
 
   .career_box_img {
     margin-bottom: 2rem;
   }
   .lets_connect_first_column {
+    padding-left: 0;
     padding-right: 70px;
   }
 
@@ -461,11 +465,6 @@ body {
 
 
   /* Informed And Connected Section */
-.cont_join_connect {
-  padding: 0px 50px;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
 .cont_join_connect h1 {
   font-size: var(--h2-font-size);
   color: var(--regular-font) !important;
@@ -477,14 +476,22 @@ body {
   letter-spacing: 1px;
 }
 .cont_join_connect_col1 {
+  padding-left: 0;
   padding-right: 70px;
 }
 
 .cont_join_connect_col2{
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  padding-right: 20px;
+  height: 400px;
+  width: 600px;
+}
+
+.cont_join_connect_col2 img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .jump_us_cv{
@@ -606,6 +613,7 @@ body {
     letter-spacing: 1px;
   }
 
+
   /* Map */
   .connect_location {
     padding: 0px 50px;
@@ -673,6 +681,11 @@ body {
   .cont_join_connect p {
     font-size: var(--h6-font-size);}
 
+    .cont_join_connect_col2{
+      width: 540px;
+      height: 330px;
+    }
+
 }
 
 
@@ -709,6 +722,11 @@ body {
     top: 35%;
     right: 42.5%;
   }
+
+  .cont_join_connect_col2{
+    width: 450px;
+    height: 330px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -737,6 +755,10 @@ body {
     line-height: 30px;
     letter-spacing: 1px;
   }
+  .cont_join_connect_col2{
+    width: 430px;
+    height: 330px;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -760,7 +782,19 @@ body {
 
   .cont_join_connect p {
     font-size: var(--body-font-size);}
+
+    .cont_join_connect_col2{
+      width: 340px;
+      height: 320px;
+    }
 }
+@media screen and (max-width:768px) {
+  .cont_join_connect_col2{
+    width: 100%;
+    height: auto;
+  }
+}
+
 
 
 @media screen and (max-width:600px) {
@@ -774,7 +808,6 @@ body {
 
   .cont_lets_connect{
     margin-top: 2rem;
-    padding: 20px;
   }
   
   .cont_lets_connect h2 {
@@ -848,8 +881,7 @@ body {
   }
   /* Join Us */
   .cont_join_connect{
-    padding: 30px;
-    margin-top: 0px !important;
+    margin-top: 30px !important;
   }
 
   .cont_join_connect h1 {
